@@ -5,12 +5,13 @@ background no
 use_xft yes
 xftfont monospace:pixelsize=9
 xftalpha 0.8
-update_interval 1.0
+update_interval 2
 total_run_times 0
 own_window yes
 own_window_transparent yes
 #own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 own_window_type override
+#own_window_type desktop
 double_buffer yes
 draw_shades no
 draw_outline n
@@ -33,6 +34,8 @@ use_spacer yes
 
 maximum_width 350
 
+lua_load ~/a
+lua_draw_hook_post main
 
 TEXT
 #leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
@@ -74,14 +77,14 @@ ${alignr}$font < ${top_mem name 2}  ${top_mem mem 2} > -─┤    │    │
 ${alignr}$font < ${top_mem name 3}  ${top_mem mem 3} > -─┤    │    │  
 ${alignr}$font < ${top_mem name 4}  ${top_mem mem 4} > -─┤    │    │  
 ${alignr}$font < ${top_mem name 5}  ${top_mem mem 5} > -─┘    │    │  
-${alignr}$font < $swapperc% - $swap/$swapmax > swap -─┤    │  
-${alignr}$font < ${swapbar 5,120} > -─┘    │    │  
-${alignr}$font < ${fs_used /}/${fs_size /} > root -─┤    │  
+${alignr}$font < ${fs_used /}/${fs_size /} > /    -─┤    │  
 ${alignr}$font < ${fs_bar 5,120 /} > -─┘    │    │  
-${alignr}$font < ${fs_used /home/}/${fs_size /home/} > home -─┤    │  
-${alignr}$font < ${fs_bar 5,120 /home/user/} > -─┘    │    │  
-${alignr}$font < ${fs_used /usr/local}/${fs_size /usr/local} > local -─┘    │  
-${alignr}$font < ${fs_bar 5,120 /home/Container/} > -─┘         │  
+${alignr}$font < ${fs_used /home/}/${fs_size /home/} > /home-─┤    │  
+${alignr}$font < ${fs_bar 5,120 /home/} > -─┘    │    │  
+${alignr}$font < ${fs_used /var/}/${fs_size /var/} > /var-─┤    │  
+${alignr}$font < ${fs_bar 5,120 /var/} > -─┘    │    │  
+${alignr}$font < $swapperc% - $swap/$swapmax > swap -─┘    │  
+${alignr}$font < ${swapbar 5,120} > -─┘         │  
 ${alignr}$font │  
 ${alignr}$font net -─┘  
 ${alignr}$font < ${tcp_portmon 1 65535 count} > connections -─┤       
@@ -93,8 +96,8 @@ ${alignr}$font < ${tcp_portmon 32768 61000 count} > out / remote -─┤
 ${alignr}$font < ${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0} > -─┤    │       
 ${alignr}$font < ${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1} > -─┤    │       
 ${alignr}$font < ${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2} > -─┤    │       
-${alignr}$font < ${upspeed wlan0} k/s >   up -─┤       
+${alignr}$font < ${upspeed wlan0}/s >   up -─┤       
 ${alignr}$font < ${upspeedgraph wlan0 8,120 8b2132 fe8608} > -─┘    │       
-${alignr}$font < ${downspeed wlan0} k/s > down -─┘       
-${alignr}}${offset -60}$font < ${downspeedgraph wlan0 8,120 8b2132 fe8608} > -─┘
+${alignr}$font < ${downspeed wlan0}/s > down -─┘       
+${alignr}${offset -60}$font < ${downspeedgraph wlan0 8,120 8b2132 fe8608} > -─┘
 

@@ -6,7 +6,7 @@ max_text_width 0
 net_avg_samples 2
 
 # Update interval in seconds
-update_interval 3
+update_interval 2
 # This is the number of times Conky will update before quitting.
 # Set to zero to run forever.
 total_run_times 0
@@ -62,13 +62,21 @@ TEXT
         "color"     : "\#88ABC4"
     },
     {
-        "full_text" : "CPU: ${cpu}%", 
+	"full_text" : "CPU:",
+	"color"     : "\#ffffff"
+    },
+    {
+        "full_text" : "${cpu}%", 
 	"color"	    : ${if_match ${cpu}>80}"\#ff0000"${else}"\#EECC00"${endif}
 
     },
     {
+	"full_text" : "RAM:",
+	"color"     : "\#f3f3f3"
+    },
+    {
         "icon"      : "$HOME/.i3/xbmicons/mem.xbm",
-	"full_text" : "RAM: ${mem} (${memperc}%)",
+	"full_text" : "${mem} (${memperc}%)",
         "color"     : ${if_match ${memperc}>80}"\#ff0000"${else}"\#EECC00"${endif}
     },
     {
@@ -76,15 +84,11 @@ TEXT
         "color"     : "\#88ABC4"
     },
     {
-        "full_text" : "${exec /opt/bin/conky-audio}",
-        "color"     : "\#88ABC4"
+        "full_text" : "${exec /opt/bin/conky-audio}%",
+        "color"     : ${if_match ${exec /opt/bin/conky-audio}>95}"\#ff0000"${else}"\#88ABC4"${endif}
     },
     {
         "full_text" : " ${battery_percent BAT1}%"  ,
         "color"     : ${if_match ${battery_percent BAT1}<15}"\#ff0000"${else}"\#88ABC4"${endif}
-    },
-    {
-        "full_text" : "test@${nodename}",
-	"color"	    : "\#00B306"
     }
 ],
