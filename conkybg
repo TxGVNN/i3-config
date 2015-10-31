@@ -24,8 +24,8 @@ default_color 35A1D7
 default_shade_color black
 default_outline_color white
 alignment top_right
-gap_x 10
-gap_y 80
+gap_x 20
+gap_y 70
 no_buffers yes
 cpu_avg_samples 2
 net_avg_samples 2
@@ -34,12 +34,13 @@ use_spacer yes
 
 maximum_width 350
 
-lua_load ~/a
-lua_draw_hook_post main
+#lua_load ~/.i3/file_lua_nha
+#lua_draw_hook_post main
 
 TEXT
 #leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
-${alignr}${offset -52} ${font DejaVu Sans Mono:pixelsize=16}${nodename}──┐
+
+${color \0xff0000}${alignr}${offset -52} ${font DejaVu Sans Mono:pixelsize=16}${nodename}${color}──┐
 ${alignr}${offset 25}$font  │  
 ${alignr}${sysname} -─┤  
 ${alignr}$font < ${kernel} > kernel -─┤    │  
