@@ -67,7 +67,7 @@ TEXT
     },
     {
         "full_text" : "${cpu}%", 
-	"color"	    : ${if_match ${cpu}>80}"\#ff0000"${else}"\#EECC00"${endif}
+	"color"	    : ${if_match ${cpu}>80}"\#ff0000"${else}"\#FFAD00"${endif}
 
     },
     {
@@ -77,7 +77,7 @@ TEXT
     {
         "icon"      : "$HOME/.i3/xbmicons/mem.xbm",
 	"full_text" : "${mem} (${memperc}%)",
-        "color"     : ${if_match ${memperc}>80}"\#ff0000"${else}"\#EECC00"${endif}
+        "color"     : ${if_match ${memperc}>80}"\#ff0000"${else}"\#FFAD00"${endif}
     },
     {
         "full_text" : " ${time %A %d %b} ${time %R}",

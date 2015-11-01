@@ -30,6 +30,7 @@ font pango:DejaVu Sans Mono 8
 # clear in small sizes. However, its unicode glyph coverage is limited, the old
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
+hide_edge_borders both
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -115,7 +116,6 @@ bindsym $mod+6 workspace $tag6
 bindsym $mod+7 workspace $tag7
 bindsym $mod+8 workspace $tag8
 bindsym $mod+9 workspace $tag9
-bindsym $mod+0 workspace $tag10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $tag1
@@ -127,7 +127,6 @@ bindsym $mod+Shift+6 move container to workspace $tag6
 bindsym $mod+Shift+7 move container to workspace $tag7
 bindsym $mod+Shift+8 move container to workspace $tag8
 bindsym $mod+Shift+9 move container to workspace $tag9
-bindsym $mod+Shift+0 move container to workspace $tag10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -171,10 +170,11 @@ bar {
 	i3bar_command /usr/bin/i3bar
 	status_command /opt/bin/conky-i3bar
 	tray_output LVDS1
+#	tray_output primary
 	position top
 	colors {
-                background #000000
-                separator #000000
+                background #111111
+                separator #111111
                 statusline #666666
                 focused_workspace  #AAAAAA #000000 #DDDDDD
                 active_workspace   #000000 #808080 #336633
@@ -183,9 +183,10 @@ bar {
 }
 # Start application
 #exec --no-startup-id nm-applet
+#exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id feh --bg-fill /opt/background/abstractsdark6.png
 exec --no-startup-id conky -d -c ~/.i3/conkybg
-exec --no-startup-id gnome-settings-daemon
+exec --no-startup-id /opt/bin/xinput-fix
 exec --no-startup-id ibus-daemon -d -R
 
 # Capture
@@ -205,8 +206,10 @@ bindsym XF86PowerOff exec systemctl suspend
 #bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
-bindsym XF86AudioPlay exec rhythmbox-client --play-pause
-bindsym XF86AudioPause exec rhythmbox-client --play-pause
-bindsym XF86AudioNext exec rhythmbox-client --next
-bindsym XF86AudioPrev exec  rhythmbox-client --previous
+#bindsym XF86AudioPlay exec rhythmbox-client --play-pause
+#bindsym XF86AudioPause exec rhythmbox-client --play-pause
+#bindsym XF86AudioNext exec rhythmbox-client --next
+#bindsym XF86AudioPrev exec  rhythmbox-client --previous
 
+focus_follows_mouse no
+#workspace_auto_back_and_forth yes
