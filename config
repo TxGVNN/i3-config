@@ -184,7 +184,28 @@ bar {
                 inactive_workspace #606060 #808080 #000000
         }
 }
-# Start application
+# theme wm
+# set color
+set $bg     #2c2c2e
+set $fg     #9f9f9f
+set $hi     #efef8f
+set $ac     #007DA2
+set $tx     #f9f9f9
+set $ia     #8f8f8f
+set $be     #8faf9f
+set $yw     #f8f893
+set $gn     #88b090
+set $rd     #e89393
+set $id     #666666
+set $ce     #ceecee
+
+# set some nice colors      border  background  text    indicator
+client.focused              $id     $ac         $tx     $id
+client.unfocused            $bg     $bg         $ia     $id
+client.focused_inactive     $bg     $bg         $ac     $id
+#client.urgent               $yw     $yw         $tx     $id
+
+# start application
 #exec --no-startup-id nm-applet
 #exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id feh --bg-fill /opt/background/abstractsdark2.bmp
@@ -207,7 +228,6 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 
 # Touchpad controls
 bindsym XF86PowerOff exec systemctl suspend
-#bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
 #bindsym XF86AudioPlay exec rhythmbox-client --play-pause
