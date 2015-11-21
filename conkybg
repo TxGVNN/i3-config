@@ -82,7 +82,7 @@ ${alignr}$font < ${fs_used /}/${fs_size /} > /    -─┤    │
 ${alignr}$font < ${fs_bar 5,120 /} > -─┘    │    │  
 ${alignr}$font < ${fs_used /home/}/${fs_size /home/} > /home-─┤    │  
 ${alignr}$font < ${fs_bar 5,120 /home/} > -─┘    │    │  
-${alignr}$font < ${fs_used /var/}/${fs_size /var/} > /var-─┤    │  
+${alignr}$font < ${fs_used /var/}/${fs_size /var/} > /var -─┤    │  
 ${alignr}$font < ${fs_bar 5,120 /var/} > -─┘    │    │  
 ${alignr}$font < $swapperc% - $swap/$swapmax > swap -─┘    │  
 ${alignr}$font < ${swapbar 5,120} > -─┘         │  

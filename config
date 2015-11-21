@@ -12,6 +12,9 @@ set $tag3 "3: G"
 set $tag4 "4: V"
 set $tag5 "5: N"
 set $tag6 "6: N"
+set $tag7 "7: Seven"
+set $tag8 "8: Eight"
+set $tag9 "9: Nice"
 
 # i3 config file (v4)
 #
@@ -184,13 +187,14 @@ bar {
 # Start application
 #exec --no-startup-id nm-applet
 #exec --no-startup-id gnome-settings-daemon
-exec --no-startup-id feh --bg-fill /opt/background/abstractsdark6.png
+exec --no-startup-id feh --bg-fill /opt/background/abstractsdark2.bmp
 exec --no-startup-id conky -d -c ~/.i3/conkybg
 exec --no-startup-id /opt/bin/xinput-fix
-exec --no-startup-id ibus-daemon -d -R
+exec --no-startup-id ibus-daemon  --xim -d
+#exec --no-startup-id wicd-gtk 
 
 # Capture
-bindsym Print exec scrot 'scrot_%Y-%m-%d-%T_$wx$h.png' #-e 'mv $f ~/Pictures/screenshots/'
+bindsym Print exec scrot 'scrot_%Y-%m-%d-%T_$wx$h.png' -e 'mv $f ~/Pictures/'
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 -- +5% #increase sound volume
@@ -213,3 +217,4 @@ bindsym XF86PowerOff exec systemctl suspend
 
 focus_follows_mouse no
 #workspace_auto_back_and_forth yes
+workspace $tag4 output VGA1
