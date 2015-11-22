@@ -136,8 +136,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exit
 # lock screen
 bindsym Mod1+Control+l exec i3lock -i /usr/share/images/desktop-base/debian-red.png
 # resize window (you can also use the mouse for that)
@@ -189,8 +189,8 @@ bar {
 set $bg     #2c2c2e
 set $fg     #9f9f9f
 set $hi     #efef8f
-set $ac     #007DA2
-set $tx     #f9f9f9
+set $ac     #225577
+set $tx     #f1f1f1
 set $ia     #8f8f8f
 set $be     #8faf9f
 set $yw     #f8f893
@@ -200,7 +200,7 @@ set $id     #666666
 set $ce     #ceecee
 
 # set some nice colors      border  background  text    indicator
-client.focused              $id     $ac         $tx     $id
+client.focused              $id     $ac        $tx     $id
 client.unfocused            $bg     $bg         $ia     $id
 client.focused_inactive     $bg     $bg         $ac     $id
 #client.urgent               $yw     $yw         $tx     $id
@@ -235,6 +235,12 @@ bindsym XF86PowerOff exec systemctl suspend
 #bindsym XF86AudioNext exec rhythmbox-client --next
 #bindsym XF86AudioPrev exec  rhythmbox-client --previous
 
+# shortcut application
+bindsym Mod1+Control+g exec google-chrome
+
 focus_follows_mouse no
 #workspace_auto_back_and_forth yes
+
+# screen display
 workspace $tag4 output VGA1
+
