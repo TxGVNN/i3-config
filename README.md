@@ -1,2 +1,2 @@
-# config
-file config linux
+# i3 config
+File config for i3wm
