@@ -212,6 +212,8 @@ exec --no-startup-id feh --bg-fill /opt/background/abstractsdark2.bmp
 exec --no-startup-id conky -d -c ~/.i3/conkybg
 exec --no-startup-id /opt/bin/xinput-fix
 exec --no-startup-id ibus-daemon  --xim -d
+exec --no-startup-id xrdb -merge ~/.i3/Xresources 
+
 #exec --no-startup-id wicd-gtk 
 
 # Capture
@@ -243,4 +245,3 @@ focus_follows_mouse no
 
 # screen display
 workspace $tag4 output VGA1
-
