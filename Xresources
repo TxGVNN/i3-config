@@ -7,7 +7,7 @@
 ! URxvt*skipScroll:                     boolean
 ! URxvt*pastableTabs:                   boolean
 ! URxvt*scrollstyle:                    mode
-URxvt*scrollBar:                      false
+*scrollBar:                      false
 ! URxvt*scrollBar_right:                boolean
 ! URxvt*scrollBar_floating:             boolean
 ! URxvt*scrollBar_align:                mode
@@ -16,9 +16,9 @@ URxvt*scrollBar:                      false
 ! URxvt*scrollTtyKeypress:              boolean
 ! URxvt*scrollWithBuffer:               boolean
 ! URxvt*inheritPixmap:                  boolean
-URxvt*transparent:                    true
+*transparent:                    true
 ! URxvt*tintColor:                      color
-URxvt*shading:                        10
+*shading:                        10
 ! URxvt*blurRadius:                     HxV
 ! URxvt*fading:                         number
 ! URxvt*fadeColor:                      color
@@ -33,25 +33,25 @@ URxvt*shading:                        10
 ! URxvt*cursorUnderline:                boolean
 ! URxvt*cursorBlink:                    boolean
 ! URxvt*pointerBlank:                   boolean
-URxvt*background:                     rgba:1111/1111/1111/dddd
-URxvt*foreground:                     #ffffff
-URxvt*color0:                         #222222
-URxvt*color1:                         #cc0000
-URxvt*color2:                         #009933
-URxvt*color3:                         #ff6600
-URxvt*color4:                         #0066cc
-URxvt*color5:                         #993399
-URxvt*color6:                         #00b1b3
-URxvt*color7:                         #663200
+*background:                     #111111
+*foreground:                     #e0e0e0
+*color0:                         #222222
+*color1:                         #990000
+*color2:                         #009933
+*color3:                         #ff6600
+*color4:                         #0066cc
+*color5:                         #993399
+*color6:                         #00b1b3
+*color7:                         #ffccff
 ! bold
-URxvt*color8:                         #808080
-URxvt*color9:                         #cc0000
-URxvt*color10:                         #009933
-URxvt*color11:                         #ff6600
-URxvt*color12:                         #0066cc
-URxvt*color13:                         #993399
-URxvt*color14:                         #00b1b3
-URxvt*color15:                         #663200
+*color8:                         #808080
+*color9:                         #aa0000
+*color10:                         #009933
+*color11:                         #ff6600
+*color12:                         #0066cc
+*color13:                         #993399
+*color14:                         #00b1b3
+*color15:                         #ffccff
 ! URxvt*colorBD:                        color
 ! URxvt*colorIT:                        color
 ! URxvt*colorUL:                        color
@@ -102,7 +102,7 @@ URxvt*depth:                         32
 ! URxvt*answerbackString:               string
 ! URxvt*secondaryScreen:                boolean
 ! URxvt*secondaryScroll:                boolean
-! URxvt*perl-lib:                       string
+URxvt*perl-lib:                       /usr/lib/urxvt/perl/
 ! URxvt*perl-eval:                      perl-eval
 ! URxvt*perl-ext-common:                string
 ! URxvt*perl-ext:                       string
@@ -114,7 +114,7 @@ URxvt*depth:                         32
 ! URxvt*background.expr:                string
 ! URxvt*background.interval:            seconds
 ! URxvt*bell-command:                   string
-! URxvt*matcher.button:                 string
+URxvt*matcher.button:                 1
 ! URxvt*matcher.launcher:               string
 ! URxvt*matcher.launcher.*:             string
 ! URxvt*matcher.pattern.*:              string
@@ -130,7 +130,7 @@ URxvt*depth:                         32
 ! URxvt*tab-fg:                         colour
 ! URxvt*tabbar-bg:                      colour
 ! URxvt*tabbar-fg:                      colour
-! URxvt*url-launcher:                   string
+URxvt*url-launcher:                   /usr/bin/google-chrome-stable
 ! Compile xft: Attempt to find a visual with the given bit depth; option -depth.
 ! URxvt*depth: bitdepth
 
@@ -364,7 +364,7 @@ URxvt*depth:                         32
 ! Compile frills: Associate string with keysym sym. The intervening resource name
 ! URxvt*keysym.sym: string
 
-URxvt*perl-ext-common: default,matcher
+URxvt*perl-ext-common: default,matcher,selection-to-clipboard
 
 ! Comma-separated list(s) of perl extension scripts (default: "default") to use in
 ! URxvt*perl-ext: string
