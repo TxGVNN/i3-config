@@ -18,7 +18,7 @@
 ! URxvt*inheritPixmap:                  boolean
 *transparent:                    true
 ! URxvt*tintColor:                      color
-*shading:                        10
+*shading:                        5
 ! URxvt*blurRadius:                     HxV
 ! URxvt*fading:                         number
 ! URxvt*fadeColor:                      color
@@ -33,25 +33,41 @@
 ! URxvt*cursorUnderline:                boolean
 ! URxvt*cursorBlink:                    boolean
 ! URxvt*pointerBlank:                   boolean
-*background:                     #111111
-*foreground:                     #e0e0e0
-*color0:                         #222222
-*color1:                         #990000
-*color2:                         #009933
-*color3:                         #ff6600
-*color4:                         #0066cc
-*color5:                         #993399
-*color6:                         #00b1b3
-*color7:                         #ffccff
-! bold
-*color8:                         #808080
-*color9:                         #aa0000
-*color10:                         #009933
-*color11:                         #ff6600
-*color12:                         #0066cc
-*color13:                         #993399
-*color14:                         #00b1b3
-*color15:                         #ffccff
+*background:                     #1f1f1f
+*foreground:                     #c0b18b
+
+!black
+*color0:                         #4A3637
+*color8:                         #4A3637
+
+!red
+*color1:                         #de6839
+*color9:                         #de6839
+
+!green
+*color2:                         #6d9f45
+*color10:                         #6d9f45
+
+!yellow
+*color3:                         #af865a
+*color11:                         #af865a
+
+!blue
+*color4:                         #535C5C
+*color12:                         #535C5C
+
+!magenta
+*color5:                         #775759
+*color13:                         #775759
+
+!cyan
+*color6:                         #5a715c
+*color14:                         #5a715c
+
+!white
+*color7:                         #c0b18b
+*color15:                         #c0b18b
+
 ! URxvt*colorBD:                        color
 ! URxvt*colorIT:                        color
 ! URxvt*colorUL:                        color
