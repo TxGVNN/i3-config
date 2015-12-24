@@ -1,2 +1,3 @@
 # i3 config
-File config for i3wm
+All file config for i3wm
+![screenfetch](http://i.imgur.com/2HuTCuq.png)
