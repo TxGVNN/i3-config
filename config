@@ -189,7 +189,7 @@ bar {
 set $bg     #2c2c2e
 set $fg     #9f9f9f
 set $hi     #efef8f
-set $ac     #225577
+set $ac     #5a715c
 set $tx     #f1f1f1
 set $ia     #8f8f8f
 set $be     #8faf9f
