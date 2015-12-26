@@ -51,6 +51,8 @@ bindsym $mod+Shift+q kill
 # installed.
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# Border toggle
+bindsym $mod+x border toggle
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
