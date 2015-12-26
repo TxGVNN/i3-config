@@ -171,9 +171,9 @@ bindsym $mod+r mode "resize"
 bar {
 #        status_command i3status -c ~/.i3/i3status.conf
 	i3bar_command /usr/bin/i3bar
-	status_command /opt/bin/conky-i3bar
-	tray_output LVDS1
-#	tray_output primary
+	status_command ~/.i3/conky-i3bar
+#	tray_output LVDS1
+	tray_output primary
 	position top
 	colors {
                 background #111111

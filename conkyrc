@@ -84,8 +84,8 @@ TEXT
         "color"     : "\#88ABC4"
     },
     {
-        "full_text" : "${exec /opt/bin/conky-audio}%",
-        "color"     : ${if_match ${exec /opt/bin/conky-audio}>95}"\#ff0000"${else}"\#88ABC4"${endif}
+        "full_text" : "${exec ~/.i3/conky-audio}%",
+        "color"     : ${if_match ${exec ~/.i3/conky-audio}>95}"\#ff0000"${else}"\#88ABC4"${endif}
     },
     {
         "full_text" : " ${battery_percent BAT1}%"  ,
