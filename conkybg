@@ -39,8 +39,8 @@ maximum_width 350
 
 TEXT
 #leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
-${image ~/.i3/logo.png -p 180,5}
-${color FFA500}${alignr}${offset -52}${font DejaVu Sans Mono:pixelsize=16}${nodename}${color}──┐
+${image ~/.i3/logo.png -p 85,6}
+${color c70036}${alignr}${offset -57}${font DejaVu Sans Mono:pixelsize=16}${nodename}${color} ──┐
 ${alignr}${offset 25}$font  │  
 ${alignr}${sysname} -─┤  
 ${alignr}$font < ${kernel} > kernel -─┤    │  
