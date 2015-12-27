@@ -198,7 +198,7 @@ set $be     #8faf9f
 set $yw     #f8f893
 set $gn     #88b090
 set $rd     #e89393
-set $id     #666666
+set $id     #444444
 set $ce     #ceecee
 
 # set some nice colors      border  background  text    indicator
@@ -215,7 +215,7 @@ exec --no-startup-id conky -d -c ~/.i3/conkybg
 exec --no-startup-id /opt/bin/xinput-fix
 exec --no-startup-id ibus-daemon  --xim -d
 exec --no-startup-id xrdb -merge ~/.i3/Xresources 
-
+exec --no-startup-id  xrandr --output LVDS1 --primary
 #exec --no-startup-id wicd-gtk 
 
 # Capture
@@ -242,9 +242,10 @@ bindsym XF86PowerOff exec systemctl suspend
 # shortcut application
 bindsym Mod1+Control+g exec google-chrome
 bindsym Mod1+Control+p exec gimp
+bindsym Mod1+Control+b exec iceweasel
 
 focus_follows_mouse no
 #workspace_auto_back_and_forth yes
 
 # screen display
-workspace $tag4 output VGA1
+#workspace $tag4 output VGA1
