@@ -39,8 +39,8 @@ maximum_width 350
 
 TEXT
 #leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
-
-${color \0xff0000}${alignr}${offset -52} ${font DejaVu Sans Mono:pixelsize=16}${nodename}${color}──┐
+${image ~/.i3/logo.png -p 180,5}
+${color FFA500}${alignr}${offset -52}${font DejaVu Sans Mono:pixelsize=16}${nodename}${color}──┐
 ${alignr}${offset 25}$font  │  
 ${alignr}${sysname} -─┤  
 ${alignr}$font < ${kernel} > kernel -─┤    │  
@@ -101,4 +101,3 @@ ${alignr}$font < ${upspeed wlan0}/s >   up -─┤
 ${alignr}$font < ${upspeedgraph wlan0 8,120 8b2132 fe8608} > -─┘    │       
 ${alignr}$font < ${downspeed wlan0}/s > down -─┘       
 ${alignr}${offset -60}$font < ${downspeedgraph wlan0 8,120 8b2132 fe8608} > -─┘
-
