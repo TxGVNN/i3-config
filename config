@@ -141,7 +141,7 @@ bindsym $mod+Shift+r restart
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+e exit
 # lock screen
-bindsym Mod1+Control+l exec i3lock -i /usr/share/images/desktop-base/debian-red.png
+bindsym Mod1+Control+l exec i3lock -i ~/.i3/lock.png
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -208,17 +208,15 @@ client.focused_inactive     $bg     $bg         $ac     $id
 #client.urgent               $yw     $yw         $tx     $id
 
 # start application
-#exec --no-startup-id nm-applet
-#exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id feh --bg-fill /opt/background/abstractsdark2.bmp
 exec --no-startup-id conky -d -c ~/.i3/conkybg
-exec --no-startup-id /opt/bin/xinput-fix
+exec --no-startup-id ~/.i3/xinput-fix
 exec --no-startup-id ibus-daemon  --xim -d
 exec --no-startup-id xrdb -merge ~/.i3/Xresources 
 exec --no-startup-id  xrandr --output LVDS1 --primary
 #exec --no-startup-id wicd-gtk 
 
-# Capture
+# Screenshot
 bindsym Print exec scrot 'scrot_%Y-%m-%d-%T_$wx$h.png' -e 'mv $f ~/Pictures/'
 
 # Pulse Audio controls
