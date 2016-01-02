@@ -1,0 +1,7 @@
+#/bin/sh
+#xinput set-prop 14 309 1 1 1 1 1 2 0
+#xinput set-prop 14 303 1 1 1
+xinput --set-prop "ETPS/2 Elantech Touchpad" "Synaptics Tap Action" 1 1 1 1  1 2 0
+xinput --set-prop "ETPS/2 Elantech Touchpad" "Synaptics Edge Scrolling" 1 1 1
+
+
