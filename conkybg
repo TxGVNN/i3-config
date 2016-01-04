@@ -1,7 +1,7 @@
 # this file goes in ~
 # source from here http://dotshare.it/dots/471/
 
-background no
+background yes
 use_xft yes
 xftfont monospace:pixelsize=9
 xftalpha 0.8
@@ -15,7 +15,7 @@ own_window_type override
 double_buffer yes
 draw_shades no
 draw_outline n
-draw_borders noo
+draw_borders no
 draw_graph_borders yes
 stippled_borders 0
 border_margin 4
@@ -31,7 +31,6 @@ cpu_avg_samples 2
 net_avg_samples 2
 override_utf8_locale yes
 use_spacer yes
-
 maximum_width 350
 
 #lua_load ~/.i3/file_lua_nha
