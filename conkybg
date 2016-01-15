@@ -1,6 +1,3 @@
-# this file goes in ~
-# source from here http://dotshare.it/dots/471/
-
 background yes
 use_xft yes
 xftfont monospace:pixelsize=9
