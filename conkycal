@@ -1,0 +1,68 @@
+total_run_times 0
+background yes
+
+cpu_avg_samples 1
+net_avg_samples 2
+
+double_buffer yes
+no_buffers yes
+text_buffer_size 1024
+
+out_to_console no
+update_interval 1
+
+alignment top_left
+
+minimum_size 270 10
+maximum_width 270
+
+gap_x 10
+gap_y 30
+
+draw_shades no
+draw_outline no
+draw_borders no
+border_width 1
+border_inner_margin 1
+
+own_window yes
+own_window_type override
+own_window_transparent yes
+
+
+use_xft yes
+xftalpha .1
+override_utf8_locale yes
+uppercase no
+use_spacer right
+
+xftfont saxMono:size=9
+
+default_bar_size 82 3
+stippled_borders 3
+
+
+default_color FFFFFF
+default_shade_color 333333
+default_outline_color 000000
+
+short_units yes
+pad_percents 2
+
+# Lua Script
+lua_load ~/.i3/clock.lua
+lua_draw_hook_pre clock_rings
+
+color2 00aaff
+color3 00aaff
+color4 ff0000
+
+TEXT
+${offset 56}${voffset 3}${cpugraph cpu6 17,1}${voffset -1}${cpugraph cpu1 0,50}
+${voffset -30}${offset 110}${font Digital\-7:size=12}${time %H:%M:%S}${font}${alignr}
+${voffset -5}${offset 110}${hr}${voffset 2}
+${font Nimbus Mono L:size=9}${voffset -15}
+${execp cal | cat -e|  sed 's/\$/ /g ;s/_^H./\${color2}'"$(date +%e)"'${color1}/1; s/_^H.//g; s/^/\${goto 120}/g'} ${voffset -84}
+
+${voffset 68}${offset 56}${stippled_hr}${voffset -27}
+${voffset 0}${offset 56}${cpugraph cpu6 17,1}${color1}
