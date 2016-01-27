@@ -210,7 +210,6 @@ client.focused_inactive     $bg     $bg         $ac     $id
 # start application
 exec --no-startup-id feh --bg-fill /opt/share/background/abstractsdark.bmp
 exec --no-startup-id conky -d -c ~/.i3/conkybg
-exec --no-startup-id conky -d -c ~/.i3/conkycal
 exec --no-startup-id ~/.i3/xinput-fix
 exec --no-startup-id ibus-daemon  --xim -d
 exec --no-startup-id xrdb -merge ~/.i3/Xresources
