@@ -59,7 +59,7 @@ ${voffset -5}${offset 110}${hr}${voffset 2}
 ${font Nimbus Mono L:size=9}${voffset -15}
 ${execp cal | cat -e|  sed 's/\$/ /g ;s/_^H./\${color2}'"$(date +%e)"'${color}/1; s/_^H.//g; s/^/\${goto 120}/g'} ${voffset -84}
 
-${voffset 73}${offset 56}${stippled_hr}${voffset -27}
+${color1}${voffset 73}${offset 56}${stippled_hr}${voffset -27}
 ${voffset 0}${offset 56}${cpugraph cpu6 17,1}${color1}
 
 #leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
