@@ -7,7 +7,7 @@ All file config for i3 window manager
 git clone https://github.com/TxGVNN/i3-config.git ~/.i3
 ```
 ## screenshot
-![screenfetch](http://i.imgur.com/2HuTCuq.png)
+![screenfetch](http://i.imgur.com/S2WVk6X.png)
 ## packages
 ``conky xbacklight xinput pavucontrol wicd
 ``
