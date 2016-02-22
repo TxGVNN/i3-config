@@ -1,7 +1,8 @@
 i3 config
 =========
-All file config for i3 window manager
+All file config for i3 window manager.
 
+I use Debian GNU/Linux.
 ## how to use
 ```
 git clone https://github.com/TxGVNN/i3-config.git ~/.i3
