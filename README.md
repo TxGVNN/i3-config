@@ -19,8 +19,8 @@ git clone https://github.com/TxGVNN/i3-config.git ~/.i3
 ## bugs
 - icons not show?
 
-install font-awesome package.
+      install font-awesome package.
 
-on Debian:
-```apt-get install fonts-font-awesome```
+      on Debian:
+      ```apt-get install fonts-font-awesome```
 
