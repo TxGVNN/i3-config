@@ -14,5 +14,13 @@ git clone https://github.com/TxGVNN/i3-config.git ~/.i3
 - v1.0
 ![screenfetch](http://i.imgur.com/S2WVk6X.png)
 ## packages
-``conky xbacklight xinput pavucontrol wicd
+``conky lua xbacklight xinput pavucontrol wicd
 ``
+## bugs
+- icons not show?
+
+install font-awesome package.
+
+on Debian:
+```apt-get install fonts-font-awesome```
+
