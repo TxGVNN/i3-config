@@ -14,7 +14,7 @@ git clone https://github.com/TxGVNN/i3-config.git ~/.i3
 - v1.0
 ![screenfetch](http://i.imgur.com/S2WVk6X.png)
 ## packages
-``conky lua xbacklight xinput pavucontrol wicd
+``conky lua rxvt-unicode xbacklight xinput pavucontrol wicd ranger clementine icedove iceweasel
 ``
 ## bugs
 - icons not show?
