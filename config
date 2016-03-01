@@ -233,21 +233,25 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 bindsym XF86PowerOff exec systemctl suspend
 
 # Media player controls
-bindsym XF86AudioPlay exec clementine --play
+bindsym XF86AudioPlay exec clementine --play-pause
 bindsym XF86AudioPause exec clementine --play-pause
 bindsym XF86AudioNext exec clementine --next
 bindsym XF86AudioPrev exec  clementine --previous
 
 ## shortcut application
+#email
+bindsym Mod1+Control+e exec icedove
 #browser
-bindsym Mod1+Control+g exec google-chrome 
 bindsym Mod1+Control+b exec iceweasel
+bindsym Mod1+Control+g exec chromium
 #paint
 bindsym Mod1+Control+p exec gimp
 #music
 bindsym Mod1+Control+m exec clementine
 #explore
 bindsym Mod1+Control+r exec /usr/bin/rxvt -e ranger
+#skype
+bindsym Mod1+Control+s exec skype
 
 
 
