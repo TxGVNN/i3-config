@@ -88,7 +88,7 @@ TEXT
         "color"     : ${if_match ${exec ~/.i3/conky-audio}>95}"\#ff0000"${else}"\#88ABC4"${endif}
     },
     {
-        "full_text" : " ${battery_percent BAT1}%"  ,
+        "full_text" : "${if_match ${exec ~/.i3/battery }>0}${else}${endif}${battery_percent BAT1}%",
         "color"     : ${if_match ${battery_percent BAT1}<15}"\#ff0000"${else}"\#88ABC4"${endif}
     }
 ],
