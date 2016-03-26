@@ -1,0 +1,12 @@
+vbell off
+autodetach on
+startup_message off
+utf8 on
+term screen-256color
+terminfo rxvt-256color 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defscrollback 10000
+# add backtick printer functions
+#hardstatus alwayslastline "%{= d}%{r}%{k}%{r}%{k}${USER}%{k}@%{k}%H: %L>%1`%? %?%{.g}%u%? %-18=%?%{m} %{k}%-=%{k}%-w%{r}%n %t%{k}%+w %{k}|%C"
+#hardstatus alwayslastline '%{= m}Load Avg:%{= G} %l %= %{= w}%-w%{+b r}%n:%t%{-b r}%{w}%+w %= %{b}%D %d/%m/%Y %{Y}%c'
+#hardstatus string '%{= m}Load Avg:%{= G} %l %= %{= w}%-w%{+b r}%n:%t%{-b r}%{w}%+w %= %{b}%D %d/%m/%Y %{Y}%c'
+hardstatus alwayslastline "%{= d}%{r}screen %L>%1`%? %?%{.g}%u%? %-18=%?%{m} %{k}%-=%{k}%-w%{+b r}%n %t%{k}%+w %{k}"
