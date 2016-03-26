@@ -140,7 +140,14 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exit
+#bindsym $mod+Shift+e exit
+mode "exit i3?" {
+    bindsym Return exec --no-startup-id i3-msg exit, mode "default"
+    # exit system mode: "Enter" or "Escape"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+e mode "exit i3?"
+
 # lock screen
 bindsym Mod1+Control+l exec ~/.i3/i3lock.sh
 # resize window (you can also use the mouse for that)
@@ -175,6 +182,7 @@ bar {
 #        status_command i3status -c ~/.i3/i3status.conf
 	i3bar_command /usr/bin/i3bar
 	status_command ~/.i3/conky-i3bar
+#	i3bar_command ~./.i3/lemonbar/i3_lemonbar.sh
 #	tray_output LVDS1
 	tray_output primary
 	position top
@@ -185,6 +193,7 @@ bar {
                 focused_workspace  #AAAAAA #000000 #DDDDDD
                 active_workspace   #000000 #808080 #336633
                 inactive_workspace #606060 #808080 #000000
+		urgent_workspace   #000000 #AA1100 #0033AA
         }
 }
 # theme wm
@@ -253,9 +262,7 @@ bindsym Mod1+Control+r exec /usr/bin/rxvt -e ranger
 #skype
 bindsym Mod1+Control+s exec skype
 
-
-
 #workspace_auto_back_and_forth yes
 
-# screen display
+#screen display
 #workspace $tag4 output VGA1
