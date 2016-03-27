@@ -9,4 +9,4 @@ defscrollback 10000
 #hardstatus alwayslastline "%{= d}%{r}%{k}%{r}%{k}${USER}%{k}@%{k}%H: %L>%1`%? %?%{.g}%u%? %-18=%?%{m} %{k}%-=%{k}%-w%{r}%n %t%{k}%+w %{k}|%C"
 #hardstatus alwayslastline '%{= m}Load Avg:%{= G} %l %= %{= w}%-w%{+b r}%n:%t%{-b r}%{w}%+w %= %{b}%D %d/%m/%Y %{Y}%c'
 #hardstatus string '%{= m}Load Avg:%{= G} %l %= %{= w}%-w%{+b r}%n:%t%{-b r}%{w}%+w %= %{b}%D %d/%m/%Y %{Y}%c'
-hardstatus alwayslastline "%{= d}%{r}screen %L>%1`%? %?%{.g}%u%? %-18=%?%{m} %{k}%-=%{k}%-w%{+b r}%n %t%{k}%+w %{k}"
+hardstatus alwayslastline "%{= d}%{g}...%L>%1`%? %?%{.g}%u%? %-18=%?%{m} %{k}%-=%{k}%-w%{+b r}%n %t%{k}%+w %{k}"

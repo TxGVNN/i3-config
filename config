@@ -193,7 +193,7 @@ bar {
                 focused_workspace  #AAAAAA #000000 #DDDDDD
                 active_workspace   #000000 #808080 #336633
                 inactive_workspace #606060 #808080 #000000
-		urgent_workspace   #000000 #AA1100 #0033AA
+		urgent_workspace   #808080 #AA1100 #999999
         }
 }
 # theme wm
