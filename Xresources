@@ -37,8 +37,8 @@
 *foreground:                     #c0b18b
 
 !black
-*color0:                         #4A3637
-*color8:                         #4A3637
+*color0:                         #4A3535
+*color8:                         #4A3535
 
 !red
 *color1:                         #de6839
@@ -57,8 +57,8 @@
 *color12:                         #535C5C
 
 !magenta
-*color5:                         #775770
-*color13:                         #775770
+*color5:                         #775555
+*color13:                         #775555
 
 !cyan
 *color6:                         #5a715c
