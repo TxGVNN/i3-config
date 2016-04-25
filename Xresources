@@ -33,8 +33,8 @@
 ! URxvt*cursorUnderline:                boolean
 ! URxvt*cursorBlink:                    boolean
 ! URxvt*pointerBlank:                   boolean
-*background:                     #1f1f1f
-*foreground:                     #c0b18b
+URxvt*background:                     #1f1f1f
+URxvt*foreground:                     #c0b18b
 
 !black
 *color0:                         #4A3535
