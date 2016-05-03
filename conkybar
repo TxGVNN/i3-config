@@ -40,12 +40,10 @@ TEXT
 [
 
 #    {
-#        "icon"      : "$HOME/.i3/xbmicons/hdd.xbm",
 #        "full_text" : " ${fs_used_perc /}%",
 #        "color"     : ${if_match ${fs_used_perc /}>90}"\#ff0000"${else}"\#88ABC4"${endif}
 #    },
 #    {
-#        "icon"      : "$HOME/.i3/xbmicons/temp.xbm",
 #        "full_text" : "${acpitemp}°C",
 #        "color"     : ${if_match ${acpitemp}>55}"\#ff0000"${else}"\#88ABC4"${endif}
 #    },
@@ -75,20 +73,19 @@ TEXT
 	"color"     : "\#f3f3f3"
     },
     {
-        "icon"      : "$HOME/.i3/xbmicons/mem.xbm",
 	"full_text" : "${mem} (${memperc}%)",
         "color"     : ${if_match ${memperc}>80}"\#ff0000"${else}"\#FFAD00"${endif}
     },
     {
+        "full_text" : "${exec ~/.i3/bin/conky-audio}%",
+        "color"     : ${if_match ${exec ~/.i3/bin/conky-audio}>95}"\#ff0000"${else}"\#88ABC4"${endif}
+    },
+    {
+        "full_text" : "${if_match ${exec ~/.i3/bin/battery }>0}${else}${endif}${battery_percent BAT1}%",
+        "color"     : ${if_match ${battery_percent BAT1}<15}"\#ff0000"${else}"\#88ABC4"${endif}
+    },
+    {
         "full_text" : " ${time %A %d %b} ${time %R}",
         "color"     : "\#88ABC4"
-    },
-    {
-        "full_text" : "${exec ~/.i3/conky-audio}%",
-        "color"     : ${if_match ${exec ~/.i3/conky-audio}>95}"\#ff0000"${else}"\#88ABC4"${endif}
-    },
-    {
-        "full_text" : "${if_match ${exec ~/.i3/battery }>0}${else}${endif}${battery_percent BAT1}%",
-        "color"     : ${if_match ${battery_percent BAT1}<15}"\#ff0000"${else}"\#88ABC4"${endif}
     }
 ],
