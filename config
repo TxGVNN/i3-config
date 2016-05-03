@@ -149,7 +149,7 @@ mode "exit i3?" {
 bindsym $mod+Shift+e mode "exit i3?"
 
 # lock screen
-bindsym Mod1+Control+l exec ~/.i3/i3lock.sh
+bindsym Mod1+Control+l exec ~/.i3/bin/i3lock.sh
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -181,7 +181,7 @@ bindsym $mod+r mode "resize"
 bar {
 	i3bar_command /usr/bin/i3bar
 #	status_command i3status -c ~/.i3/i3status.conf
-	status_command ~/.i3/conky-i3bar
+	status_command ~/.i3/bin/conky-i3bar
 #	i3bar_command ~./.i3/lemonbar/i3_lemonbar.sh
 #	tray_output LVDS1
 	tray_output primary
@@ -220,7 +220,7 @@ client.focused_inactive     $bg     $bg         $ac     $id
 # start application
 exec --no-startup-id feh --bg-fill /opt/share/background/abstractsdark.bmp
 exec --no-startup-id conky -d -c ~/.i3/conkybg
-exec --no-startup-id ~/.i3/xinput-fix
+exec --no-startup-id ~/.i3/bin/xinput-fix
 exec --no-startup-id ibus-daemon  --xim -d
 exec --no-startup-id xrandr --output LVDS1 --primary
 #exec --no-startup-id wicd-gtk
