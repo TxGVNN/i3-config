@@ -26,7 +26,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 7
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -187,9 +187,9 @@ bar {
 	tray_output primary
 	position top
 	colors {
-                background #111111
-                separator #111111
-                statusline #666666
+                background #202020
+                separator #202020
+                statusline #ffffff
                 focused_workspace  #AAAAAA #000000 #DDDDDD
                 active_workspace   #000000 #808080 #336633
                 inactive_workspace #606060 #808080 #000000

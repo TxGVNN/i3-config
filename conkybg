@@ -49,7 +49,7 @@ pad_percents 2
 lua_load ~/.i3/clock.lua
 lua_draw_hook_pre clock_rings
 
-color1 35A1D7
+color1 4ca0be
 color2 00ffff
 
 TEXT

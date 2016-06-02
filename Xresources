@@ -35,6 +35,9 @@
 ! URxvt*pointerBlank:                   boolean
 URxvt*background:                     #1f1f1f
 URxvt*foreground:                     #c0b18b
+xterm*background:                     #1f1f1f
+xterm*foreground:                     #c0b18b
+
 
 !black
 *color0:                         #4A3535
