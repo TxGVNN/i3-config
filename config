@@ -186,6 +186,7 @@ bar {
 #	tray_output LVDS1
 	tray_output primary
 	position top
+#	font pango:Terminus 8
 	colors {
                 background #202020
                 separator #202020
