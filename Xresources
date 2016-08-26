@@ -12,7 +12,7 @@
 ! URxvt*scrollBar_floating:             boolean
 ! URxvt*scrollBar_align:                mode
 ! URxvt*thickness:                      number
-! URxvt*scrollTtyOutput:                boolean
+URxvt*scrollTtyOutput:               false 
 ! URxvt*scrollTtyKeypress:              boolean
 ! URxvt*scrollWithBuffer:               boolean
 ! URxvt*inheritPixmap:                  boolean
@@ -33,6 +33,8 @@
 ! URxvt*cursorUnderline:                boolean
 ! URxvt*cursorBlink:                    boolean
 ! URxvt*pointerBlank:                   boolean
+URxvt.keysym.Control-0x2b: perl:font-size:increase
+URxvt.keysym.Control-0x2d: perl:font-size:decrease
 URxvt*background:                     #1f1f1f
 URxvt*foreground:                     #c0b18b
 xterm*background:                     #1f1f1f
@@ -99,7 +101,7 @@ URxvt*font:                           xft:Mono:pixelsize=12
 ! URxvt*imFont:                         fontname
 URxvt*title:                          test@Debian
 ! URxvt*iconName:                       string
-! URxvt*saveLines:                      number
+URxvt*saveLines:                      -1
 ! URxvt*buffered:                       boolean
 URxvt*depth:                         32
 ! URxvt*visual:                         number
@@ -109,7 +111,7 @@ URxvt*depth:                         32
 ! URxvt*externalBorder:                 number
 ! URxvt*internalBorder:                 number
 ! URxvt*borderLess:                     boolean
-! URxvt*lineSpace:                      number
+URxvt*lineSpace:                      -1
 ! URxvt*letterSpace:                    number
 ! URxvt*skipBuiltinGlyphs:              boolean
 ! URxvt*pointerBlankDelay:              number
@@ -123,7 +125,7 @@ URxvt*depth:                         32
 ! URxvt*secondaryScroll:                boolean
 URxvt*perl-lib:                       /usr/lib/urxvt/perl/
 ! URxvt*perl-eval:                      perl-eval
-! URxvt*perl-ext-common:                string
+URxvt*perl-ext-common:               default,matcher,selection-to-clipboard,font-size 
 ! URxvt*perl-ext:                       string
 ! URxvt*iso14755:                       boolean
 ! URxvt*iso14755_52:                    boolean
@@ -133,7 +135,7 @@ URxvt*perl-lib:                       /usr/lib/urxvt/perl/
 ! URxvt*background.expr:                string
 ! URxvt*background.interval:            seconds
 ! URxvt*bell-command:                   string
-URxvt*matcher.button:                 1
+URxvt*matcher.button:                 c1
 ! URxvt*matcher.launcher:               string
 ! URxvt*matcher.launcher.*:             string
 ! URxvt*matcher.pattern.*:              string
@@ -383,7 +385,7 @@ URxvt*url-launcher:                   /usr/bin/x-www-browser
 ! Compile frills: Associate string with keysym sym. The intervening resource name
 ! URxvt*keysym.sym: string
 
-URxvt*perl-ext-common: default,matcher,selection-to-clipboard
+! URxvt*perl-ext-common: default,matcher,selection-to-clipboard,font-size
 
 ! Comma-separated list(s) of perl extension scripts (default: "default") to use in
 ! URxvt*perl-ext: string
