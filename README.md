@@ -14,7 +14,7 @@ git clone https://github.com/TxGVNN/i3-config.git ~/.i3
 - v1.0
 ![screenfetch](http://i.imgur.com/S2WVk6X.png)
 ## packages
-``xinit xbacklight xinput feh scrot conky lua rxvt-unicode pavucontrol wicd ranger clementine icedove iceweasel
+``xinit xbacklight xinput feh scrot conky lua rxvt-unicode pavucontrol wicd ranger clementine icedove iceweasel alsa-utils acpi
 ``
 ## bugs
 - icons not show?
