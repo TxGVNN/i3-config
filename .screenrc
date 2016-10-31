@@ -10,3 +10,11 @@ defscrollback 10000
 #hardstatus alwayslastline '%{= m}Load Avg:%{= G} %l %= %{= w}%-w%{+b r}%n:%t%{-b r}%{w}%+w %= %{b}%D %d/%m/%Y %{Y}%c'
 #hardstatus string '%{= m}Load Avg:%{= G} %l %= %{= w}%-w%{+b r}%n:%t%{-b r}%{w}%+w %= %{b}%D %d/%m/%Y %{Y}%c'
 hardstatus alwayslastline "%{= d}%{g}...%L>%1`%? %?%{.g}%u%? %-18=%?%{m} %{k}%-=%{k}%-w%{+b r}%n %t%{k}%+w %{k}"
+bind = resize =
+bind + resize +5
+bind - resize -5
+bind _ resize max
+bindkey "^[k" eval "copy" "stuff ^b"  # enter copy mode and move up one page
+bindkey "^k" eval "copy" "stuff k"    # enter copy mode and move up one line
+bindkey -m "^[k" stuff ^b             # move up one page
+bindkey -m "^k" stuff k               # move up one line
