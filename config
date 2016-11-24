@@ -147,7 +147,9 @@ mode "exit i3?" {
     bindsym Escape mode "default"
 }
 bindsym $mod+Shift+e mode "exit i3?"
-
+#scratchpad
+bindsym $mod+minus scratchpad show
+bindsym $mod+Shift+minus move scratchpad
 # lock screen
 bindsym Mod1+Control+l exec ~/.i3/bin/i3lock.sh
 # resize window (you can also use the mouse for that)
@@ -255,8 +257,8 @@ bindsym Mod1+Control+e exec icedove
 bindsym Mod1+Control+k exec keepassx
 #browser
 bindsym Mod1+Control+b exec iceweasel
-bindsym Mod1+Control+g exec chromium
-bindsym Mod1+Control+Shift+g exec chromium --incognito
+bindsym Mod1+Control+g exec getchromium
+bindsym Mod1+Control+Shift+g exec getchromium incognito
 #paint
 bindsym Mod1+Control+p exec gimp
 #music

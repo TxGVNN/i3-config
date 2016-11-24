@@ -415,7 +415,8 @@ URxvt*url-launcher:                   /usr/bin/x-www-browser
 ! URxvt*override-redirect: boolean
 
 ! Turn on/off ISO 14755 (default enabled).
-! URxvt*iso14755: boolean
+URxvt*iso14755: false
 
 ! Turn on/off ISO 14755 5.2 mode (default enabled).
-! URxvt*iso14755_52: boolean
+URxvt*iso14755_52: false
+
