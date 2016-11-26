@@ -9,7 +9,7 @@ git clone https://github.com/TxGVNN/i3-config.git ~/.i3
 ```
 ## screenshots
 - master
-![screenfetch](http://i.imgur.com/QymYLPX.png)
+![screenfetch](http://i.imgur.com/F8Qj4QM.png)
 
 - v1.0
 ![screenfetch](http://i.imgur.com/S2WVk6X.png)
