@@ -48,44 +48,43 @@ TEXT
 #        "color"     : ${if_match ${acpitemp}>55}"\#ff0000"${else}"\#88ABC4"${endif}
 #    },
     {
-        "full_text" : " ${wireless_essid wlan0} (${addr wlan0})",
+        "full_text" : "\uF1EB ${wireless_essid wlan0} (${addr wlan0})",
         "color"     : "\#88ABC4"
     },
     {
-        "full_text" : " ${downspeed wlan0}/s",
-        "color"     : "\#88ABC4"
+        "full_text" : "\uF0ED ${downspeed wlan0}/s",
+        "color"     : "\#00A0A0"
     },
     {
-        "full_text" : " ${upspeed wlan0}/s",
-        "color"     : "\#88ABC4"
+        "full_text" : "\uF0EE ${upspeed wlan0}/s",
+        "color"     : "\#00A0A0"
     },
+#    {
+#		"full_text" : "CPU:",
+#		"color"     : "\#ffffff"
+#    },
     {
-	"full_text" : "CPU:",
-	"color"     : "\#ffffff"
+        "full_text" : "\uF0E4 ${cpu}%", 
+		"color"	    : ${if_match ${cpu}>80}"\#ff0000"${else}"\#FFAD00"${endif}
     },
+#    {
+#		"full_text" : "RAM:",
+#		"color"     : "\#f3f3f3"
+#    },
     {
-        "full_text" : "${cpu}%", 
-	"color"	    : ${if_match ${cpu}>80}"\#ff0000"${else}"\#FFAD00"${endif}
-
-    },
-    {
-	"full_text" : "RAM:",
-	"color"     : "\#f3f3f3"
-    },
-    {
-	"full_text" : "${mem} (${memperc}%)",
+		"full_text" : "\uF0AE ${mem} (${memperc}%)",
         "color"     : ${if_match ${memperc}>80}"\#ff0000"${else}"\#FFAD00"${endif}
     },
     {
-        "full_text" : "${exec ~/.i3/bin/conky-audio}%",
+        "full_text" : "\uF0A1 ${exec ~/.i3/bin/conky-audio}%",
         "color"     : ${if_match ${exec ~/.i3/bin/conky-audio}>95}"\#ff0000"${else}"\#88ABC4"${endif}
     },
     {
-        "full_text" : "${if_match ${exec ~/.i3/bin/battery }>0}${else}${endif}${battery_percent BAT1}%",
+        "full_text" : "${if_match ${exec ~/.i3/bin/battery }>0}\uF0E4${else}\uF1E6${endif} ${battery_percent BAT1}%",
         "color"     : ${if_match ${battery_percent BAT1}<15}"\#ff0000"${else}"\#88ABC4"${endif}
     },
     {
-        "full_text" : " ${time %A %d %b} ${time %R}",
-        "color"     : "\#88ABC4"
+        "full_text" : "\uF073 ${time %A %d %b} ${time %R}",
+        "color"     : "\#119966"
     }
 ],
