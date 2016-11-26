@@ -15,6 +15,7 @@ set $tag6 "6: N"
 set $tag7 "7: Seven"
 set $tag8 "8: Eight"
 set $tag9 "9: Nice"
+set $tag0 "Zero"
 
 # i3 config file (v4)
 #
@@ -122,6 +123,7 @@ bindsym $mod+6 workspace $tag6
 bindsym $mod+7 workspace $tag7
 bindsym $mod+8 workspace $tag8
 bindsym $mod+9 workspace $tag9
+bindsym $mod+0 workspace $tag0
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $tag1
@@ -185,8 +187,8 @@ bar {
 #	status_command i3status -c ~/.i3/i3status.conf
 	status_command ~/.i3/bin/conky-i3bar
 #	i3bar_command ~./.i3/lemonbar/i3_lemonbar.sh
-#	tray_output LVDS1
-	tray_output primary
+	tray_output LVDS1
+#	tray_output primary
 	position top
 #	font pango:Terminus 8
 	colors {
@@ -196,7 +198,7 @@ bar {
                 focused_workspace  #AAAAAA #000000 #DDDDDD
                 active_workspace   #000000 #808080 #336633
                 inactive_workspace #606060 #808080 #000000
-		urgent_workspace   #808080 #AA1100 #999999
+				urgent_workspace  #AAAAAA #e60000 #ffffff
         }
 }
 # theme wm
