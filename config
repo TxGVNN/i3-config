@@ -35,8 +35,9 @@ font pango:DejaVu Sans Mono 8
 # clear in small sizes. However, its unicode glyph coverage is limited, the old
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
-hide_edge_borders both
+#hide_edge_borders both
 
+new_window pixel 2
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -112,7 +113,9 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+z focus child
+
+# focus follow mouse
 focus_follows_mouse no
 
 # switch to workspace
@@ -186,9 +189,9 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	i3bar_command /usr/bin/i3bar
+#	i3bar_command ~./.i3/lemonbar/i3_lemonbar.sh
 #	status_command i3status -c ~/.i3/i3status.conf
 	status_command ~/.i3/bin/conky-i3bar
-#	i3bar_command ~./.i3/lemonbar/i3_lemonbar.sh
 	tray_output LVDS1
 #	tray_output primary
 	position top
@@ -235,6 +238,7 @@ exec --no-startup-id xrandr --output LVDS1 --primary
 # Assign workspace
 assign [class="Keepassx"] $tag0
 assign [class="Skype"] $tag1
+assign [class="Icedove"] $tag1
 
 # Screenshot
 bindsym Print exec scrot 'scrot_%Y-%m-%d-%T_$wx$h.png' -e 'mv $f ~/Pictures/'
