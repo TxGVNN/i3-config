@@ -47,6 +47,10 @@ TEXT
 #        "color"     : ${if_match ${acpitemp}>55}"\#ff0000"${else}"\#88ABC4"${endif}
 #    },
     {
+        "full_text" : "${exec xprop -id $(xprop  -root _NET_ACTIVE_WINDOW | sed -un 's/.*\(0x.*\)/\1/p') | awk '/_NET_WM_NAME/{$1=$2="";print}' | cut -d'"' -f2}",
+        "color"     : "\#17cf8b"
+    },
+    {
         "full_text" : "\uF1EB ${wireless_essid wlan0} (${addr wlan0})",
         "color"     : "\#88ABC4"
     },
@@ -64,14 +68,14 @@ TEXT
 #    },
     {
         "full_text" : "\uF0AE ${cpu}%", 
-		"color"	    : ${if_match ${cpu}>80}"\#DD0000"${else}"\#E69D00"${endif}
+        "color"	    : ${if_match ${cpu}>80}"\#DD0000"${else}"\#E69D00"${endif}
     },
 #    {
 #		"full_text" : "RAM:",
 #		"color"     : "\#f3f3f3"
 #    },
     {
-		"full_text" : "\uF1C0 ${mem} (${memperc}%)",
+        "full_text" : "\uF1C0 ${mem} (${memperc}%)",
         "color"     : ${if_match ${memperc}>80}"\#DD0000"${else}"\#E69D00"${endif}
     },
     {
