@@ -1,3 +1,10 @@
+Xft.dpi:	96
+Xft.antialias:	1
+Xft.rgba:	rgb
+Xft.autohint:	0
+Xft.lcdfilter:	lcddefault
+Xft.hinting:	1
+Xft.hintstyle:	hintfull
 ! URxvt*termName:                       string
 ! URxvt*geometry:                       geometry
 ! URxvt*chdir:                          string
@@ -12,13 +19,13 @@
 ! URxvt*scrollBar_floating:             boolean
 ! URxvt*scrollBar_align:                mode
 ! URxvt*thickness:                      number
-URxvt*scrollTtyOutput:               false 
+URxvt*scrollTtyOutput:               true
 ! URxvt*scrollTtyKeypress:              boolean
 ! URxvt*scrollWithBuffer:               boolean
 ! URxvt*inheritPixmap:                  boolean
 *transparent:                    true
 ! URxvt*tintColor:                      color
-*shading:                        5
+*shading:                        3
 ! URxvt*blurRadius:                     HxV
 ! URxvt*fading:                         number
 ! URxvt*fadeColor:                      color
@@ -27,7 +34,7 @@ URxvt*scrollTtyOutput:               false
 ! URxvt*visualBell:                     boolean
 ! URxvt*mapAlert:                       boolean
 ! URxvt*meta8:                          boolean
-! URxvt*mouseWheelScrollPage:           boolean
+URxvt*mouseWheelScrollPage:           true
 ! URxvt*tripleclickwords:               boolean
 ! URxvt*insecure:                       boolean
 ! URxvt*cursorUnderline:                boolean
@@ -101,7 +108,7 @@ URxvt*font:                           xft:Mono:pixelsize=12
 ! URxvt*imFont:                         fontname
 URxvt*title:                          test@Debian
 ! URxvt*iconName:                       string
-URxvt*saveLines:                      -1
+URxvt*saveLines:                      1024
 ! URxvt*buffered:                       boolean
 URxvt*depth:                         32
 ! URxvt*visual:                         number
@@ -152,6 +159,8 @@ URxvt*perl-ext-common:               default,matcher,selection-to-clipboard
 ! URxvt*tabbar-bg:                      colour
 ! URxvt*tabbar-fg:                      colour
 URxvt*url-launcher:                   /usr/bin/x-www-browser
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
 ! Compile xft: Attempt to find a visual with the given bit depth; option -depth.
 ! URxvt*depth: bitdepth
 
