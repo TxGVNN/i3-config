@@ -1,0 +1,128 @@
+:
+##########################################################################
+# Shellscript:	xtitle - set title on xterm window
+# Author     :	Heiner Steven <heiner.steven@odn.de>
+# Requires   :	xprop
+# Category   :	Desktop
+# Date       :	1995-03-17
+# SCCS-Id.   :	@(#) xtitle	1.8 04/02/18
+##########################################################################
+# Notes
+#    o	Thanks to Des Herriott (des@corp.netcom.net.uk) for
+#	the way to get a title using "xprop"
+#
+# Example
+#    o	Get the old window title, set the new title to "New Title"
+#	    OldTitle=`xtitle -g w -w "New Title"`
+#
+# Changes
+# 1995-06-01 hs	Separate settings for title and icon (0.2)
+# 1996-03-04 hs	Determine how to echo without newline (0.3)
+# 1996-10-01 hs	Get a window title, syntax changed (0.4)
+# 1999-10-27 hs	Use "getopts" to preserve whitespace in arguments (1.4)
+# 2002-04-09 hs	Added "Requires" header field (1.6)
+##########################################################################
+
+PN=`basename "$0"`			# program name
+VER='1.8'
+
+# Character for escape sequence to set title
+BOTH=0 ICON=1 WINDOW=2			# Escape sequences - do not change
+ICON_PROP=WM_ICON_NAME			# Must match output of "xprop"
+WIN_PROP=WM_NAME
+
+Usage () {
+    echo >&2 "$PN - set title of xterm window, $VER (hs '95)
+usage: $PN [ -g type] [-w title] [-i title] [-t title]
+   or  $PN title
+
+switches:
+    -t	set both titles (default)
+    -w	set window title
+    -i	set icon title
+    -g  get title, type: w=window, i=icon, b=both
+
+If no arguments are given, $PN prints the window title. In the
+second form, both (icon and window) titles are set to the given
+title."
+    exit 1
+}
+
+# Determine how to echo without a newline
+[ -z "$ECHO" ] &&
+    if [ X`echo -n` = "X-n" ]
+    then ECHO="echo"; NL="\c"
+    else ECHO="echo -n"; NL=
+    fi
+
+Echo ()	{
+    $ECHO "$@$NL"
+}
+Fatal () {
+    for Line
+    do echo >&2 "$PN: $Line"
+    done
+    exit 1
+}
+
+# GetProperty { $ICON_PROP | $WIN_PROP }
+#
+GetProperty () {
+    if [ -n "$WINDOWID" ]
+    then
+	# "prop" Example output:
+	#   WM_NAME(STRING) = "Title"
+	# or (empty title):
+	#   WM_NAME(STRING) =
+	for Property
+	do
+	    xprop -id $WINDOWID 2>/dev/null |
+		    grep "^$Property" |
+		    sed 's/.*=[ 	"]*\([^"]*\)["]*$/\1/'
+	done
+    else
+	echo >&2 "$PN: cannot get window property
+	(getting the window title works with a local X server only)"
+    fi
+}
+
+# SetTitle { $BOTH | $ICON | $WINDOW } "Text"
+SetTitle () {
+    Echo "]${1};$2"
+}
+
+[ -z "$DISPLAY" ] && 
+    Fatal "cannot determine X Windows server (DISPLAY not set)"
+
+if [ $# -lt 1 ]
+then					# Default action: print window title
+    GetProperty "$WIN_PROP"
+    exit 0
+fi
+
+while getopts g:w:i:b:t:h opt
+do
+    case "$opt" in
+	g)				# Get title
+	    case "$OPTARG" in
+		w)   GetProperty "$WIN_PROP";;
+		i)   GetProperty "$ICON_PROP";;
+		b|t) GetProperty "$WIN_PROP" "$ICON_PROP";;
+		*)   Fatal "title type must be one of {w|i|b}";;
+	    esac
+	    exit 0;;
+	w)				# Set window title
+	    SetTitle "$WINDOW" "$OPTARG";;
+	i)				# Set icon title
+	    SetTitle "$ICON" "$OPTARG";;
+	b|t)				# Set both titles
+	    SetTitle "$BOTH" "$OPTARG";;
+	h)	Usage;;
+	*)	Usage;;
+    esac
+done
+shift `expr $OPTIND - 1`
+
+# Default action: set both titles
+[ $# -gt 0 ] && SetTitle "$BOTH" "$*"
+exit 0

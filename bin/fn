@@ -1,0 +1,38 @@
+#!/bin/bash
+# Giap Tran <txgvnn@gmail.com>
+#.i3/config
+#bindsym $mod+F1 [title="^F1$"] exec fn 1
+#bindsym $mod+Fn [title="^Fn$"] exec fn n
+
+UID=$(id -u)
+
+_fn(){
+	name=f"$1"
+	# check terminal isn't running
+	if ! ps -p "$(cat /run/user/"${UID}"/i3/"${name}".pid 2>/dev/null)" >/dev/null
+	then
+		echo "${name}">/tmp/.fn-"$UID"
+		# create new terminal and move to scatchpad
+		i3-sensible-terminal  -e fn &
+		echo "$!"> /run/user/"$UID"/i3/"$name".pid
+		sleep 1
+	fi
+	# finally, need show terminal
+	i3 [title="^${name}$"] scratchpad show &>/dev/null
+}
+
+# create new terminal
+if [ "$#" -eq 0 ]
+then
+	name=$(cat /tmp/.fn-"${UID}")
+	~/.i3/bin/xtitle "$name"
+	i3 move scratchpad
+	screen -t "$name"
+	exit
+fi
+
+# toggle Fn
+if [[ "$1" -ge 0 && "$1" -le 9 ]]
+then
+	_fn "$1"
+fi
