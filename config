@@ -236,7 +236,6 @@ exec --no-startup-id xrandr --output LVDS1 --primary
 # Assign workspace
 assign [class="Keepassx"] $tag0
 assign [class="Skype"] $tag1
-assign [class="Icedove"] $tag1
 
 # Screenshot
 bindsym Print exec scrot 'scrot_%Y-%m-%d-%T_$wx$h.png' -e 'mv $f ~/Pictures/'

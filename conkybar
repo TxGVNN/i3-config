@@ -47,7 +47,7 @@ TEXT
 #        "color"     : ${if_match ${acpitemp}>55}"\#ff0000"${else}"\#88ABC4"${endif}
 #    },
     {
-        "full_text" : "${exec xprop -id $(xprop  -root _NET_ACTIVE_WINDOW | sed -un 's/.*\(0x.*\)/\1/p') | awk '/_NET_WM_NAME/{$1=$2="";print}'| sed 's/["?/]//g' | cut -d'"' -f2}",
+        "full_text" : "${exec xprop -id $(xprop  -root _NET_ACTIVE_WINDOW | sed -un 's/.*\(0x.*\)/\1/p') | awk '/_NET_WM_NAME/{$1=$2="";print}'| sed 's/["?/\]//g' | cut -d'"' -f2}",
         "color"     : "\#17cf8b"
     },
     {
