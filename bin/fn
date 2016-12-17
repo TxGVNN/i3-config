@@ -4,9 +4,9 @@
 #bindsym $mod+F1 [title="^F1$"] exec fn 1
 #bindsym $mod+Fn [title="^Fn$"] exec fn n
 
-if [ -z "$UID" ]; then
-	UID=$(id -u)
-fi
+#if [ -z "$UID" ]; then
+#	UID=$(id -u)
+#fi
 _fn(){
 	name=f"$1"
 	# check terminal isn't running

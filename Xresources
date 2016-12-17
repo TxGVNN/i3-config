@@ -5,6 +5,12 @@ Xft.autohint:	0
 Xft.lcdfilter:	lcddefault
 Xft.hinting:	1
 Xft.hintstyle:	hintfull
+
+URxvt.font: xft:Inconsolata:size=10:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt.boldFont: xft:Inconsolata:size=10:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt.italicFont: xft:Inconsolata:size=10:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt.boldItalicFont: xft:Inconsolata:size=10:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
+
 ! URxvt*termName:                       string
 ! URxvt*geometry:                       geometry
 ! URxvt*chdir:                          string
@@ -23,9 +29,9 @@ URxvt*scrollTtyOutput:               true
 ! URxvt*scrollTtyKeypress:              boolean
 ! URxvt*scrollWithBuffer:               boolean
 ! URxvt*inheritPixmap:                  boolean
-*transparent:                    true
+*transparent:                    false
 ! URxvt*tintColor:                      color
-*shading:                        3
+*shading:                        1
 ! URxvt*blurRadius:                     HxV
 ! URxvt*fading:                         number
 ! URxvt*fadeColor:                      color
@@ -40,13 +46,12 @@ URxvt*mouseWheelScrollPage:           true
 ! URxvt*cursorUnderline:                boolean
 ! URxvt*cursorBlink:                    boolean
 ! URxvt*pointerBlank:                   boolean
-!URxvt.keysym.Control-0x2b: perl:font-size:increase
-!URxvt.keysym.Control-0x2d: perl:font-size:decrease
-URxvt*background:                     #1f1f1f
+URxvt.keysym.Control-0x2b: perl:font-size:increase
+URxvt.keysym.Control-0x2d: perl:font-size:decrease
+URxvt*background:                     #080808
 URxvt*foreground:                     #c0b18b
 xterm*background:                     #1f1f1f
 xterm*foreground:                     #c0b18b
-
 
 !black
 *color0:                         #4A3535
@@ -97,7 +102,8 @@ xterm*foreground:                     #c0b18b
 ! URxvt*path:                           search path
 ! URxvt*backgroundPixmap:               file[;geom]
 ! URxvt*iconFile:                       file
-URxvt*font:                           xft:Mono:pixelsize=12
+!URxvt*font:                           xft:Inconsolata:style=Medium:pixelsize=14
+!URxvt*font:                           xft:Mono:pixelsize=12
 ! URxvt*boldFont:                       fontname
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
@@ -159,8 +165,8 @@ URxvt*perl-ext-common:               default,matcher,selection-to-clipboard
 ! URxvt*tabbar-bg:                      colour
 ! URxvt*tabbar-fg:                      colour
 URxvt*url-launcher:                   /usr/bin/x-www-browser
-URxvt.keysym.Shift-Up: command:\033]720;1\007
-URxvt.keysym.Shift-Down: command:\033]721;1\007
+!URxvt.keysym.Shift-Up: command:\033]720;1\007
+!URxvt.keysym.Shift-Down: command:\033]721;1\007
 ! Compile xft: Attempt to find a visual with the given bit depth; option -depth.
 ! URxvt*depth: bitdepth
 
