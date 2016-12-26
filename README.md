@@ -3,7 +3,12 @@ i3 config
 All file config for i3 window manager.
 
 I use Debian GNU/Linux.
-## how to use
+```
+$i3 --version
+i3 version 4.13 (2016-11-08) © 2009 Michael Stapelberg and contributors
+```
+
+## how to setup
 ```
 git clone https://github.com/TxGVNN/i3-config.git ~/.i3
 ```
@@ -14,7 +19,7 @@ git clone https://github.com/TxGVNN/i3-config.git ~/.i3
 - v1.0
 ![screenfetch](http://i.imgur.com/S2WVk6X.png)
 ## packages
-``xinit xbacklight xinput feh scrot conky lua rxvt-unicode pavucontrol wicd ranger clementine icedove iceweasel alsa-utils acpi
+``xinit xbacklight xinput feh scrot conky rxvt-unicode pavucontrol wicd ranger clementine icedove iceweasel alsa-utils acpi
 ``
 ## bugs
 - icons not show?
@@ -22,5 +27,11 @@ git clone https://github.com/TxGVNN/i3-config.git ~/.i3
       install font-awesome package.
 
       on Debian:
-      ```apt-get install fonts-font-awesome```
+      ```apt-get install fonts-font-awesome -y ```
+      
+- Clock not show?
 
+      install lua package.
+
+      on Debian:
+      ```apt-get install lua5.2 -y ```
