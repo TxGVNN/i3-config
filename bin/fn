@@ -28,7 +28,7 @@ then
 	name=$(cat /tmp/.fn-"${UID}")
 	~/.i3/bin/xtitle "$name"
 	i3 move scratchpad &> /dev/null
-	if [ "$(which screen >/dev/null)" ]; then
+	if which screen >/dev/null; then
 		screen -t "$name"
 	fi
 	bash
