@@ -188,6 +188,7 @@ bar {
 #	i3bar_command ~/.i3/lemonbar/i3_lemonbar.sh
 #	status_command i3status -c ~/.i3/i3status.conf
 	status_command ~/.i3/bin/conky-i3bar
+	font pango: Terminess Powerline, awesome 8
 	tray_output LVDS1
 #	tray_output primary
 	position top

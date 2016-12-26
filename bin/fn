@@ -14,7 +14,7 @@ _fn(){
 	then
 		echo "${name}">/tmp/.fn-"$UID"
 		# create new terminal and move to scatchpad
-		i3-sensible-terminal  -e fn &
+		i3-sensible-terminal  -e ~/.i3/bin/fn &
 		echo "$!"> /run/user/"$UID"/i3/"$name".pid
 		sleep 1
 	fi
@@ -27,8 +27,11 @@ if [ "$#" -eq 0 ]
 then
 	name=$(cat /tmp/.fn-"${UID}")
 	~/.i3/bin/xtitle "$name"
-	i3 move scratchpad
-	screen -t "$name"
+	i3 move scratchpad &> /dev/null
+	if [ "$(which screen >/dev/null)" ]; then
+		screen -t "$name"
+	fi
+	bash
 	exit
 fi
 
