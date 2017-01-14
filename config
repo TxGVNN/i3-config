@@ -50,7 +50,8 @@ bindsym $mod+Shift+q kill
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -b -nb '#011015' -sb '#567ec5' -sf '#000000' -fn 'Terminus-11' -l 10"
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-
+# Workspace toggle $mod + \
+bindcode $mod+51 workspace back_and_forth
 # Border toggle
 bindsym $mod+x border toggle
 # change focus
@@ -110,7 +111,8 @@ bindsym $mod+a focus parent
 
 # focus the child container
 bindsym $mod+z focus child
-
+# focus urgent lasted $mod+'='
+bindsym $mod+21 [urgent=latest] focus
 # focus follow mouse
 focus_follows_mouse no
 
