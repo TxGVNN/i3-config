@@ -82,10 +82,10 @@ ${alignr}$font < ${top name 1}  ${top cpu 1} > -─┤    │    │
 ${alignr}$font < ${top name 2}  ${top cpu 2} > -─┤    │    │
 ${alignr}$font < ${top name 3}  ${top cpu 5} > -─┘    │    │
 ${alignr}$font processes -─┤    │
-${alignr}$font < $processes >   total -─┤    │    │
+${alignr}$font < $processes > total   -─┤    │    │
 ${alignr}$font < $threads > threads -─┘    │    │
-${alignr}$font temperature -─┘    │
-${alignr}$font < ${hwmon temp 1}  >    tmp1 -─┘         │
+${alignr}$font temp -─┘    │
+${alignr}$font < ${acpitemp}  > °C      -─┘         │
 ${alignr}$font │
 ${alignr}$font resources -─┤
 ${alignr}$font < $diskio_read >  r   -─┤    │
