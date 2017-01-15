@@ -19,16 +19,9 @@ git clone https://github.com/TxGVNN/i3-config.git ~/.i3
 - v1.0
 ![screenfetch](http://i.imgur.com/S2WVk6X.png)
 ## packages
-``xinit xbacklight xinput feh scrot conky rxvt-unicode pavucontrol wicd ranger clementine icedove iceweasel alsa-utils acpi
+``xinit xbacklight xinput feh scrot conky conky-all rxvt-unicode pavucontrol wicd ranger clementine icedove iceweasel alsa-utils acpi fonts-font-awesome
 ``
 ## bugs
-- icons not show?
-
-      install font-awesome package.
-
-      on Debian:
-      ```apt-get install fonts-font-awesome -y ```
-      
 - Clock not show?
 
       install lua package.
