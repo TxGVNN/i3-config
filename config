@@ -112,7 +112,7 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+z focus child
 # focus urgent lasted $mod+'='
-bindsym $mod+21 [urgent=latest] focus
+bindcode $mod+21 [urgent=latest] focus
 # focus follow mouse
 focus_follows_mouse no
 
