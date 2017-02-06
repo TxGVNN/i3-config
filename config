@@ -234,6 +234,7 @@ exec --no-startup-id conky -d -c ~/.i3/conkybg
 exec --no-startup-id ~/.i3/bin/xinput-fix
 exec --no-startup-id ibus-daemon  --xim -d
 exec --no-startup-id xrandr --output LVDS1 --primary
+exec --no-startup-id xautolock -time 5 -locker '~/.i3/bin/i3lock.sh'
 #exec --no-startup-id wicd-gtk
 
 # Assign workspace
