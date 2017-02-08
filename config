@@ -230,7 +230,7 @@ client.focused_inactive     $bg     $bg         $ac     $id
 # start application
 exec --no-startup-id feh --bg-fill ~/.i3/background.bmp
 exec --no-startup-id conky -d -c ~/.i3/conkybg
-#exec --no-startup-id conky -d -c ~/.i3/conky-left
+exec --no-startup-id conky -d -c ~/.i3/conky-left
 exec --no-startup-id ~/.i3/bin/xinput-fix
 exec --no-startup-id ibus-daemon  --xim -d
 exec --no-startup-id xrandr --output LVDS1 --primary
