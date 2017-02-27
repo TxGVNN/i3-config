@@ -204,8 +204,8 @@ bar {
 		inactive_workspace #606060 #808080 #000000
 		urgent_workspace  #AAAAAA #e60000 #ffffff
     }
-	bindsym button1 nop
-	bindsym button2 nop
+#	bindsym button1 nop
+#	bindsym button2 nop
 }
 # define color
 set $bg     #2c2c2e
