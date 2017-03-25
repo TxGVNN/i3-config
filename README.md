@@ -24,7 +24,4 @@ git clone https://github.com/TxGVNN/i3-config.git ~/.i3
 ## bugs
 - Clock not show?
 
-      install lua package.
-
-      on Debian:
-      ```apt-get install lua5.2 -y ```
+   search and install the Lua packages.
