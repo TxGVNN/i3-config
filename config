@@ -270,7 +270,8 @@ bindsym Mod1+Control+k exec keepassx
 #email
 bindsym Mod1+Control+e exec icedove
 #browser
-bindsym Mod1+Control+b exec iceweasel
+bindsym Mod1+Control+b exec firefox
+bindsym Mod1+Control+Shift+b exec firefox --private-window
 bindsym Mod1+Control+g exec getchromium
 bindsym Mod1+Control+Shift+g exec getchromium incognito
 #paint
