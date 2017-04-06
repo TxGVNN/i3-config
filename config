@@ -147,12 +147,12 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 #bindsym $mod+Shift+e exit
-mode "exit i3?" {
+mode "Exit i3?" {
     bindsym Return exec --no-startup-id i3-msg exit, mode "default"
     # exit system mode: "Enter" or "Escape"
     bindsym Escape mode "default"
 }
-bindsym $mod+Shift+e mode "exit i3?"
+bindsym $mod+Shift+e mode "Exit i3?"
 #scratchpad
 bindsym $mod+minus scratchpad show
 bindsym $mod+Shift+minus move scratchpad
@@ -160,11 +160,6 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym Mod1+Control+l exec ~/.i3/bin/i3lock.sh
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym j resize shrink width 5 px or 5 ppt
         bindsym k resize grow height 5 px or 5 ppt
         bindsym l resize shrink height 5 px or 5 ppt
@@ -191,7 +186,7 @@ bar {
 #	status_command i3status -c ~/.i3/i3status.conf
 	status_command ~/.i3/bin/conky-i3bar
 	font pango: Terminess Powerline, awesome 8
-	tray_output LVDS1
+	tray_output eDP1
 #	tray_output primary
 	position top
 #	font pango:Terminus 8
@@ -232,8 +227,7 @@ exec --no-startup-id feh --bg-fill ~/.i3/background.bmp
 exec --no-startup-id conky -d -c ~/.i3/conkybg
 exec --no-startup-id conky -d -c ~/.i3/conky-left
 exec --no-startup-id ~/.i3/bin/xinput-fix
-exec --no-startup-id ibus-daemon  --xim -d
-exec --no-startup-id xrandr --output LVDS1 --primary
+exec --no-startup-id ibus-daemon --xim -d
 exec --no-startup-id xautolock -time 5 -locker '~/.i3/bin/i3lock.sh'
 #exec --no-startup-id wicd-gtk
 
@@ -245,9 +239,9 @@ assign [class="Skype"] $tag1
 bindsym Print exec scrot 'scrot_%Y-%m-%d-%T_$wx$h.png' -e 'mv $f ~/Pictures/'
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 -- +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -- -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q sset Master 3%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q sset Master 3%-
+bindsym XF86AudioMute exec --no-startup-id amixer -q sset Master toggle # mute sound
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
@@ -268,7 +262,7 @@ bindsym XF86AudioPrev exec  clementine --previous
 #keepassx
 bindsym Mod1+Control+k exec keepassx
 #email
-bindsym Mod1+Control+e exec icedove
+bindsym Mod1+Control+e exec thunderbird
 #browser
 bindsym Mod1+Control+b exec firefox
 bindsym Mod1+Control+Shift+b exec firefox --private-window
@@ -281,7 +275,7 @@ bindsym Mod1+Control+m exec clementine
 #explore
 bindsym Mod1+Control+r exec /usr/bin/rxvt -e ranger
 #skype
-bindsym Mod1+Control+s exec skype
+bindsym Mod1+Control+s exec skypeforlinux
 #slack team
 bindsym Mod1+Control+t exec slack
 #workspace_auto_back_and_forth yes
