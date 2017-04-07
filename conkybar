@@ -83,8 +83,8 @@ TEXT
         "color"     : ${if_match ${exec ~/.i3/bin/conky-audio}>95}"\#DD0000"${else}"\#88ABC4"${endif}
     },
     {
-        "full_text" : "${if_match ${exec ~/.i3/bin/battery }>0}\uF0E4${else}\uF1E6${endif} ${battery_percent BAT1}%",
-        "color"     : ${if_match ${battery_percent BAT1}<15}"\#ff0000"${else}"\#88ABC4"${endif}
+        "full_text" : "${if_match ${exec ~/.i3/bin/battery }>0}\uF0E4${else}\uF1E6${endif} ${battery_percent}%",
+        "color"     : ${if_match ${battery_percent}<15}"\#ff0000"${else}"\#88ABC4"${endif}
     },
     {
         "full_text" : "\uF073 ${time %A %d %b} \uF188 ${time %R}",
