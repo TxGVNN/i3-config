@@ -7,12 +7,12 @@ set $tag1 "1 "
 set $tag2 "2 "
 set $tag3 "3 "
 set $tag4 "4 "
-set $tag5 "5 "
-set $tag6 "6 "
-set $tag7 "7 "
-set $tag8 "8 "
-set $tag9 "9 "
-set $tag0 "Zero"
+set $tag5 "5 "
+set $tag6 "6 "
+set $tag7 "7 "
+set $tag8 "8 "
+set $tag9 "9 "
+set $tag0 "Zero "
 
 # i3 config file (v4)
 #
@@ -248,7 +248,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 # Touchpad controls
-bindsym XF86PowerOff exec systemctl suspend
+bindsym XF86Sleep exec systemctl suspend
 # shortcut scratchpad
 bindsym $mod+F1 [title="^F1$"] exec ~/.i3/bin/fn 1
 bindsym $mod+F2 [title="^F2$"] exec ~/.i3/bin/fn 2
