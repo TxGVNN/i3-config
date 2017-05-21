@@ -55,6 +55,10 @@ TEXT
         "color"     : "\#88ABC4"
     },
     {
+        "full_text" : ${if_match ${exec ~/.i3/bin/vpn}==0}"\uF023 VPN"${else}""${endif},
+        "color"     : "\#119966"
+    },
+    {
         "full_text" : "\uF0ED ${downspeed wlan0}/s",
         "color"     : "\#00A0A0"
     },
