@@ -51,7 +51,7 @@ TEXT
         "color"     : "\#17cf8b"
     },
     {
-        "full_text" : "\uF1EB ${wireless_essid wlan0} (${addr wlan0})",
+        "full_text" : ${if_up wlan0}"\uF1EB ${wireless_essid wlan0} (${addr wlan0})"${else}"\uF287 (${addr eth0})"${endif},
         "color"     : "\#88ABC4"
     },
     {
@@ -59,11 +59,11 @@ TEXT
         "color"     : "\#119966"
     },
     {
-        "full_text" : "\uF0ED ${downspeed wlan0}/s",
+        "full_text" : "\uF0ED ${if_up wlan0}${downspeed wlan0}${else}${downspeed eth0}${endif}/s",
         "color"     : "\#00A0A0"
     },
     {
-        "full_text" : "\uF0EE ${upspeed wlan0}/s",
+        "full_text" : "\uF0EE ${if_up wlan0}${upspeed wlan0}${else}${upspeed eth0}${endif}/s",
         "color"     : "\#00A0A0"
     },
 #    {
