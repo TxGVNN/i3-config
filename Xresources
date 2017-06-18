@@ -6,10 +6,10 @@ Xft.lcdfilter:	lcddefault
 Xft.hinting:	1
 Xft.hintstyle:	hintfull
 
-URxvt.font: xft:Inconsolata:size=10:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
-URxvt.boldFont: xft:Inconsolata:size=10:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
-URxvt.italicFont: xft:Inconsolata:size=10:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
-URxvt.boldItalicFont: xft:Inconsolata:size=10:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt.font: xft:Inconsolata:size=11:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt.boldFont: xft:Inconsolata:size=11:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt.italicFont: xft:Inconsolata:size=11:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt.boldItalicFont: xft:Inconsolata:size=11:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
 
 ! URxvt*termName:                       string
 ! URxvt*geometry:                       geometry
@@ -114,7 +114,7 @@ xterm*foreground:                     #c0b18b
 ! URxvt*imFont:                         fontname
 URxvt*title:                          test@Debian
 ! URxvt*iconName:                       string
-URxvt*saveLines:                      1024
+!URxvt*saveLines:                      1024
 ! URxvt*buffered:                       boolean
 URxvt*depth:                         32
 ! URxvt*visual:                         number
@@ -124,7 +124,7 @@ URxvt*depth:                         32
 ! URxvt*externalBorder:                 number
 ! URxvt*internalBorder:                 number
 ! URxvt*borderLess:                     boolean
-URxvt*lineSpace:                      -1
+!URxvt*lineSpace:                      -1
 ! URxvt*letterSpace:                    number
 ! URxvt*skipBuiltinGlyphs:              boolean
 ! URxvt*pointerBlankDelay:              number
@@ -138,11 +138,13 @@ URxvt*lineSpace:                      -1
 ! URxvt*secondaryScroll:                boolean
 URxvt*perl-lib:                       /usr/lib/urxvt/perl/
 ! URxvt*perl-eval:                      perl-eval
-URxvt*perl-ext-common:               default,matcher,selection-to-clipboard
+URxvt*perl-ext-common:               default,matcher,selection-to-clipboard,font-size
 ! URxvt*perl-ext:                       string
 ! URxvt*iso14755:                       boolean
 ! URxvt*iso14755_52:                    boolean
 ! URxvt*xrm:                            string
+URxvt*keysym.Control-Shift-Up:      perl:font-size:increment
+URxvt*keysym.Control-Shift-Down:    perl:font-size:decrement
 ! URxvt*keysym.sym:                     keysym
 ! URxvt*background.border:              boolean
 ! URxvt*background.expr:                string

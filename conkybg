@@ -1,5 +1,6 @@
 use_xft yes
-xftfont monospace:pixelsize=9
+xftfont Inconsolata:pixelsize=12
+#xftfont xft:Inconsolata:size=10:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
 xftalpha 0.8
 total_run_times 0
 background yes
@@ -16,7 +17,7 @@ own_window_type override
 own_window_transparent yes
 
 out_to_console no
-update_interval 1
+update_interval 10
 alignment top_right
 
 override_utf8_locale yes
@@ -62,60 +63,59 @@ ${execp cal | cat -e|  sed 's/\$/ /g ;s/_^H./\${color2}'"$(date +%e)"'${color}/1
 ${color1}${voffset 73}${offset 56}${stippled_hr}${voffset -27}
 ${voffset 0}${offset 56}${cpugraph cpu6 17,1}${color1}
 
-#leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
 ${voffset -45}${color1}
-${alignr}${offset 10}$font  │
-${alignr}${sysname} -─┤
-${alignr}$font < ${kernel} > kernel -─┤    │
-${alignr}$font < $machine >   arch -─┤    │
-${alignr}$font < $uptime > uptime -─┘    │
-${alignr}$font │
-${alignr}$font system -─┤
-${alignr}$font cpu -─┤    │
-${alignr}$font used -─┤    │    │
-${alignr}$font < ${cpu 0}% > cpu -─┘    │    │    │
-${alignr}$font freq -─┤    │    │
-${alignr}$font < ${freq 1}mhz > cpu1 -─┤    │    │    │
-${alignr}$font < ${freq 2}mhz > cpu2 -─┘    │    │    │
-${alignr}$font < $loadavg > load -─┤    │    │
-${alignr}$font < ${top name 1}  ${top cpu 1} > -─┤    │    │
-${alignr}$font < ${top name 2}  ${top cpu 2} > -─┤    │    │
-${alignr}$font < ${top name 3}  ${top cpu 5} > -─┘    │    │
-${alignr}$font processes -─┤    │
-${alignr}$font < $processes > total   -─┤    │    │
-${alignr}$font < $threads > threads -─┘    │    │
-${alignr}$font temp -─┘    │
-${alignr}$font < ${acpitemp}  > °C      -─┘         │
-${alignr}$font │
-${alignr}$font resources -─┤
-${alignr}$font < $diskio_read >  r   -─┤    │
-${alignr}$font < $diskio_write >  w   -─┤    │
-${alignr}$font ram -─┤    │
-${alignr}$font < $memperc% > used -─┤    │    │
-${alignr}$font < $mem/$memmax > -─┘    │    │    │
-${alignr}$font < ${top_mem name 1}  ${top_mem mem 1} > -─┤    │    │
-${alignr}$font < ${top_mem name 2}  ${top_mem mem 2} > -─┤    │    │
-${alignr}$font < ${top_mem name 3}  ${top_mem mem 3} > -─┘    │    │
-${alignr}$font < ${fs_used /}/${fs_size /} > /    -─┤    │
-${alignr}$font < ${fs_bar 5,120 /} > -─┘    │    │
-${alignr}$font < ${fs_used /home}/${fs_size /home} > /home-─┤    │
-${alignr}$font < ${fs_bar 5,120 /home} > -─┘    │    │
-${alignr}$font < ${fs_used /tmp}/${fs_size /tmp} > /tmp -─┤    │
-${alignr}$font < ${fs_bar 5,120 /tmp} > -─┘    │    │
-${alignr}$font < $swapperc% - $swap/$swapmax > swap -─┘    │
-${alignr}$font < ${swapbar 5,120} > -─┘         │
-${alignr}$font │
-${alignr}$font networks -─┘
-${alignr}$font < ${tcp_portmon 1 65535 count} >  connections -─┤     
-${alignr}$font < ${tcp_portmon 1 32767 count} >  in / locale -─┤     
-${alignr}$font < ${tcp_portmon 1 32767 rhost 0} ${tcp_portmon 1 32767 lservice 0} > -─┤    │     
-${alignr}$font < ${tcp_portmon 1 32767 rhost 1} ${tcp_portmon 1 32767 lservice 1} > -─┤    │     
-${alignr}$font < ${tcp_portmon 1 32767 rhost 2} ${tcp_portmon 1 32767 lservice 2} > -─┘    │     
-${alignr}$font < ${tcp_portmon 32768 61000 count} > out / remote -─┤     
-${alignr}$font < ${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0} > -─┤    │     
-${alignr}$font < ${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1} > -─┤    │     
-${alignr}$font < ${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2} > -─┤    │     
-${alignr}$font < ${upspeed wlan0}/s > up   -─┤     
-${alignr}$font < ${upspeedgraph wlan0 8,120 8b2132 fe8608} > -─┘    │     
-${alignr}$font < ${downspeed wlan0}/s > down -─┘     
-${alignr}${offset -25}$font < ${downspeedgraph wlan0 8,120 8b2132 fe8608} > -─┘     
+${alignr}${offset 10}$font  |
+${alignr}${sysname} --|
+${alignr}$font < ${kernel} > kernel --+    |
+${alignr}$font < $machine >   arch --+    |
+${alignr}$font < $uptime > uptime --+    |
+${alignr}$font |
+${alignr}$font system --+
+${alignr}$font cpu --+    |
+${alignr}$font used --+    |    |
+${alignr}$font < ${cpu 0}% > cpu --+    |    |    |
+${alignr}$font freq --+    |    |
+${alignr}$font < ${freq 1}mhz > cpu1 --+    |    |    |
+${alignr}$font < ${freq 2}mhz > cpu2 --+    |    |    |
+${alignr}$font < $loadavg > load --+    |    |
+${alignr}$font < ${top name 1}  ${top cpu 1} > --+    |    |
+${alignr}$font < ${top name 2}  ${top cpu 2} > --+    |    |
+${alignr}$font < ${top name 3}  ${top cpu 5} > --+    |    |
+${alignr}$font processes --+    |
+${alignr}$font < $processes > total   --+    |    |
+${alignr}$font < $threads > threads --+    |    |
+${alignr}$font temp --+    |
+${alignr}$font < ${acpitemp}  > °C      --+         |
+${alignr}$font |
+${alignr}$font resources --+
+${alignr}$font < $diskio_read >  r   --+    |
+${alignr}$font < $diskio_write >  w   --+    |
+${alignr}$font ram --+    |
+${alignr}$font < $memperc% > used --+    |    |
+${alignr}$font < $mem/$memmax > --+    |    |    |
+${alignr}$font < ${top_mem name 1}  ${top_mem mem 1} > --+    |    |
+${alignr}$font < ${top_mem name 2}  ${top_mem mem 2} > --+    |    |
+${alignr}$font < ${top_mem name 3}  ${top_mem mem 3} > --+    |    |
+${alignr}$font < ${fs_used /}/${fs_size /} > /    --+    |
+${alignr}$font < ${fs_bar 5,120 /} > --+    |    |
+${alignr}$font < ${fs_used /home}/${fs_size /home} > /home--+    |
+${alignr}$font < ${fs_bar 5,120 /home} > --+    |    |
+${alignr}$font < ${fs_used /gtx}/${fs_size /gtx} > /gtx --+    |
+${alignr}$font < ${fs_bar 5,120 /gtx} > --+    |    |
+${alignr}$font < $swapperc% - $swap/$swapmax > swap --+    |
+${alignr}$font < ${swapbar 5,120} > --+         |
+${alignr}$font |
+${alignr}$font networks --+
+${alignr}$font < ${tcp_portmon 1 65535 count} >  connections --+     
+${alignr}$font < ${tcp_portmon 1 32767 count} >  in / locale --+     
+${alignr}$font < ${tcp_portmon 1 32767 rhost 0} ${tcp_portmon 1 32767 lservice 0} > --+    |     
+${alignr}$font < ${tcp_portmon 1 32767 rhost 1} ${tcp_portmon 1 32767 lservice 1} > --+    |     
+${alignr}$font < ${tcp_portmon 1 32767 rhost 2} ${tcp_portmon 1 32767 lservice 2} > --+    |     
+${alignr}$font < ${tcp_portmon 32768 61000 count} > out / remote --+     
+${alignr}$font < ${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0} > --+    |     
+${alignr}$font < ${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1} > --+    |     
+${alignr}$font < ${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2} > --+    |     
+${alignr}$font < ${upspeed wlan0}/s > up   --+     
+${alignr}$font < ${upspeedgraph wlan0 8,120 8b2132 fe8608} > --+    |     
+${alignr}$font < ${downspeed wlan0}/s > down --+     
+${alignr}${offset -25}$font < ${downspeedgraph wlan0 8,120 8b2132 fe8608} > --+      

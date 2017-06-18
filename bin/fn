@@ -10,7 +10,7 @@
 _fn(){
 	name=f"$1"
 	# check terminal isn't running
-	if ! ps -p "$(cat /run/user/"${UID}"/i3/"${name}".pid 2>/dev/null)" >/dev/null
+	if ! ps p "$(cat /run/user/"${UID}"/i3/"${name}".pid 2>/dev/null)" >/dev/null
 	then
 		echo "${name}">/tmp/.fn-"$UID"
 		# create new terminal and move to scatchpad
@@ -36,7 +36,7 @@ then
 fi
 
 # toggle Fn
-if [[ "$1" -ge 0 && "$1" -le 9 ]]
+if [[ "$1" -ge 0 && "$1" -le 12 ]]
 then
 	_fn "$1"
 fi

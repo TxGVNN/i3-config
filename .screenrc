@@ -2,20 +2,22 @@ vbell off
 autodetach on
 startup_message off
 utf8 on
-term screen-256color
+#term screen-256color
 terminfo rxvt-256color 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 defscrollback 100000
 # add backtick printer functions
 #hardstatus alwayslastline "%{= d}%{r}%{k}%{r}%{k}${USER}%{k}@%{k}%H: %L>%1`%? %?%{.g}%u%? %-18=%?%{m} %{k}%-=%{k}%-w%{r}%n %t%{k}%+w %{k}|%C"
 #hardstatus alwayslastline '%{= m}Load Avg:%{= G} %l %= %{= w}%-w%{+b r}%n:%t%{-b r}%{w}%+w %= %{b}%D %d/%m/%Y %{Y}%c'
-#hardstatus string '%{= m}Load Avg:%{= G} %l %= %{= w}%-w%{+b r}%n:%t%{-b r}%{w}%+w %= %{b}%D %d/%m/%Y %{Y}%c'
 #hardstatus alwayslastline "%{rk}%H %{gk}%c %{yk}%M%d %{wk}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wk}%?%+Lw%?"
-hardstatus alwayslastline "%{= d}%{g}...%L>%1`%? %?%{.g}%u%? %-18=%?%{m} %{k}%-=%{y}%-w%{r}%n %t%{y}%+w %{k}%{c}%c"
+hardstatus alwayslastline "%{= d}%{g}${USER}@%H%L>%1`%? %?%{.g}%u%? %-18=%?%{m} %{k}%-=%{y}%-w%{r}%n %t%{y}%+w %{k}%{c}%c"
+escape ^Zz
+# do not trash BackSpace, usually DEL
+bindkey -k kb
+bindkey -d -k kb
+# do not trash Delete, usually ESC [ 3 ~
+bindkey -k kD
+bindkey -d -k kD
 bind = resize =
 bind + resize +5
 bind - resize -5
 bind _ resize max
-bindkey "^[k" eval "copy" "stuff ^b"  # enter copy mode and move up one page
-bindkey "^k" eval "copy" "stuff k"    # enter copy mode and move up one line
-bindkey -m "^[k" stuff ^b             # move up one page
-bindkey -m "^k" stuff k               # move up one line

@@ -1,5 +1,5 @@
 use_xft yes
-xftfont 123:size=8
+xftfont Inconsolata:pixelsize=12
 xftalpha 0.1
 update_interval 1
 total_run_times 0
@@ -37,13 +37,13 @@ use_spacer yes
 
 TEXT
 ${voffset 10}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %H:%M}${font}${voffset -84}${offset 10}${color FFA300}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 24}${font GE Inspira:pixelsize=58}${offset -148}${time %A}${font}
-${voffset +20}${font DejaVu Sans Mono:pixelsize=10}${color 535C5C}
+${voffset +20}${font DejaVu Sans Mono:pixelsize=12}${color 535C5C}
   _____ ${color de6839} _    ${color 535C5C} __    _      _      _
    | |  ${color de6839}\ \_/ ${color 535C5C}/ /`_ \ \  / | |\ | | |\ |
    |_|  ${color de6839}/_/ \ ${color 535C5C}\_\_/  \_\/  |_| \| |_| \|
 ${color 5a715c}
   [ @author TxGVNN ]
 
-${font DejaVu Sans Mono:pixelsize=10}${color 00A0A0}
+${font Inconsolata:pixelsize=12}${color 00A0A0}
 ${exec gxt cat logs/$(date +%Y-%m-%d)}
 ${voffset +500}
