@@ -259,6 +259,8 @@ bindsym XF86AudioNext exec clementine --next
 bindsym XF86AudioPrev exec  clementine --previous
 
 ## shortcut 
+#emacs
+bindsym Mod1+Control+i exec emacs
 #keepassx
 bindsym Mod1+Control+k exec keepassx
 #email
