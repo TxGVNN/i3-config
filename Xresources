@@ -25,7 +25,7 @@ URxvt.boldItalicFont: xft:Inconsolata:size=11:hintstyle=hintfull, -xos4-termines
 ! URxvt*scrollBar_floating:             boolean
 ! URxvt*scrollBar_align:                mode
 ! URxvt*thickness:                      number
-URxvt*scrollTtyOutput:               true
+URxvt*scrollTtyOutput:           true
 ! URxvt*scrollTtyKeypress:              boolean
 ! URxvt*scrollWithBuffer:               boolean
 ! URxvt*inheritPixmap:                  boolean
@@ -40,7 +40,7 @@ URxvt*scrollTtyOutput:               true
 ! URxvt*visualBell:                     boolean
 ! URxvt*mapAlert:                       boolean
 ! URxvt*meta8:                          boolean
-URxvt*mouseWheelScrollPage:           true
+!URxvt*mouseWheelScrollPage:           true
 ! URxvt*tripleclickwords:               boolean
 ! URxvt*insecure:                       boolean
 ! URxvt*cursorUnderline:                boolean
