@@ -260,24 +260,24 @@ bindsym XF86AudioPrev exec  clementine --previous
 
 ## shortcut 
 #emacs
-bindsym Mod1+Control+i exec emacs
+bindsym $mod+Mod1+i exec emacs
 #keepassx
-bindsym Mod1+Control+k exec keepassx
+bindsym $mod+Mod1+k exec keepassx
 #email
-bindsym Mod1+Control+e exec thunderbird
+bindsym $mod+Mod1+e exec thunderbird
 #browser
-bindsym Mod1+Control+b exec firefox
-bindsym Mod1+Control+Shift+b exec firefox --private-window
-bindsym Mod1+Control+g exec getchromium
-bindsym Mod1+Control+Shift+g exec getchromium incognito
+bindsym $mod+Mod1+b exec firefox
+bindsym $mod+Mod1+Shift+b exec firefox --private-window
+bindsym $mod+Mod1+g exec getchromium
+bindsym $mod+Mod1+Shift+g exec getchromium incognito
 #paint
-bindsym Mod1+Control+p exec gimp
-#music
-bindsym Mod1+Control+m exec clementine
+bindsym $mod+Mod1+p exec gimp
+#mattermost
+bindsym $mod+Mod1+m exec /opt/mattermost/mattermost-desktop
 #explore
-bindsym Mod1+Control+r exec /usr/bin/rxvt -e ranger
+bindsym $mod+Mod1+r exec /usr/bin/rxvt -e ranger
 #skype
-bindsym Mod1+Control+s exec skypeforlinux
+bindsym $mod+Mod1+s exec skypeforlinux
 #slack team
-bindsym Mod1+Control+t exec slack
+bindsym $mod+Mod1+t exec /usr/local/bin/riot-web
 #workspace_auto_back_and_forth yes
