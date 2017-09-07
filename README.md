@@ -12,6 +12,7 @@ i3 version 4.13 (2016-11-08) © 2009 Michael Stapelberg and contributors
 ```
 git clone https://github.com/TxGVNN/i3-config.git ~/.i3
 ```
+Don't forget setup the `Xresources` file
 ## screenshots
 - master
 
@@ -24,7 +25,13 @@ git clone https://github.com/TxGVNN/i3-config.git ~/.i3
 ![screenfetch](http://i.imgur.com/S2WVk6X.png)
 
 ## packages
-``xinit xbacklight xinput feh scrot conky conky-all rxvt-unicode pavucontrol wicd ranger clementine icedove iceweasel alsa-utils acpi fonts-font-awesome
+- required
+
+``xinit xbacklight xinput feh scrot conky conky-all rxvt-unicode  alsa-utils acpi fonts-font-awesome
+``
+- optional
+
+``wicd thunderbird firefore-esr ranger clementine 
 ``
 ## bugs
 - Clock not show?
