@@ -226,6 +226,7 @@ client.focused_inactive     $bg     $bg         $ac     $id
 exec --no-startup-id feh --bg-fill ~/.i3/background.bmp
 exec --no-startup-id conky -d -c ~/.i3/conkybg
 exec --no-startup-id conky -d -c ~/.i3/conky-left
+exec --no-startup-id conky -d -c ~/.i3/conky-bottom
 exec --no-startup-id dunst
 exec --no-startup-id ibus-daemon --xim -d -r
 exec --no-startup-id xautolock -time 5 -locker '~/.i3/bin/i3lock.sh'

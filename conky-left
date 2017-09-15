@@ -27,46 +27,20 @@ alignment top_left
 gap_x 30
 gap_y 20
 
-cpu_avg_samples 10
-net_avg_samples 2
-
 no_buffers no
 override_utf8_locale yes
+use_spacer right
 
 TEXT
-${voffset 10}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %H:%M}${font}${voffset -84}${offset 10}${color FFA300}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 24}${font GE Inspira:pixelsize=58}${offset -148}${time %A}${font}
-${voffset +20}${font DejaVu Sans Mono:pixelsize=12}${color 535C5C}
+${voffset 10}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %H:%M}${font}${voffset -84}${offset 10}${color FFA300}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 24}${font GE Inspira:pixelsize=58}${offset -185}${time %A}${font}
+${font DejaVu Sans Mono:pixelsize=12}${color 535C5C}
   _____ ${color de6839} _    ${color 535C5C} __    _      _      _
    | |  ${color de6839}\ \_/ ${color 535C5C}/ /`_ \ \  / | |\ | | |\ |
    |_|  ${color de6839}/_/ \ ${color 535C5C}\_\_/  \_\/  |_| \| |_| \|
 ${color 5a715c}
   [ @author TxGVNN ]
 
+${voffset -180}${color}${execp cat /tmp/.weather}
+${texeci 25600 ~/.i3/bin/weather > /tmp/.weather 2>&1}
 ${font Inconsolata:pixelsize=12}${color 88ABC4}
-${exec cat ~/.gxt/logs/$(date +%Y-%m-%d)}
-${voffset +300}
-${font Inconsolata:pixelsize=13}${color 4ca0be}
-+-------------+
-|  SPEEDTEST  |
-+-------------+
-${exec cat /tmp/.speeds}
-${texeci 25600 speedtest --simple --server 3009 > /tmp/.speeds 2>&1}
-+-------------+
-| HACKER NEWS |
-+-------------+
- 1. ${rss https://news.ycombinator.com/rss 30 item_title 0}
- 2. ${rss https://news.ycombinator.com/rss 30 item_title 1}
- 3. ${rss https://news.ycombinator.com/rss 30 item_title 2}
- 4. ${rss https://news.ycombinator.com/rss 30 item_title 3}
- 5. ${rss https://news.ycombinator.com/rss 30 item_title 4}
- 6. ${rss https://news.ycombinator.com/rss 30 item_title 5}
- 7. ${rss https://news.ycombinator.com/rss 30 item_title 6}
- 8. ${rss https://news.ycombinator.com/rss 30 item_title 7}
- 9. ${rss https://news.ycombinator.com/rss 30 item_title 8}
-10. ${rss https://news.ycombinator.com/rss 30 item_title 9}
-11. ${rss https://news.ycombinator.com/rss 30 item_title 10}
-12. ${rss https://news.ycombinator.com/rss 30 item_title 11}
-13. ${rss https://news.ycombinator.com/rss 30 item_title 12}
-14. ${rss https://news.ycombinator.com/rss 30 item_title 13}
-15. ${rss https://news.ycombinator.com/rss 30 item_title 14}
-${voffset +30}
+${voffset +180}
