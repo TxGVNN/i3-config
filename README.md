@@ -16,7 +16,7 @@ Don't forget setup the `Xresources` file
 ## screenshots
 - master
 
-![screenfetch](http://i.imgur.com/IlNq1wY.png)
+![screenfetch](http://i.imgur.com/uHzHgWD.png)
 
 - v2
 ![screenfetch](http://i.imgur.com/gJQy6nk.png)
