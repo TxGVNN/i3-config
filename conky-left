@@ -40,7 +40,7 @@ ${font DejaVu Sans Mono:pixelsize=12}${color 535C5C}
 ${color 5a715c}
   [ @author TxGVNN ]
 
-${voffset -180}${color}${execp cat /tmp/.weather}
+${voffset -185}${color}${execp cat /tmp/.weather}
 ${texeci 1800 ~/.i3/bin/weather > /tmp/.weather 2>&1}
 ${font Inconsolata:pixelsize=12}${color 88ABC4}
 ${voffset +180}
