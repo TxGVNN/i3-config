@@ -32,7 +32,7 @@ override_utf8_locale yes
 use_spacer right
 
 TEXT
-${voffset 10}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %H:%M}${font}${voffset -84}${offset 10}${color FFA300}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 24}${font GE Inspira:pixelsize=58}${offset -250}${time %A}${font}
+${voffset 10}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %H:%M}${font}${voffset -84}${offset 10}${color FFA300}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 24}${font GE Inspira:pixelsize=58}${offset -215}${time %A}${font}
 ${font DejaVu Sans Mono:pixelsize=12}${color 535C5C}
   _____ ${color de6839} _    ${color 535C5C} __    _      _      _
    | |  ${color de6839}\ \_/ ${color 535C5C}/ /`_ \ \  / | |\ | | |\ |
@@ -40,7 +40,7 @@ ${font DejaVu Sans Mono:pixelsize=12}${color 535C5C}
 ${color 5a715c}
   [ @author TxGVNN ]
 
-${voffset -185}${color}${execp cat /tmp/.weather}
+${voffset -186}${color}${execp cat /tmp/.weather}
 ${texeci 1800 ~/.i3/bin/weather > /tmp/.weather 2>&1}
 ${font Inconsolata:pixelsize=12}${color 88ABC4}
 ${voffset +180}
