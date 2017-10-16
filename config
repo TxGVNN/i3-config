@@ -12,7 +12,7 @@ set $tag6 "6 "
 set $tag7 "7 "
 set $tag8 "8 "
 set $tag9 "9 "
-set $tag0 "Zero "
+set $tag0 ""
 
 # i3 config file (v4)
 #
