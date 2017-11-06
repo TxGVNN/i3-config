@@ -50,8 +50,8 @@ bindsym $mod+Shift+q kill
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -b -nb '#011015' -sb '#567ec5' -sf '#000000' -fn 'Terminus-11' -l 10"
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-# Workspace toggle $mod + '/'
-bindcode $mod+61 workspace back_and_forth
+# Workspace toggle $mod + 'q'
+bindsym $mod+q workspace back_and_forth
 # Border toggle
 bindsym $mod+x border toggle
 # change focus
@@ -157,7 +157,7 @@ bindsym $mod+Shift+e mode "Exit i3?"
 bindsym $mod+minus scratchpad show
 bindsym $mod+Shift+minus move scratchpad
 # lock screen
-bindsym Mod1+Control+l exec ~/.i3/bin/i3lock.sh
+bindsym $mod+Mod1+l exec ~/.i3/bin/i3lock.sh
 # resize window (you can also use the mouse for that)
 mode "resize" {
         bindsym j resize shrink width 5 px or 5 ppt
@@ -230,7 +230,7 @@ exec --no-startup-id conky -d -c ~/.i3/conky-bottom
 exec --no-startup-id dunst
 exec --no-startup-id ibus-daemon --xim -d -r
 exec --no-startup-id xautolock -time 5 -locker '~/.i3/bin/i3lock.sh'
-#exec --no-startup-id wicd-gtk
+exec --no-startup-id redshift
 
 # Assign workspace
 assign [class="Keepassx"] $tag0
