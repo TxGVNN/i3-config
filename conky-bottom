@@ -30,13 +30,11 @@ override_utf8_locale yes
 use_spacer right
 
 TEXT
-${exec cat ~/.gxt/logs/$(date +%Y-%m-%d)}
 ${font Inconsolata:pixelsize=13}${color 4ca0be}
 +-------------+
-|  SPEEDTEST  |
+| TODAY       |
 +-------------+
-${color 4ca0be}${exec cat /tmp/.speeds}
-${texeci 25600 speedtest --simple --server 3009 > /tmp/.speeds 2>&1}${color 4ca0be}
+${exec cat ~/.gxt/logs/$(date +%Y-%m-%d)}
 +-------------+
 | HACKER NEWS |
 +-------------+
