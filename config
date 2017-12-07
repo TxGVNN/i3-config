@@ -153,7 +153,7 @@ bindsym $mod+Shift+r restart
 mode "(s)leep (h)ybernate (r)eboot (p)oweroff (e)xit-i3" {
         bindsym s exec ~/.i3/bin/i3lock.sh && systemctl suspend; mode "default"
         bindsym h exec ~/.i3/bin/i3lock.sh && systemctl hibernate; mode "default"
-        bindsym d exec systemctl poweroff; mode "default"
+        bindsym p exec systemctl poweroff; mode "default"
         bindsym r exec systemctl reboot; mode "default"
         bindsym e exec --no-startup-id i3-msg exit; mode "default"
         bindsym Return mode "default"
