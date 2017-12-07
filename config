@@ -140,6 +140,9 @@ bindsym $mod+Shift+8 move container to workspace $tag8
 bindsym $mod+Shift+9 move container to workspace $tag9
 bindsym $mod+Shift+0 move container to workspace $tag0
 
+# mark container
+bindsym $mod+m exec i3-input -F 'mark %s' -P 'Mark name: '
+bindsym $mod+Shift+m exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -147,12 +150,17 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 #bindsym $mod+Shift+e exit
-mode "Exit i3?" {
-    bindsym Return exec --no-startup-id i3-msg exit, mode "default"
-    # exit system mode: "Enter" or "Escape"
-    bindsym Escape mode "default"
+mode "(s)leep (h)ybernate (r)eboot (p)oweroff (e)xit-i3" {
+        bindsym s exec ~/.i3/bin/i3lock.sh && systemctl suspend; mode "default"
+        bindsym h exec ~/.i3/bin/i3lock.sh && systemctl hibernate; mode "default"
+        bindsym d exec systemctl poweroff; mode "default"
+        bindsym r exec systemctl reboot; mode "default"
+        bindsym e exec --no-startup-id i3-msg exit; mode "default"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
 }
-bindsym $mod+Shift+e mode "Exit i3?"
+bindsym $mod+Shift+e mode "(s)leep (h)ybernate (r)eboot (p)oweroff (e)xit-i3"
+
 #scratchpad
 bindsym $mod+minus scratchpad show
 bindsym $mod+Shift+minus move scratchpad
@@ -249,10 +257,10 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 # Touchpad controls
-bindsym XF86Sleep exec systemctl suspend
+bindsym XF86Sleep exec exec ~/.i3/bin/i3lock.sh && systemctl suspend
 # shortcut scratchpad
 bindsym $mod+F1 [title="^F1$"] exec ~/.i3/bin/fn 1
-bindsym $mod+F2 [title="^F2$"] exec ~/.i3/bin/fn 2
+bindsym $mod+F12 [title="^F12$"] exec ~/.i3/bin/fn 12
 # Media player controls
 bindsym XF86AudioPlay exec clementine --play-pause
 bindsym XF86AudioPause exec clementine --play-pause
@@ -267,8 +275,8 @@ bindsym $mod+Mod1+k exec keepassx
 #email
 bindsym $mod+Mod1+e exec thunderbird
 #browser
-bindsym $mod+Mod1+b exec firefox
-bindsym $mod+Mod1+Shift+b exec firefox --private-window
+bindsym $mod+Mod1+b exec firefox -P default
+bindsym $mod+Mod1+Shift+b exec firefox -P default --private-window
 bindsym $mod+Mod1+g exec getchromium
 bindsym $mod+Mod1+Shift+g exec getchromium incognito
 #paint
