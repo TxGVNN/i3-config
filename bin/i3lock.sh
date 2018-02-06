@@ -6,3 +6,4 @@ convert /tmp/screen_locked.png -blur 1x1  -implode 1 -colorize 20%   /tmp/screen
 convert /tmp/screen_locked.png -scale 20% -scale 500% /tmp/screen_locked.png
 convert /tmp/screen_locked.png ~/.i3/bin/lock.png -gravity center -composite -matte /tmp/screen_locked.png
 i3lock -i /tmp/screen_locked.png
+xset dpms force off

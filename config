@@ -257,7 +257,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 # Touchpad controls
-bindsym XF86Sleep exec exec ~/.i3/bin/i3lock.sh && systemctl suspend
+bindsym XF86Sleep exec ~/.i3/bin/i3lock.sh && systemctl suspend
 # shortcut scratchpad
 bindsym $mod+F1 [title="^F1$"] exec ~/.i3/bin/fn 1
 bindsym $mod+F12 [title="^F12$"] exec ~/.i3/bin/fn 12
