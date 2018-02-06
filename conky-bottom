@@ -31,13 +31,12 @@ use_spacer right
 
 TEXT
 ${font Inconsolata:pixelsize=13}${color 4ca0be}
-+-------------+
-| TODAY       |
-+-------------+
+TODAY
+-----------
 ${exec cat ~/.gxt/logs/$(date +%Y-%m-%d)}
-+-------------+
-| HACKER NEWS |
-+-------------+
+
+HACKER NEWS
+-----------
  1. ${rss https://news.ycombinator.com/rss 30 item_title 0}
  2. ${rss https://news.ycombinator.com/rss 30 item_title 1}
  3. ${rss https://news.ycombinator.com/rss 30 item_title 2}
