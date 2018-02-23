@@ -285,8 +285,9 @@ bindsym $mod+Mod1+p exec gimp
 bindsym $mod+Mod1+m exec /opt/mattermost/mattermost-desktop
 #explore
 bindsym $mod+Mod1+r exec /usr/bin/rxvt -e ranger
-#skype
-bindsym $mod+Mod1+s exec skypeforlinux
+#chat
+bindsym $mod+Mod1+s exec /opt/Telegram/Telegram
 #slack team
 bindsym $mod+Mod1+t exec /usr/local/bin/riot-web
-#workspace_auto_back_and_forth yes
+bindcode $mod+90 [title="YouTube"] scratchpad show
+for_window [title="YouTube"] sticky enable
