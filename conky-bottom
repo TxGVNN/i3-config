@@ -1,7 +1,7 @@
 use_xft yes
 xftfont Inconsolata:pixelsize=12
 xftalpha 0.1
-update_interval 1.0
+update_interval 5.0
 total_run_times 0
 background no
 
@@ -33,7 +33,7 @@ TEXT
 ${font Inconsolata:pixelsize=13}${color 4ca0be}
 TODAY
 -----------
-${exec cat ~/.gxt/logs/$(date +%Y-%m-%d)}
+${execi 300 cat ~/.gxt/logs/$(date +%Y-%m-%d)}
 
 HACKER NEWS
 -----------
