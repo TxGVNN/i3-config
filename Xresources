@@ -112,7 +112,7 @@ xterm*foreground:                     #c0b18b
 ! URxvt*preeditType:                    style
 ! URxvt*imLocale:                       string
 ! URxvt*imFont:                         fontname
-URxvt*title:                          test@Debian
+!URxvt*title:                          URxvt
 ! URxvt*iconName:                       string
 !URxvt*saveLines:                      1024
 ! URxvt*buffered:                       boolean
