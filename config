@@ -126,7 +126,7 @@ bindsym $mod+6 workspace number 6 $tag6
 bindsym $mod+7 workspace number 7 $tag7
 bindsym $mod+8 workspace number 8 $tag8
 bindsym $mod+9 workspace number 9 $tag9
-bindsym $mod+0 workspace number 0 $tag0
+bindsym $mod+0 workspace $tag0
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number 1
@@ -138,7 +138,7 @@ bindsym $mod+Shift+6 move container to workspace number 6
 bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 0
+bindsym $mod+Shift+0 move container to workspace $tag0
 
 # rename workspace
 bindsym $mod+t exec ~/.i3/bin/tags
@@ -245,7 +245,6 @@ exec --no-startup-id redshift
 
 # Assign workspace
 assign [class="Keepassx"] $tag0
-assign [class="Skype"] $tag1
 
 # Screenshot
 bindsym Print exec scrot 'scrot_%Y-%m-%d-%T_$wx$h.png' -e 'mv $f ~/Pictures/'
