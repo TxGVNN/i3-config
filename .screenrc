@@ -3,13 +3,9 @@ autodetach on
 startup_message off
 utf8 on
 altscreen
-term rxvt-unicode
-#terminfo rxvt-255color 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+term xterm-color
+layout save default
 defscrollback 100000
-# add backtick printer functions
-#hardstatus alwayslastline "%{= d}%{r}%{k}%{r}%{k}${USER}%{k}@%{k}%H: %L>%1`%? %?%{.g}%u%? %-18=%?%{m} %{k}%-=%{k}%-w%{r}%n %t%{k}%+w %{k}|%C"
-#hardstatus alwayslastline '%{= m}Load Avg:%{= G} %l %= %{= w}%-w%{+b r}%n:%t%{-b r}%{w}%+w %= %{b}%D %d/%m/%Y %{Y}%c'
-#hardstatus alwayslastline "%{rk}%H %{gk}%c %{yk}%M%d %{wk}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wk}%?%+Lw%?"
 hardstatus alwayslastline "%{= d}%{g}${USER}@%H%L>%1`%? %?%{.g}%u%? %-18=%?%{m} %{k}%-=%{y}%-w%{r}%n %t%{y}%+w %{k}%{c}%c"
 escape ^Zz
 # do not trash BackSpace, usually DEL
