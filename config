@@ -196,8 +196,7 @@ bar {
 #	status_command i3status -c ~/.i3/i3status.conf
 	status_command ~/.i3/bin/conky-i3bar
 	font pango:DejaVu Sans Mono, FontAwesome 8
-	tray_output eDP1
-#	tray_output primary
+	tray_output primary
 	position top
 #	font pango:Terminus 8
 	colors {
@@ -279,8 +278,8 @@ bindsym $mod+Mod1+e exec thunderbird
 #browser
 bindsym $mod+Mod1+b exec firefox -P default
 bindsym $mod+Mod1+Shift+b exec firefox -P default --private-window
-bindsym $mod+Mod1+g exec getchromium
-bindsym $mod+Mod1+Shift+g exec getchromium incognito
+bindsym $mod+Mod1+g exec chromium  --profile-directory="Default"
+bindsym $mod+Mod1+Shift+g exec chromium  --profile-directory="Default" --incognito
 #paint
 bindsym $mod+Mod1+p exec gimp
 #mattermost
