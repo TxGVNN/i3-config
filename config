@@ -163,7 +163,7 @@ mode "(s)leep (h)ybernate (r)eboot (p)oweroff (e)xit-i3" {
 }
 bindsym $mod+Shift+e mode "(s)leep (h)ybernate (r)eboot (p)oweroff (e)xit-i3"
 
-#scratchpad
+# scratchpad
 bindsym $mod+minus scratchpad show
 bindsym $mod+Shift+minus move scratchpad
 # lock screen
@@ -185,11 +185,10 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# Start i3bar to display a workspace bar
+bindsym $mod+b bar mode toggle
 bar {
 	i3bar_command /usr/bin/i3bar
 #	i3bar_command ~/.i3/lemonbar/i3_lemonbar.sh
