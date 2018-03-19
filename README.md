@@ -27,7 +27,7 @@ Don't forget setup the `Xresources` file
 ## packages
 - required
 
-``xinit xbacklight xinput feh scrot conky conky-all rxvt-unicode  alsa-utils acpi fonts-font-awesome redshift
+``xinit xbacklight xinput feh scrot conky conky-all rxvt-unicode-256color  alsa-utils acpi fonts-font-awesome redshift
 ``
 - optional
 
