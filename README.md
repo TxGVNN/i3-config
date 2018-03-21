@@ -6,14 +6,18 @@ I use Debian GNU/Linux.
 ```
 $i3 --version
 i3 version 4.13 (2016-11-08) © 2009 Michael Stapelberg and contributors
-```
-
-## how to setup
+```                                                   
+## Features                                                                                             
+                                                                                                         
+- Basic i3 configuration
+- Show/hide fastly terminal
+- Updating workspace name even working
+## How to setup
 ```
 git clone https://github.com/TxGVNN/i3-config.git ~/.i3
 ```
 Don't forget setup the `Xresources` file
-## screenshots
+## Screenshots
 - master
 
 ![screenfetch](http://i.imgur.com/uHzHgWD.png)
@@ -24,16 +28,16 @@ Don't forget setup the `Xresources` file
 - v1
 ![screenfetch](http://i.imgur.com/S2WVk6X.png)
 
-## packages
+## Packages
 - required
 
-``xinit xbacklight xinput feh scrot conky conky-all rxvt-unicode-256color  alsa-utils acpi fonts-font-awesome redshift
+``xinit xbacklight xinput feh scrot conky conky-all rxvt-unicode-256color alsa-utils acpi fonts-font-awesome redshift
 ``
 - optional
 
-``wicd thunderbird firefore-esr ranger clementine 
+``wicd thunderbird firefore-esr ranger weechat emacs vim
 ``
-## bugs
+## Bugs
 - Clock not show?
 
    search and install the Lua packages.
