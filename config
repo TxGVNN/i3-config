@@ -142,6 +142,9 @@ bindsym $mod+Shift+0 move container to workspace $tag0
 
 # rename workspace
 bindsym $mod+t exec ~/.i3/bin/tags
+# [move to] new workspace
+bindsym $mod+i exec i3-input -F "workspace \"%s\"" -P 'Workspace: '
+bindsym $mod+Shift+i exec i3-input -F "move container to workspace \"%s\"" -P 'Move to workspace: '
 # mark container
 bindsym $mod+m exec i3-input -F 'mark %s' -P 'Mark name: '
 bindsym $mod+Shift+m exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '

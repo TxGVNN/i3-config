@@ -6,12 +6,13 @@ I use Debian GNU/Linux.
 ```
 $i3 --version
 i3 version 4.13 (2016-11-08) © 2009 Michael Stapelberg and contributors
-```                                                   
-## Features                                                                                             
-                                                                                                         
+```
+## Features
+
 - Basic i3 configuration
 - Show/hide fastly terminal
 - Updating workspace name even working
+- Create new workspace by naming (or moving container to new)
 ## How to setup
 ```
 git clone https://github.com/TxGVNN/i3-config.git ~/.i3
@@ -40,4 +41,4 @@ Don't forget setup the `Xresources` file
 ## Bugs
 - Clock not show?
 
-   search and install the Lua packages.
+search and install the Lua packages.
