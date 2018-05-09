@@ -1,6 +1,4 @@
-i3 config
-=========
-All file config for i3 window manager.
+# i3wm configuration files
 
 I use Debian GNU/Linux.
 ```
