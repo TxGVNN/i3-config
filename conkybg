@@ -96,11 +96,11 @@ ${alignr}$font < $mem/$memmax > --+    |    |    |
 ${alignr}$font < ${top_mem name 1}  ${top_mem mem 1} > --+    |    |
 ${alignr}$font < ${top_mem name 2}  ${top_mem mem 2} > --+    |    |
 ${alignr}$font < ${top_mem name 3}  ${top_mem mem 3} > --+    |    |
-${alignr}$font < ${fs_used /}/${fs_size /} > /    --+    |
+${alignr}$font < ${fs_used_perc /}% - ${fs_used /}/${fs_size /} > /    --+    |
 ${alignr}$font < ${fs_bar 5,120 /} > --+    |    |
-${alignr}$font < ${fs_used /home}/${fs_size /home} > /home--+    |
+${alignr}$font < ${fs_used_perc /home}% - ${fs_used /home}/${fs_size /home} > /home--+    |
 ${alignr}$font < ${fs_bar 5,120 /home} > --+    |    |
-${alignr}$font < ${fs_used /gtx}/${fs_size /gtx} > /gtx --+    |
+${alignr}$font < ${fs_used_perc /gtx}% - ${fs_used /gtx}/${fs_size /gtx} > /gtx --+    |
 ${alignr}$font < ${fs_bar 5,120 /gtx} > --+    |    |
 ${alignr}$font < $swapperc% - $swap/$swapmax > swap --+    |
 ${alignr}$font < ${swapbar 5,120} > --+         |
