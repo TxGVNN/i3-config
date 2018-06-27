@@ -1,4 +1,4 @@
-Xft.dpi:	96
+Xft.dpi:	98
 Xft.antialias:	1
 Xft.rgba:	rgb
 Xft.autohint:	0
@@ -6,10 +6,9 @@ Xft.lcdfilter:	lcddefault
 Xft.hinting:	1
 Xft.hintstyle:	hintfull
 
-URxvt.font: xft:Inconsolata:size=11:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
-URxvt.boldFont: xft:Inconsolata:size=11:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
-URxvt.italicFont: xft:Inconsolata:size=11:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
-URxvt.boldItalicFont: xft:Inconsolata:size=11:hintstyle=hintfull, -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt.font: xft:DejaVu Sans Mono-11
+Emacs.font: DejaVu Sans Mono-11
+XTerm.vt100.faceName: DejaVu Sans Mono:size=11
 
 ! URxvt*termName:                       string
 ! URxvt*geometry:                       geometry
@@ -46,8 +45,8 @@ URxvt*scrollTtyOutput:           true
 ! URxvt*cursorUnderline:                boolean
 ! URxvt*cursorBlink:                    boolean
 ! URxvt*pointerBlank:                   boolean
-URxvt.keysym.Control-0x2b: perl:font-size:increase
-URxvt.keysym.Control-0x2d: perl:font-size:decrease
+! URxvt.keysym.Control-0x2b: perl:font-size:increase
+! URxvt.keysym.Control-0x2d: perl:font-size:decrease
 URxvt*background:                     #080808
 URxvt*foreground:                     #c0b18b
 xterm*background:                     #1f1f1f
@@ -103,7 +102,7 @@ xterm*foreground:                     #c0b18b
 ! URxvt*backgroundPixmap:               file[;geom]
 ! URxvt*iconFile:                       file
 !URxvt*font:                           xft:Inconsolata:style=Medium:pixelsize=14
-!URxvt*font:                           xft:Mono:pixelsize=12
+!URxvt*font:                           xft:Mono:pixelsize=13
 ! URxvt*boldFont:                       fontname
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
@@ -138,13 +137,13 @@ URxvt*depth:                         32
 ! URxvt*secondaryScroll:                boolean
 URxvt*perl-lib:                       /usr/lib/urxvt/perl/
 ! URxvt*perl-eval:                      perl-eval
-URxvt*perl-ext-common:               default,matcher,selection-to-clipboard,font-size
+URxvt*perl-ext-common:               default,matcher,selection-to-clipboard
 ! URxvt*perl-ext:                       string
 ! URxvt*iso14755:                       boolean
 ! URxvt*iso14755_52:                    boolean
 ! URxvt*xrm:                            string
-URxvt*keysym.Control-Shift-Up:      perl:font-size:increment
-URxvt*keysym.Control-Shift-Down:    perl:font-size:decrement
+! URxvt*keysym.Control-Shift-Up:      perl:font-size:increment
+! URxvt*keysym.Control-Shift-Down:    perl:font-size:decrement
 ! URxvt*keysym.sym:                     keysym
 ! URxvt*background.border:              boolean
 ! URxvt*background.expr:                string
@@ -436,4 +435,3 @@ URxvt*iso14755: false
 
 ! Turn on/off ISO 14755 5.2 mode (default enabled).
 URxvt*iso14755_52: false
-
