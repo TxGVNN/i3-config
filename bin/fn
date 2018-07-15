@@ -1,8 +1,9 @@
 #!/bin/bash
 # Giap Tran <txgvnn@gmail.com>
-#.i3/config
+#cat >> .i3/config <<EOF
 #bindsym $mod+F1 [title="^F1$"] exec fn 1
 #bindsym $mod+Fn [title="^Fn$"] exec fn n
+#EOF
 
 #if [ -z "$UID" ]; then
 #	UID=$(id -u)
@@ -19,14 +20,14 @@ _fn(){
 		sleep 1
 	fi
 	# finally, need show terminal
-	i3 [title="^${name}$"] scratchpad show &>/dev/null
+	i3 [con_mark="^${name}$"] scratchpad show &>/dev/null
 }
 
 # create new terminal
 if [ "$#" -eq 0 ]
 then
 	name=$(cat /tmp/.fn-"${UID}")
-	~/.i3/bin/xtitle "$name"
+	i3 mark "$name"
 	i3 move scratchpad &> /dev/null
 	if which screen >/dev/null; then
 		screen -t "$name"
