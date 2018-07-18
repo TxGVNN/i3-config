@@ -261,16 +261,16 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 
 # Touchpad controls
 bindsym XF86Sleep exec ~/.i3/bin/i3lock.sh && systemctl suspend
-# shortcut scratchpad
-bindsym $mod+F1 [title="^F1$"] exec ~/.i3/bin/fn 1
-bindsym $mod+F12 [title="^F12$"] exec ~/.i3/bin/fn 12
+# Toggle fastly terminal
+bindsym $mod+F1 exec ~/.i3/bin/fn 1
+bindsym $mod+F12 exec ~/.i3/bin/fn 12
 # Media player controls
 bindsym XF86AudioPlay exec clementine --play-pause
 bindsym XF86AudioPause exec clementine --play-pause
 bindsym XF86AudioNext exec clementine --next
 bindsym XF86AudioPrev exec  clementine --previous
 
-## shortcut 
+## shortcut
 #emacs
 bindsym $mod+Mod1+i exec emacs
 #keepassx
