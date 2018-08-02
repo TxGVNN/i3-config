@@ -31,6 +31,15 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 * <kbd>Super</kbd>+<kbd>m</kbd> Mark a container
 * <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>m</kbd> Go to the marked container
 
+### Mouse mode
+<kbd>Super</kbd>+<kbd>g</kbd> Go to mouse mode, after that you can
+
+* <kbd>&larr;(a)</kbd>, <kbd>&rarr;(d)</kbd>, <kbd>&uarr;(w)</kbd>, <kbd>&darr;(x)</kbd> `Mouse move left, right, up & down`
+
+* <kbd>$mod+(above)</kbd> `Mouse move fasterx2`
+
+* <kbd>Control</kbd>+[<kbd>&larr;(a)</kbd>, <kbd>&rarr;(d)</kbd>)] `Mouse click right, left`
+
 ## Screenshots
 - master
 

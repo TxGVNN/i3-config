@@ -166,6 +166,48 @@ mode "(s)leep (h)ybernate (r)eboot (p)oweroff (e)xit-i3" {
 }
 bindsym $mod+Shift+e mode "(s)leep (h)ybernate (r)eboot (p)oweroff (e)xit-i3"
 
+# mouse mode
+mode "mouse" {
+        # normal
+        bindsym Up exec xdotool mousemove_relative -- 0 -15
+        bindsym Down exec xdotool mousemove_relative -- 0 15
+        bindsym Right exec xdotool mousemove_relative -- 15 0
+        bindsym Left exec xdotool mousemove_relative -- -15 0
+        bindsym w exec xdotool mousemove_relative -- 0 -15
+        bindsym x exec xdotool mousemove_relative -- 0 15
+        bindsym d exec xdotool mousemove_relative -- 15 0
+        bindsym a exec xdotool mousemove_relative -- -15 0
+        bindsym q exec xdotool mousemove_relative -- -15 -15
+        bindsym e exec xdotool mousemove_relative -- 15 -15
+        bindsym c exec xdotool mousemove_relative -- 15 15
+        bindsym z exec xdotool mousemove_relative -- -15 15
+        # faster(x2)
+        bindsym $mod+Up exec xdotool mousemove_relative -- 0 -30
+        bindsym $mod+Down exec xdotool mousemove_relative -- 0 30
+        bindsym $mod+Right exec xdotool mousemove_relative -- 30 0
+        bindsym $mod+Left exec xdotool mousemove_relative -- -30 0
+        bindsym $mod+w exec xdotool mousemove_relative -- 0 -30
+        bindsym $mod+x exec xdotool mousemove_relative -- 0 30
+        bindsym $mod+d exec xdotool mousemove_relative -- 30 0
+        bindsym $mod+a exec xdotool mousemove_relative -- -30 0
+        bindsym $mod+q exec xdotool mousemove_relative -- -30 -30
+        bindsym $mod+e exec xdotool mousemove_relative -- 30 -30
+        bindsym $mod+c exec xdotool mousemove_relative -- 30 30
+        bindsym $mod+z exec xdotool mousemove_relative -- -30 30
+        # click
+        bindsym Control+Right exec xdotool click 3
+        bindsym Control+Left exec xdotool click 1
+        bindsym Control+d exec xdotool click 3
+        bindsym Control+a exec xdotool click 1
+        bindsym Control+s exec xdotool click 2
+        bindsym Control+Up exec xdotool click 4
+        bindsym Control+Down exec xdotool click 5
+        # exit mode
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+g mode "mouse"
+
 # scratchpad
 bindsym $mod+minus scratchpad show
 bindsym $mod+Shift+minus move scratchpad
