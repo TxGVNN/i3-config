@@ -36,9 +36,11 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 
 * <kbd>&larr;(a)</kbd>, <kbd>&rarr;(d)</kbd>, <kbd>&uarr;(w)</kbd>, <kbd>&darr;(x)</kbd> `Mouse move left, right, up & down`
 
+* <kbd>q, e, c, z</kbd> `Move top+left, top+right, bottom+right, bottom+left`
+
 * <kbd>$mod+(above)</kbd> `Mouse move fasterx2`
 
-* <kbd>Control</kbd>+[<kbd>&larr;(a)</kbd>, <kbd>&rarr;(d)</kbd>)] `Mouse click right, left`
+* <kbd>Control</kbd>+[<kbd>&larr;(a)</kbd>, <kbd>&rarr;(d)</kbd>, <kbd>s</kbd>, <kbd>&uarr;(w)</kbd>, <kbd>&darr;(x)</kbd>)] `Mouse click right, left, middle, wheel up, wheel down`
 
 ## Screenshots
 - master
@@ -54,7 +56,7 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 ## Packages
 - required
 
-``xinit xbacklight xinput feh scrot conky conky-all rxvt-unicode-256color alsa-utils acpi fonts-font-awesome redshift
+``xinit xbacklight xinput feh scrot conky-all rxvt-unicode-256color alsa-utils acpi fonts-font-awesome redshift xdotool screen
 ``
 - optional
 
