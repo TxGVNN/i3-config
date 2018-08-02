@@ -194,16 +194,28 @@ mode "mouse" {
         bindsym $mod+e exec xdotool mousemove_relative -- 30 -30
         bindsym $mod+c exec xdotool mousemove_relative -- 30 30
         bindsym $mod+z exec xdotool mousemove_relative -- -30 30
+        # slower (1/3 normal)
+        bindsym Control+Up exec xdotool mousemove_relative -- 0 -5
+        bindsym Control+Down exec xdotool mousemove_relative -- 0 5
+        bindsym Control+Right exec xdotool mousemove_relative -- 5 0
+        bindsym Control+Left exec xdotool mousemove_relative -- -5 0
+        bindsym Control+w exec xdotool mousemove_relative -- 0 -5
+        bindsym Control+x exec xdotool mousemove_relative -- 0 5
+        bindsym Control+d exec xdotool mousemove_relative -- 5 0
+        bindsym Control+a exec xdotool mousemove_relative -- -5 0
+        bindsym Control+q exec xdotool mousemove_relative -- -5 -5
+        bindsym Control+e exec xdotool mousemove_relative -- 5 -5
+        bindsym Control+c exec xdotool mousemove_relative -- 5 5
+        bindsym Control+z exec xdotool mousemove_relative -- -5 5
         # click
-        bindsym Control+Right exec xdotool click 3
-        bindsym Control+Left exec xdotool click 1
-        bindsym Control+d exec xdotool click 3
-        bindsym Control+a exec xdotool click 1
-        bindsym Control+s exec xdotool click 2
-        bindsym Control+w exec xdotool click 4
-        bindsym Control+x exec xdotool click 5
-        bindsym Control+Up exec xdotool click 4
-        bindsym Control+Down exec xdotool click 5
+        bindsym s exec xdotool click 2 # middle
+        bindsym k exec xdotool click 3 # right
+        bindsym j exec xdotool click 1 # left
+        bindsym h exec xdotool click 4 # wheel up
+        bindsym l exec xdotool click 5 # wheel down
+        bindsym Shift+j exec xdotool click 1 # shift + left = mark
+        bindsym Control+h exec xdotool click 4 # control + wheel up = zoom
+        bindsym Control+l exec xdotool click 5 # control + wheel down = zoom
         # exit mode
         bindsym Return mode "default"
         bindsym Escape mode "default"

@@ -38,9 +38,15 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 
 * <kbd>q, e, c, z</kbd> `Move top+left, top+right, bottom+right, bottom+left`
 
-* <kbd>$mod+(above)</kbd> `Mouse move fasterx2`
+* <kbd>$mod+(above)</kbd> `Mouse move faster (2*normal)`
 
-* <kbd>Control</kbd>+[<kbd>&larr;(a)</kbd>, <kbd>&rarr;(d)</kbd>, <kbd>s</kbd>, <kbd>&uarr;(w)</kbd>, <kbd>&darr;(x)</kbd>)] `Mouse click right, left, middle, wheel up, wheel down`
+* <kbd>Control+(above)</kbd> `Mouse move slower (normal/3)`
+
+* <kbd>k</kbd>, <kbd>j</kbd>, <kbd>s</kbd>, <kbd>h</kbd>, <kbd>l</kbd> `Mouse click right, left, middle, wheel up, wheel down`
+
+* <kbd>Shift+j</kbd> `It means Shift + Right click (mark feature)`
+
+* <kbd>Control+h</kbd>, <kbd>Control+l</kbd> `It means Control + Right/Left click (zoom feature in browser)`
 
 ## Screenshots
 - master
