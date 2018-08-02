@@ -200,6 +200,8 @@ mode "mouse" {
         bindsym Control+d exec xdotool click 3
         bindsym Control+a exec xdotool click 1
         bindsym Control+s exec xdotool click 2
+        bindsym Control+w exec xdotool click 4
+        bindsym Control+x exec xdotool click 5
         bindsym Control+Up exec xdotool click 4
         bindsym Control+Down exec xdotool click 5
         # exit mode
