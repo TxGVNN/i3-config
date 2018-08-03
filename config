@@ -214,6 +214,7 @@ mode "mouse" {
         bindsym h exec xdotool click 4 # wheel up
         bindsym l exec xdotool click 5 # wheel down
         bindsym Shift+j exec xdotool click 1 # shift + left = mark
+        bindsym Control+j exec xdotool click 1 # control + left
         bindsym Control+h exec xdotool click 4 # control + wheel up = zoom
         bindsym Control+l exec xdotool click 5 # control + wheel down = zoom
         # exit mode
