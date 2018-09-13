@@ -1,9 +1,12 @@
 #!/bin/bash
 # Giap Tran <txgvnn@gmail.com>
 #cat >> .i3/config <<EOF
-#bindsym $mod+F1 [title="^F1$"] exec fn 1
-#bindsym $mod+Fn [title="^Fn$"] exec fn n
+#bindsym $mod+F1 exec fn 1
+#bindsym $mod+Fn exec fn n
 #EOF
+if [ "${DEBUG:-0}" -eq 1 ]; then
+	set -x
+fi
 
 #if [ -z "$UID" ]; then
 #	UID=$(id -u)
