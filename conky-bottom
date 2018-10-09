@@ -31,10 +31,6 @@ use_spacer right
 
 TEXT
 ${font Inconsolata:pixelsize=13}${color 4ca0be}
-TODAY
------------
-${execi 300 cat ~/.gxt/logs/$(date +%Y-%m-%d)}
-
 HACKER NEWS
 -----------
  1. ${rss https://news.ycombinator.com/rss 30 item_title 0}
