@@ -250,25 +250,25 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar
 bindsym $mod+b bar mode toggle
 bar {
-	i3bar_command /usr/bin/i3bar
-#	i3bar_command ~/.i3/lemonbar/i3_lemonbar.sh
-#	status_command i3status -c ~/.i3/i3status.conf
-	status_command ~/.i3/bin/conky-i3bar
-	font pango:DejaVu Sans Mono, FontAwesome 8
-	tray_output primary
-	position top
-#	font pango:Terminus 8
-	colors {
-		background #202020
-		separator #202020
-		statusline #ffffff
-		focused_workspace  #AAAAAA #000000 #DDDDDD
-		active_workspace   #000000 #808080 #336633
-		inactive_workspace #606060 #808080 #000000
-		urgent_workspace  #AAAAAA #e60000 #ffffff
-    }
-#	bindsym button1 nop
-#	bindsym button2 nop
+        i3bar_command /usr/bin/i3bar
+        # i3bar_command ~/.i3/lemonbar/i3_lemonbar.sh
+        # status_command i3status -c ~/.i3/i3status.conf
+        status_command ~/.i3/bin/conky-i3bar
+        font pango:DejaVu Sans Mono, FontAwesome 8
+        tray_output primary
+        position top
+        # font pango:Terminus 8
+        colors {
+            background #202020
+            separator #202020
+            statusline #ffffff
+            focused_workspace  #AAAAAA #000000 #DDDDDD
+            active_workspace   #000000 #808080 #336633
+            inactive_workspace #606060 #808080 #000000
+            urgent_workspace   #AAAAAA #e60000 #ffffff
+        }
+        # bindsym button1 nop
+        # bindsym button2 nop
 }
 # define color
 set $bg     #2c2c2e
@@ -301,9 +301,6 @@ exec --no-startup-id ibus-daemon --xim -d -r
 exec --no-startup-id xautolock -time 5 -locker '~/.i3/bin/i3lock.sh'
 exec --no-startup-id redshift
 
-# Assign workspace
-assign [class="Keepassx"] $tag0
-
 # Screenshot
 bindsym Print exec scrot 'scrot_%Y-%m-%d-%T_$wx$h.png' -e 'mv $f ~/Pictures/'
 
@@ -327,6 +324,9 @@ bindsym XF86AudioPause exec clementine --play-pause
 bindsym XF86AudioNext exec clementine --next
 bindsym XF86AudioPrev exec  clementine --previous
 
+# Assign workspace
+assign [class="Keepassx"] $tag0
+
 ## shortcut
 #emacs
 bindsym $mod+Mod1+i exec emacs
@@ -339,7 +339,7 @@ bindsym $mod+Mod1+b exec firefox -P default
 bindsym $mod+Mod1+Shift+b exec firefox -P default --private-window
 bindsym $mod+Mod1+g exec chromium  --profile-directory="Default"
 bindsym $mod+Mod1+Shift+g exec chromium  --profile-directory="Default" --incognito
-#paint
+#gimp
 bindsym $mod+Mod1+p exec gimp
 #mattermost
 bindsym $mod+Mod1+m exec /opt/mattermost/mattermost-desktop
@@ -347,7 +347,7 @@ bindsym $mod+Mod1+m exec /opt/mattermost/mattermost-desktop
 bindsym $mod+Mod1+r exec /usr/bin/rxvt -e ranger
 #chat
 bindsym $mod+Mod1+s exec /opt/Telegram/Telegram
-#slack team
+#community
 bindsym $mod+Mod1+t exec /usr/local/bin/riot-web
 bindcode $mod+90 [title="YouTube"] scratchpad show
 for_window [title="YouTube"] sticky enable

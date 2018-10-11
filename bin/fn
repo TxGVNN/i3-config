@@ -32,7 +32,7 @@ if [ "$#" -eq 0 ]; then
 	i3 mark "$name"
 	i3 move scratchpad &> /dev/null
 	if which screen >/dev/null; then
-		screen -t "$name"
+		screen -S "$name" -t "$name"
 	fi
 	bash
 	exit
