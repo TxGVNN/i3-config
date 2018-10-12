@@ -337,8 +337,8 @@ bindsym $mod+Mod1+e exec thunderbird
 #browser
 bindsym $mod+Mod1+b exec firefox -P default
 bindsym $mod+Mod1+Shift+b exec firefox -P default --private-window
-bindsym $mod+Mod1+g exec chromium  --profile-directory="Default"
-bindsym $mod+Mod1+Shift+g exec chromium  --profile-directory="Default" --incognito
+bindsym $mod+Mod1+g exec chromium --temp-profile
+bindsym $mod+Mod1+Shift+g exec chromium --temp-profile --incognito
 #gimp
 bindsym $mod+Mod1+p exec gimp
 #mattermost
