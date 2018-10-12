@@ -49,15 +49,15 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 * <kbd>Control+h</kbd>, <kbd>Control+l</kbd> `It means Control + Right/Left click (zoom feature in browser)`
 
 ## Screenshots
-- master
 
-![screenfetch](http://i.imgur.com/uHzHgWD.png)
+- master
+![master](https://user-images.githubusercontent.com/9713793/46845799-325f4f00-ce07-11e8-81f1-b184a8d49f1f.png)
 
 - v2
-![screenfetch](http://i.imgur.com/gJQy6nk.png)
+![v2](https://user-images.githubusercontent.com/9713793/46845797-312e2200-ce07-11e8-9631-27e27c6c8678.png)
 
 - v1
-![screenfetch](http://i.imgur.com/S2WVk6X.png)
+![v1](https://user-images.githubusercontent.com/9713793/46845798-312e2200-ce07-11e8-9ad4-58f91538aa17.png)
 
 ## Packages
 - required
@@ -76,7 +76,7 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 
 - Icon not show?
 
->depends on font-awesome
+>depends on awesome font
 
 - i3 crash caused by mark features?
 
