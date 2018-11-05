@@ -30,8 +30,8 @@ override_utf8_locale no
 # number of cpu samples to average
 # set to 1 to disable averaging
 cpu_avg_samples 1
-color1 000000 
-color2 #88ABC4
+color1 000000
+color2 88ABC4
 
 # Stuff after 'TEXT' will be formatted on screen
 TEXT
@@ -46,12 +46,12 @@ TEXT
 #        "full_text" : "${acpitemp}°C",
 #        "color"     : ${if_match ${acpitemp}>55}"\#ff0000"${else}"\#88ABC4"${endif}
 #    },
+#    {
+#        "full_text" : "${exec xprop -id $(xprop  -root _NET_ACTIVE_WINDOW | sed -un 's/.*\(0x.*\)/\1/p') | awk '/_NET_WM_NAME/{$1=$2="";print}'| sed 's/["?/\]//g' }",
+#        "color"     : "\#17cf8b"
+#    },
     {
-        "full_text" : "${exec xprop -id $(xprop  -root _NET_ACTIVE_WINDOW | sed -un 's/.*\(0x.*\)/\1/p') | awk '/_NET_WM_NAME/{$1=$2="";print}'| sed 's/["?/\]//g' }",
-        "color"     : "\#17cf8b"
-    },
-    {
-        "full_text" : ${if_up wlan0}"\uF1EB ${wireless_essid wlan0} (${addr wlan0})"${else}"\uF287 (${addr eth0})"${endif},
+        "full_text" : ${if_up wlp2s0}"\uF1EB ${wireless_essid wlp2s0} (${addr wlp2s0})"${else}"\uF287 (${addr enp1s0})"${endif},
         "color"     : "\#88ABC4"
     },
     {
@@ -59,11 +59,11 @@ TEXT
         "color"     : "\#119966"
     },
     {
-        "full_text" : "\uF0ED ${if_up wlan0}${downspeed wlan0}${else}${downspeed eth0}${endif}/s",
+        "full_text" : "\uF0ED ${if_up wlp2s0}${downspeed wlp2s0}${else}${downspeed enp1s0}${endif}/s",
         "color"     : "\#00A0A0"
     },
     {
-        "full_text" : "\uF0EE ${if_up wlan0}${upspeed wlan0}${else}${upspeed eth0}${endif}/s",
+        "full_text" : "\uF0EE ${if_up wlp2s0}${upspeed wlp2s0}${else}${upspeed enp1s0}${endif}/s",
         "color"     : "\#00A0A0"
     },
 #    {
@@ -71,7 +71,7 @@ TEXT
 #		"color"     : "\#ffffff"
 #    },
     {
-        "full_text" : "\uF0AE ${cpu}%", 
+        "full_text" : "\uF0AE ${cpu}%",
         "color"	    : ${if_match ${cpu}>80}"\#DD0000"${else}"\#E69D00"${endif}
     },
 #    {
