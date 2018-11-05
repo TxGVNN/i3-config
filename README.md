@@ -51,7 +51,10 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 ## Screenshots
 
 - master
-![master](https://user-images.githubusercontent.com/9713793/46845799-325f4f00-ce07-11e8-81f1-b184a8d49f1f.png)
+![master](https://user-images.githubusercontent.com/9713793/47977123-0030cc80-e0e9-11e8-9633-e3739c51d3b4.png)
+
+- v3
+![v3](https://user-images.githubusercontent.com/9713793/46845799-325f4f00-ce07-11e8-81f1-b184a8d49f1f.png)
 
 - v2
 ![v2](https://user-images.githubusercontent.com/9713793/46845797-312e2200-ce07-11e8-9631-27e27c6c8678.png)
