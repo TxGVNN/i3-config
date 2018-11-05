@@ -1,0 +1,7 @@
+#!/bin/bash
+# Check ~/.i3/bin/daemon.d directory
+[ -d "$0.d" ] || exit 1
+while IFS='\0' read -r -d '' shell
+do
+    bash "${shell}"
+done <  <(find "$0.d/" -maxdepth 1 -name \*.sh -printf '%p\0')

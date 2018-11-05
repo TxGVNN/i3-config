@@ -1,0 +1,87 @@
+use_xft yes
+xftfont Inconsolata:pixelsize=13
+total_run_times 0
+background yes
+
+cpu_avg_samples 1
+net_avg_samples 2
+
+double_buffer yes
+no_buffers yes
+text_buffer_size 1024
+
+own_window yes
+own_window_type override
+own_window_transparent yes
+
+out_to_console no
+update_interval 30
+alignment top_right
+
+override_utf8_locale yes
+uppercase no
+use_spacer right
+
+
+minimum_size 600 100
+maximum_width 600
+
+draw_shades no
+draw_outline no
+draw_borders no
+border_width 1
+border_inner_margin 1
+
+default_bar_size 82 3
+stippled_borders 3
+
+default_color FFFFFF
+default_shade_color 333333
+default_outline_color 000000
+
+short_units yes
+pad_percents 2
+gap_x 30
+gap_y 40
+
+color1 88ABC4
+color2 7a917c
+color3 ffff00
+
+TEXT
+${font Nimbus Mono L:size=10}${alignr}${color}${time %H:%M}@TIME *${color1}
+
+${execp cal | cat -e|  sed 's/\$/ /g ;s/_^H./\${color3}'"$(date +%e)"'${color1}/1; s/_^H.//g; s/^/\${goto 420}/g'}
+${alignr}${color}DISK *${color1}
+
+${alignr}$font < ${fs_used_perc /}% - ${fs_used /}/${fs_size /} > /    --+
+${alignr}$font < ${fs_bar 5,120 /} > --+    |
+${alignr}$font < ${fs_used_perc /home}% - ${fs_used /home}/${fs_size /home} > /home--+
+${alignr}$font < ${fs_bar 5,120 /home} > --+    |
+${alignr}$font < ${fs_used_perc /gtx}% - ${fs_used /gtx}/${fs_size /gtx} > /gtx --+
+${alignr}$font < ${fs_bar 5,120 /gtx} > --+    |
+${alignr}$font < $swapperc% - $swap/$swapmax > swap --+
+${alignr}$font < ${swapbar 5,120} > --+
+${font Inconsolata:pixelsize=14}${color}
+${alignr}${color}HACKER NEWS *${color1}
+
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 0}  (1
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 1}  (2
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 2}  (3
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 3}  (4
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 4}  (5
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 5}  (6
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 6}  (7
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 7}  (8
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 8}  (9
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 9} (10
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 10} (11
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 11} (12
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 12} (13
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 13} (14
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 14} (15
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 15} (16
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 16} (17
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 17} (18
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 18} (19
+${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 19} (20
