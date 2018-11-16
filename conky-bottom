@@ -1,7 +1,7 @@
 use_xft yes
 xftfont Inconsolata:pixelsize=12
 xftalpha 0.1
-update_interval 5.0
+update_interval 10
 total_run_times 0
 background no
 
