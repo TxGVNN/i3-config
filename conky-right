@@ -58,8 +58,6 @@ ${alignr}$font < ${fs_used_perc /}% - ${fs_used /}/${fs_size /} > /    --+
 ${alignr}$font < ${fs_bar 5,120 /} > --+     
 ${alignr}$font < ${fs_used_perc /home}% - ${fs_used /home}/${fs_size /home} > /home--+
 ${alignr}$font < ${fs_bar 5,120 /home} > --+     
-${alignr}$font < ${fs_used_perc /gtx}% - ${fs_used /gtx}/${fs_size /gtx} > /gtx --+
-${alignr}$font < ${fs_bar 5,120 /gtx} > --+     
 ${alignr}$font < $swapperc% - $swap/$swapmax > swap --+
 ${alignr}$font < ${swapbar 5,120} > --+     
 ${font Inconsolata:pixelsize=14}${color}
