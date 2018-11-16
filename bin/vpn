@@ -1,6 +1,0 @@
-#!/bin/sh
-if ip a | grep 'tun\|tap' -q; then
-	echo "0"
-else
-	echo "1"
-fi

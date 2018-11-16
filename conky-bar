@@ -6,7 +6,7 @@ max_text_width 0
 net_avg_samples 2
 
 # Update interval in seconds
-update_interval 2
+update_interval 5
 # This is the number of times Conky will update before quitting.
 # Set to zero to run forever.
 total_run_times 0
@@ -35,9 +35,18 @@ color2 88ABC4
 
 # Stuff after 'TEXT' will be formatted on screen
 TEXT
+${texeci 30 ~/.i3/bin/bar > "/tmp/.${USER}.bar" 2>/dev/null}
 
 # JSON for i3bar
 [
+    {
+        "full_text" : "${exec cat /tmp/.${USER}.bar}",
+        "color"     : "\#119966"
+    },
+    {
+        "full_text" : "${exec ~/.i3/bin/network}",
+        "color"     : "\#88ABC4"
+    },
 #    {
 #        "full_text" : " ${fs_used_perc /}%",
 #        "color"     : ${if_match ${fs_used_perc /}>90}"\#ff0000"${else}"\#88ABC4"${endif}
@@ -50,33 +59,29 @@ TEXT
 #        "full_text" : "${exec xprop -id $(xprop  -root _NET_ACTIVE_WINDOW | sed -un 's/.*\(0x.*\)/\1/p') | awk '/_NET_WM_NAME/{$1=$2="";print}'| sed 's/["?/\]//g' }",
 #        "color"     : "\#17cf8b"
 #    },
-    {
-        "full_text" : ${if_up wlp2s0}"\uF1EB ${wireless_essid wlp2s0} (${addr wlp2s0})"${else}"\uF287 (${addr enp1s0})"${endif},
-        "color"     : "\#88ABC4"
-    },
-    {
-        "full_text" : ${if_match ${exec ~/.i3/bin/vpn}==0}"\uF023 VPN"${else}""${endif},
-        "color"     : "\#119966"
-    },
-    {
-        "full_text" : "\uF0ED ${if_up wlp2s0}${downspeed wlp2s0}${else}${downspeed enp1s0}${endif}/s",
-        "color"     : "\#00A0A0"
-    },
-    {
-        "full_text" : "\uF0EE ${if_up wlp2s0}${upspeed wlp2s0}${else}${upspeed enp1s0}${endif}/s",
-        "color"     : "\#00A0A0"
-    },
 #    {
-#		"full_text" : "CPU:",
-#		"color"     : "\#ffffff"
+#        "full_text" : ${if_up wlp2s0}"\uF1EB ${wireless_essid wlp2s0} (${addr wlp2s0})"${else}"\uF287 (${addr enp1s0})"${endif},
+#        "color"     : "\#88ABC4"
+#    },
+#    {
+#        "full_text" : "\uF0ED ${if_up wlp2s0}${downspeed wlp2s0}${else}${downspeed enp1s0}${endif}/s",
+#        "color"     : "\#00A0A0"
+#    },
+#    {
+#        "full_text" : "\uF0EE ${if_up wlp2s0}${upspeed wlp2s0}${else}${upspeed enp1s0}${endif}/s",
+#        "color"     : "\#00A0A0"
+#    },
+#    {
+#       "full_text" : "CPU:",
+#       "color"     : "\#ffffff"
 #    },
     {
         "full_text" : "\uF0AE ${cpu}%",
-        "color"	    : ${if_match ${cpu}>80}"\#DD0000"${else}"\#E69D00"${endif}
+        "color"     : ${if_match ${cpu}>80}"\#DD0000"${else}"\#E69D00"${endif}
     },
 #    {
-#		"full_text" : "RAM:",
-#		"color"     : "\#f3f3f3"
+#       "full_text" : "RAM:",
+#       "color"     : "\#f3f3f3"
 #    },
     {
         "full_text" : "\uF1C0 ${mem} (${memperc}%)",

@@ -1,0 +1,13 @@
+#!/bin/bash
+# Network info
+ifaces=$(ls /sys/class/net | grep -E '^(eth|wlan|enp|wlp)')
+array=($ifaces)
+i=0
+size=${#array[@]}
+while [ $i -lt $(( size -1 )) ]; do
+    ip=$(ip addr show "${array[$i]}" | sed -nE 's,inet\s(([[:digit:]]\.?)+).*,\1,p')
+    printf "%s:(%s) " "${array[$i]}" $ip
+    i=$(( i + 1 ))
+done
+ip=$(ip addr show "${array[$i]}" | sed -nE 's,inet\s(([[:digit:]]\.?)+).*,\1,p')
+printf "%s:(%s)" "${array[$i]}" $ip

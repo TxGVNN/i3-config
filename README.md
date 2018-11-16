@@ -8,9 +8,10 @@ i3 version 4.13 (2016-11-08) © 2009 Michael Stapelberg and contributors
 ## Features
 
 - Basic i3 configuration
-- Show/hide fastly terminal
+- Show/hide fastly floating terminal (Check bindings)
 - Updating workspace name even working
 - Create new workspace by naming (or moving container to new)
+- Monitoring, you can put your bash scripts into `~/.i3/bin/{daemon.d,bar.d}`
 
 ## Setups
 ```
@@ -73,13 +74,9 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 ``
 
 ## Bugs
-- Clock not show?
-
->search and install the Lua packages.
-
 - Icon not show?
 
->depends on awesome font
+>depends on fonts-font-awesome
 
 - i3 crash caused by mark features?
 
