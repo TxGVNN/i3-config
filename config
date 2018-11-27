@@ -301,6 +301,7 @@ exec --no-startup-id redshift
 
 # lock screen
 bindsym XF86ScreenSaver exec ~/.i3/bin/i3lock.sh
+bindsym $mod+Mod1+l exec ~/.i3/bin/i3lock.sh
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q sset Master 3%+
