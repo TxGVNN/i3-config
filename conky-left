@@ -39,5 +39,5 @@ ${font DejaVu Sans Mono:pixelsize=12}${color 535C5C}
 ${color 5a715c}
   [ @author TxGVNN ]
 ${font Inconsolata:pixelsize=14}${color}
-${execp cat "/tmp/.${USER}.daemon"}
-${texeci 1800 ~/.i3/bin/daemon > "/tmp/.${USER}.daemon" 2>&1}
+${execp cat "${HOME}/.i3_daemon.tmp"}
+${texeci 1800 ~/.i3/bin/daemon > "${HOME}/.i3_daemon.tmp" 2>&1}

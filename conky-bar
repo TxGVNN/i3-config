@@ -39,7 +39,7 @@ TEXT
 # JSON for i3bar
 [
     {
-        "full_text" : "${exec cat /tmp/.${USER}.bar}",
+        "full_text" : "${exec cat ${HOME}/.i3_bar.tmp}",
         "color"     : "\#119966"
     },
     {
@@ -100,4 +100,4 @@ TEXT
     }
 ],
 
-${texeci 600 ~/.i3/bin/bar > "/tmp/.${USER}.bar" 2>/dev/null}
+${texeci 600 ~/.i3/bin/bar > "${HOME}/.i3_bar.tmp" 2>/dev/null}
