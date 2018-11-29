@@ -35,7 +35,6 @@ color2 88ABC4
 
 # Stuff after 'TEXT' will be formatted on screen
 TEXT
-${texeci 600 ~/.i3/bin/bar > "/tmp/.${USER}.bar" 2>/dev/null}
 
 # JSON for i3bar
 [
@@ -100,3 +99,5 @@ ${texeci 600 ~/.i3/bin/bar > "/tmp/.${USER}.bar" 2>/dev/null}
         "color"     : "\#119966"
     }
 ],
+
+${texeci 600 ~/.i3/bin/bar > "/tmp/.${USER}.bar" 2>/dev/null}
