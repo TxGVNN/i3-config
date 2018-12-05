@@ -16,14 +16,14 @@ _fn(){
 	# check terminal isn't running
 	if ! ps p "$(cat /run/user/"${UID}"/i3/"${name}".pid 2>/dev/null)" >/dev/null
 	then
-		echo "${name}">/tmp/.fn-"$UID"
+		echo "${name}" > /tmp/.fn-"$UID"
 		# create new terminal and move to scatchpad
-		i3-sensible-terminal  -e ~/.i3/bin/fn &
-		echo "$!"> /run/user/"$UID"/i3/"$name".pid
+		i3-sensible-terminal -e ~/.i3/bin/fn &
+		echo "$!" > /run/user/"$UID"/i3/"$name".pid
 		sleep 1
 	fi
 	# finally, need show terminal
-	i3 [con_mark="^${name}$"] scratchpad show &>/dev/null
+	i3 '[con_mark="^'${name}'$"]' scratchpad show &>/dev/null
 }
 
 # create new terminal
@@ -31,7 +31,7 @@ if [ "$#" -eq 0 ]; then
 	name=$(cat /tmp/.fn-"${UID}")
 	i3 mark "$name"
 	i3 move scratchpad &> /dev/null
-	if which screen >/dev/null; then
+	if which screen > /dev/null; then
 		screen -S "$name" -t "$name"
 	fi
 	bash
