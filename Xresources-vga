@@ -1,3 +1,4 @@
+Xft.dpi:	140
 ! URxvt*termName:                       string
 ! URxvt*geometry:                       geometry
 ! URxvt*chdir:                          string
@@ -37,36 +38,36 @@ URxvt*background:                     #ffffff
 URxvt*foreground:                     #000000
 
 !black
-*color0:                         #353535
-*color8:                         #353535
+*color0:                         #3f3f3f
+*color8:                         #5f5f5f
 
 !red
-*color1:                         #de6839
+*color1:                         #dd0000
 *color9:                         #de6839
 
 !green
-*color2:                         #6d9f45
-*color10:                         #6d9f45
+*color2:                         #009933
+*color10:                        #6d9f45
 
 !yellow
 *color3:                         #af865a
-*color11:                         #af865a
+*color11:                        #f0dfaf
 
 !blue
-*color4:                         #535C5C
-*color12:                         #535C5C
+*color4:                         #005f87
+*color12:                        #7cb8bb
 
 !magenta
 *color5:                         #775555
-*color13:                         #775555
+*color13:                        #993399
 
 !cyan
 *color6:                         #5a715c
-*color14:                         #5a715c
+*color14:                        #00b1b3
 
 !white
-*color7:                         #c0b18b
-*color15:                         #c0b18b
+*color7:                         #dcdccc
+*color15:                        #fcfcfc
 
 ! URxvt*colorBD:                        color
 ! URxvt*colorIT:                        color
