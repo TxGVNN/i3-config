@@ -47,42 +47,42 @@ URxvt*scrollTtyOutput:           true
 ! URxvt*pointerBlank:                   boolean
 ! URxvt.keysym.Control-0x2b: perl:font-size:increase
 ! URxvt.keysym.Control-0x2d: perl:font-size:decrease
-URxvt*background:                     #181818
+URxvt*background:                     #0e0e0e
 URxvt*foreground:                     #c0b18b
 xterm*background:                     #1f1f1f
 xterm*foreground:                     #c0b18b
 
 !black
-*color0:                         #3f3f3f
-*color8:                         #5f5f5f
+*color0:                         #2E3436
+*color8:                         #555753
 
 !red
-*color1:                         #dd0000
-*color9:                         #de6839
+*color1:                         #C83F09
+*color9:                         #DE6839
 
 !green
-*color2:                         #009933
-*color10:                        #6d9f45
+*color2:                         #4E9A06
+*color10:                        #77B739
 
 !yellow
-*color3:                         #af865a
-*color11:                        #f0dfaf
+*color3:                         #C4A000
+*color11:                        #E0CF91
 
 !blue
-*color4:                         #005f87
-*color12:                        #7cb8bb
+*color4:                         #3465A4
+*color12:                        #729FCF
 
 !magenta
-*color5:                         #775555
-*color13:                        #993399
+*color5:                         #75507B
+*color13:                        #AD7FA8
 
 !cyan
-*color6:                         #5a715c
-*color14:                        #00b1b3
+*color6:                         #06989A
+*color14:                        #7CB8BB
 
 !white
-*color7:                         #dcdccc
-*color15:                        #fcfcfc
+*color7:                         #BABDB9
+*color15:                        #EEEEEC
 
 ! URxvt*colorBD:                        color
 ! URxvt*colorIT:                        color
