@@ -293,6 +293,7 @@ exec --no-startup-id feh --bg-fill ~/.i3/background.bmp
 exec --no-startup-id conky -d -c ~/.i3/conky-right
 exec --no-startup-id conky -d -c ~/.i3/conky-left
 #exec --no-startup-id conky -d -c ~/.i3/conky-bottom
+exec --no-startup-id ~/.i3/bin/bar
 exec --no-startup-id ~/.i3/bin/xinput-fix
 exec --no-startup-id dunst
 exec --no-startup-id ibus-daemon --xim -d -r

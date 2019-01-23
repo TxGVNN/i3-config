@@ -99,5 +99,3 @@ TEXT
         "color"     : "\#119966"
     }
 ],
-
-${texeci 600 ~/.i3/bin/bar > "${HOME}/.i3_bar.tmp" 2>/dev/null}

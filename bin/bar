@@ -1,11 +1,21 @@
 #!/bin/bash
+OUTPUT="${HOME}/.i3_bar.tmp"
+PIDFILE="${HOME}/.i3_bar.pid"
+if [ "${DEBUG:-0}" -eq 1 ]; then
+	set -x
+fi
+
 # Check ~/.i3/bin/daemon.d directory
 [ -d "$0.d" ] || exit 1
+# Just run only session
+[ -f "$PIDFILE" ] && [ -d "/proc/$(cat $PIDFILE)" ] && [ $(cat $PIDFILE) -ne $$ ] && exit 0
+echo $$ > "$PIDFILE"
 
-# dont run at first time
-[ $(ps -o etimes -p  $(pgrep i3bar) --no-headers) -ge 10 ] || exit 0
-
-while IFS='\0' read -r -d '' shell
-do
-    bash "${shell}"
+printf "" > "$OUTPUT"
+while IFS='\0' read -r -d '' shell; do
+	bash "${shell}" >> "$OUTPUT"
 done <  <(find "$0.d/" -maxdepth 1 -name \*.sh -printf '%p\0')
+
+# Sleep 5 minutes
+sleep 600
+exec $0
