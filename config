@@ -303,6 +303,7 @@ exec --no-startup-id redshift
 # lock screen
 bindsym XF86ScreenSaver exec ~/.i3/bin/i3lock.sh
 bindsym $mod+Mod1+l exec ~/.i3/bin/i3lock.sh
+bindsym control+Mod1+Delete exec ~/.i3/bin/i3lock.sh
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q sset Master 3%+
@@ -348,7 +349,7 @@ bindsym $mod+Mod1+Shift+g exec chromium --temp-profile --incognito
 # gimp
 bindsym $mod+Mod1+p exec gimp
 # wicd
-bindsym $mod+Mod1+w exec wicd-client
+bindsym $mod+Mod1+w exec wicd-client -n
 # explore
 bindsym $mod+Mod1+r exec /usr/bin/rxvt -e ranger
 
