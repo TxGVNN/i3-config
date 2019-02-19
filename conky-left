@@ -1,5 +1,5 @@
 use_xft yes
-xftfont Inconsolata:pixelsize=12
+xftfont DejaVu Sans Mono:pixelsize=12
 xftalpha 0.1
 update_interval 10
 total_run_times 0
@@ -32,12 +32,12 @@ override_utf8_locale yes
 use_spacer right
 
 TEXT
-${font DejaVu Sans Mono:pixelsize=12}${color 535C5C}
+${color 535C5C}
   _____ ${color de6839} _    ${color 535C5C} __    _      _      _
    | |  ${color de6839}\ \_/ ${color 535C5C}/ /`_ \ \  / | |\ | | |\ |
    |_|  ${color de6839}/_/ \ ${color 535C5C}\_\_/  \_\/  |_| \| |_| \|
 ${color 5a715c}
   [ @author TxGVNN ]
-${font Inconsolata:pixelsize=14}${color}
+${color}
 ${execp cat "${HOME}/.i3_daemon.tmp"}
 ${texeci 1800 ~/.i3/bin/daemon > "${HOME}/.i3_daemon.tmp" 2>&1}
