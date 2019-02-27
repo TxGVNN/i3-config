@@ -319,6 +319,7 @@ bindsym XF86Sleep exec ~/.i3/bin/i3lock.sh && systemctl suspend
 
 # Screenshot
 bindsym Print exec scrot 'scrot_%Y-%m-%d-%T_$wx$h.png' -e 'mv $f ~/Pictures/'
+bindsym $mod+Print exec gnome-screenshot -i -a
 
 # Toggle fastly terminal
 bindsym $mod+F1 exec ~/.i3/bin/fn 1

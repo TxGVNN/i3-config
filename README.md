@@ -81,3 +81,11 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 - i3 crash caused by mark features?
 
 >https://github.com/i3/i3/issues/2511
+
+- You don't like the conky, just want a simple wallpaper
+>Disable conky configuration on `~/.i3/config`
+
+```
+exec --no-startup-id conky -d -c ~/.i3/conky-right
+exec --no-startup-id conky -d -c ~/.i3/conky-left
+```
