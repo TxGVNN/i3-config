@@ -1,6 +1,6 @@
 #!/bin/bash
-OUTPUT="${HOME}/.i3_bar.tmp"
-PIDFILE="${HOME}/.i3_bar.pid"
+OUTPUT="/tmp/.${LOGNAME}_i3_bar"
+PIDFILE="/tmp/.${LOGNAME}_i3_bar.pid"
 if [ "${DEBUG:-0}" -eq 1 ]; then
 	set -x
 fi

@@ -7,11 +7,11 @@
 if [ "${DEBUG:-0}" -eq 1 ]; then
 	set -x
 fi
-TMP="${HOME}/.i3_fn.tmp"
+TMP="/tmp/.${LOGNAME}_i3_fn.tmp"
 
 _fn(){
 	name=f"$1"
-	pidfile="${HOME}/.i3_${name}.pid"
+	pidfile="/tmp/.${LOGNAME}_i3_${name}.pid"
 	# check terminal isn't running
 	if [ ! -f "$pidfile" ] || [ ! -d "/proc/$(cat $pidfile)" ]; then
 		echo "${name}" > "$TMP"

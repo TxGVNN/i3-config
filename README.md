@@ -8,7 +8,7 @@ i3 version 4.13 (2016-11-08) © 2009 Michael Stapelberg and contributors
 ## Features
 
 - Basic i3 configuration
-- Show/hide fastly floating terminal (Check bindings)
+- Show/hide fastly floating terminal (See bindings)
 - Updating workspace name even working
 - Create new workspace by naming (or moving container to new)
 - Monitoring, you can put your bash scripts into `~/.i3/bin/{daemon.d,bar.d}`
@@ -28,7 +28,7 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 * <kbd>Super</kbd>+<kbd>f1</kbd> Toggle fastly floating terminal
 * <kbd>Super</kbd>+<kbd>t</kbd> Rename workspace name
 * <kbd>Super</kbd>+<kbd>i</kbd> Create new workspace by naming (Go to if already exists)
-* <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>i</kbd> Move a container to workspace by naming0
+* <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>i</kbd> Move a container to workspace by naming
 * <kbd>Super</kbd>+<kbd>m</kbd> Mark a container
 * <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>m</kbd> Go to the marked container
 
@@ -73,7 +73,7 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 ``wicd thunderbird firefore-esr ranger weechat emacs vim
 ``
 
-## Bugs
+## Issues
 - Icon not show?
 
 >depends on fonts-font-awesome

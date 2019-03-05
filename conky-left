@@ -39,5 +39,5 @@ ${color 535C5C}
 ${color 5a715c}
   [ @author TxGVNN ]
 ${color}
-${execp cat "${HOME}/.i3_daemon.tmp"}
-${texeci 1800 ~/.i3/bin/daemon > "${HOME}/.i3_daemon.tmp" 2>&1}
+${execp cat "/tmp/.${LOGNAME}_i3_daemon"}
+${texeci 1800 ~/.i3/bin/daemon > "/tmp/.${LOGNAME}_i3_daemon" 2>&1}
