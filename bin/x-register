@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ "$1" = "copy" ]; then
+    i3-input -F "exec sh -c 'xsel -o > /tmp/.${LOGNAME}_x-register_%s'" -P 'Copy to register: '
+    exit 0
+fi
+#i3-input -F "exec sh -c 'cat /tmp/.${LOGNAME}_x-register_%s | xsel -i -b && xdotool key ctrl+v'" -P 'Insert register: '
+i3-input -F "exec sh -c 'cat /tmp/.${LOGNAME}_x-register_%s | xsel -i -b'" -P 'Insert register: '
