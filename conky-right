@@ -1,5 +1,5 @@
 use_xft yes
-xftfont Inconsolata:pixelsize=13
+xftfont DejaVu Sans Mono:pixelsize=12
 total_run_times 0
 background yes
 
@@ -21,7 +21,6 @@ alignment top_right
 override_utf8_locale yes
 uppercase no
 use_spacer right
-
 
 minimum_size 600 100
 maximum_width 600
@@ -49,18 +48,18 @@ color2 7a917c
 color3 ffff00
 
 TEXT
-${font Nimbus Mono L:size=10}${alignr}${color}${time %H:%M}@TIME *${color1}
+${alignr}${color}${time %H:%M}@TIME *${color1}
 
 ${execp cal | cat -e|  sed 's/\$/ /g ;s/_^H./\${color3}'"$(date +%e)"'${color1}/1; s/_^H.//g; s/^/\${goto 420}/g'}
 ${alignr}${color}DISK *${color1}
 
-${alignr}$font < ${fs_used_perc /}% - ${fs_used /}/${fs_size /} > /    --+
-${alignr}$font < ${fs_bar 5,120 /} > --+     
-${alignr}$font < ${fs_used_perc /home}% - ${fs_used /home}/${fs_size /home} > /home--+
-${alignr}$font < ${fs_bar 5,120 /home} > --+     
-${alignr}$font < $swapperc% - $swap/$swapmax > swap --+
-${alignr}$font < ${swapbar 5,120} > --+     
-${font Inconsolata:pixelsize=14}${color}
+${alignr} < ${fs_used_perc /}% - ${fs_used /}/${fs_size /} > /    --+
+${alignr} < ${fs_bar 5,120 /} > --+     
+${alignr} < ${fs_used_perc /home}% - ${fs_used /home}/${fs_size /home} > /home--+
+${alignr} < ${fs_bar 5,120 /home} > --+     
+${alignr} < $swapperc% - $swap/$swapmax > swap --+
+${alignr} < ${swapbar 5,120} > --+     
+
 ${alignr}${color}HACKER NEWS *${color1}
 
 ${alignr} ${rss https://news.ycombinator.com/rss 30 item_title 0}  (1

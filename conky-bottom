@@ -1,5 +1,5 @@
 use_xft yes
-xftfont Inconsolata:pixelsize=12
+xftfont DejaVu Sans Mono:pixelsize=12
 xftalpha 0.1
 update_interval 10
 total_run_times 0
@@ -30,7 +30,7 @@ override_utf8_locale yes
 use_spacer right
 
 TEXT
-${font Inconsolata:pixelsize=13}${color 4ca0be}
+${color 4ca0be}
 HACKER NEWS
 -----------
  1. ${rss https://news.ycombinator.com/rss 30 item_title 0}
