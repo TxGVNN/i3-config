@@ -255,7 +255,7 @@ bar {
         # i3bar_command ~/.i3/lemonbar/i3_lemonbar.sh
         # status_command i3status -c ~/.i3/i3status.conf
         status_command ~/.i3/bin/conky-i3bar
-        font pango:DejaVu Sans Mono, FontAwesome 8
+        font pango:DejaVu Sans Mono 9
         tray_output primary
         position top
         # font pango:Terminus 8
@@ -300,8 +300,9 @@ exec --no-startup-id ~/.i3/bin/bar
 exec --no-startup-id ~/.i3/bin/xinput-fix
 exec --no-startup-id dunst
 exec --no-startup-id ibus-daemon --xim -d -r
+exec --no-startup-id dconf write /desktop/ibus/general/engines-order "['xkb:us::eng', 'Unikey']"
 exec --no-startup-id xautolock -time 5 -locker '~/.i3/bin/i3lock.sh'
-exec --no-startup-id redshift
+exec --no-startup-id ~/.i3/bin/redshift
 
 # lock screen
 bindsym XF86ScreenSaver exec ~/.i3/bin/i3lock.sh
@@ -336,13 +337,13 @@ bindsym XF86AudioPrev exec mpc prev
 bindsym XF86Launch1 exec xset dpms force off
 
 # Assign workspace
-assign [class="Keepassx"] $tag0
+assign [class="keepassxc"] $tag0
 
 ## shortcut
 # emacs
 bindsym $mod+Mod1+i exec emacs
 # keepassx
-bindsym $mod+Mod1+k exec keepassx
+bindsym $mod+Mod1+k exec keepassxc
 # email
 bindsym $mod+Mod1+e exec thunderbird
 # browser
