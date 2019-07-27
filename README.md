@@ -26,14 +26,16 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 * <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>q</kbd> Close current container
 * More basic bindings... (see `config`)
 * <kbd>Super</kbd>+<kbd>f1</kbd> Toggle fastly floating terminal
-* <kbd>Super</kbd>+<kbd>t</kbd> Rename workspace name
+* <kbd>Super</kbd>+<kbd>t</kbd> Rename workspace name (with workspace number)
+* <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>t</kbd> Rename workspace name
 * <kbd>Super</kbd>+<kbd>i</kbd> Create new workspace by naming (Go to if already exists)
 * <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>i</kbd> Move a container to workspace by naming
 * <kbd>Super</kbd>+<kbd>m</kbd> Mark a container
 * <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>m</kbd> Go to the marked container
 
 ### Mouse mode
-<kbd>Super</kbd>+<kbd>g</kbd> Go to mouse mode, after that you can
+
+* <kbd>Super</kbd>+<kbd>g</kbd> Go to mouse mode, after that you can
 
 * <kbd>&larr;(a)</kbd>, <kbd>&rarr;(d)</kbd>, <kbd>&uarr;(w)</kbd>, <kbd>&darr;(x)</kbd> `Mouse move left, right, up & down`
 
