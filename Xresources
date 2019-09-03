@@ -137,7 +137,7 @@ URxvt*depth:                         32
 ! URxvt*secondaryScroll:                boolean
 URxvt*perl-lib:                       /usr/lib/urxvt/perl/
 ! URxvt*perl-eval:                      perl-eval
-URxvt*perl-ext-common:               default,matcher,selection-to-clipboard
+URxvt*perl-ext-common:               default,matcher,selection-to-clipboard,font-size
 ! URxvt*perl-ext:                       string
 ! URxvt*iso14755:                       boolean
 ! URxvt*iso14755_52:                    boolean
