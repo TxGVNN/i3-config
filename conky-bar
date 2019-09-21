@@ -39,7 +39,7 @@ TEXT
 # JSON for i3bar
 [
     {
-        "full_text" : "${exec cat ${HOME}/.i3_bar.tmp}",
+        "full_text" : "${exec cat /tmp/.${LOGNAME}_i3_bar}",
         "color"     : "\#119966"
     },
     {
@@ -95,7 +95,7 @@ TEXT
         "color"     : ${if_match ${battery_percent}<15}"\#ff0000"${else}"\#88ABC4"${endif}
     },
     {
-        "full_text" : "\uF073 ${time %A %d %b} \uF188 ${time %R}",
+        "full_text" : "\uF073 ${time (W%V) %A %d %b} \uF188 ${time %R}",
         "color"     : "\#119966"
     }
 ],
