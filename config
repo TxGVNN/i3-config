@@ -307,6 +307,7 @@ exec --no-startup-id ~/.i3/bin/redshift
 
 # lock screen
 bindsym XF86ScreenSaver exec ~/.i3/bin/i3lock.sh
+bindsym $mod+Delete exec ~/.i3/bin/i3lock.sh
 bindsym $mod+Mod1+l exec ~/.i3/bin/i3lock.sh
 bindsym control+Mod1+Delete exec ~/.i3/bin/i3lock.sh
 
