@@ -328,8 +328,22 @@ bindsym Print exec scrot 'scrot_%Y-%m-%d-%T_$wx$h.png' -e 'mv $f /tmp/'
 bindsym $mod+Print exec gnome-screenshot -i -a
 
 # Toggle fastly terminal
-bindsym $mod+F1 exec ~/.i3/bin/fn 1
+bindsym $mod+Escape exec ~/.i3/bin/fn esc
 bindsym $mod+F12 exec ~/.i3/bin/fn 12
+
+# More workspaces
+bindsym $mod+F1 workspace number 11 F1
+bindsym $mod+F2 workspace number 12 F2
+bindsym $mod+F3 workspace number 13 F3
+bindsym $mod+F4 workspace number 14 F4
+bindsym $mod+F5 workspace number 15 F5
+bindsym $mod+F6 workspace number 16 F6
+bindsym $mod+F7 workspace number 17 F7
+bindsym $mod+F8 workspace number 18 F8
+bindsym $mod+F9 workspace number 19 F9
+bindsym $mod+F10 workspace number 20 F10
+bindsym $mod+F11 workspace number 21 F11
+
 # Media player controls
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioPause exec mpc pause
