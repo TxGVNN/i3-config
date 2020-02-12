@@ -83,7 +83,7 @@ TEXT
 #       "color"     : "\#f3f3f3"
 #    },
     {
-        "full_text" : "\uF1C0 ${mem} (${memperc}%)",
+        "full_text" : "\uF0A0 ${mem} (${memperc}%)",
         "color"     : ${if_match ${memperc}>80}"\#DD0000"${else}"\#E69D00"${endif}
     },
     {

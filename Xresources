@@ -47,7 +47,7 @@ URxvt*scrollTtyOutput:           true
 ! URxvt*pointerBlank:                   boolean
 ! URxvt.keysym.Control-0x2b: perl:font-size:increase
 ! URxvt.keysym.Control-0x2d: perl:font-size:decrease
-URxvt*background:                     #0e0e0e
+URxvt*background:                     #1a1a1a
 URxvt*foreground:                     #c0b18b
 xterm*background:                     #1f1f1f
 xterm*foreground:                     #c0b18b
