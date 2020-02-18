@@ -145,6 +145,7 @@ bindsym $mod+Shift+0 move container to workspace $tag0
 # rename workspace
 bindsym $mod+t exec ~/.i3/bin/tags num
 bindsym $mod+Shift+t exec ~/.i3/bin/tags
+bindsym $mod+n exec ~/.i3/bin/tags temp
 # [move to] new workspace
 bindsym $mod+i exec i3-input -F "workspace \"%s\"" -P 'Workspace: '
 bindsym $mod+Shift+i exec i3-input -F "move container to workspace \"%s\"" -P 'Move to workspace: '
