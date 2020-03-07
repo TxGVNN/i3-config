@@ -11,5 +11,13 @@ if [ "$1" = "temp" ]; then
     return
 fi
 
+# Move to new temp workspace
+if [ "$1" = "temp-move" ]; then
+    ws="$(date +%H%M%S)"
+    i3 move container to workspace "$ws"
+    i3 workspace "$ws"
+    return
+fi
+
 # Default
 i3-input -F "rename workspace to \"$WS%s\"" -P 'Rename workspace: '
