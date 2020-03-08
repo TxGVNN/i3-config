@@ -3,7 +3,7 @@
 I use Debian GNU/Linux.
 ```
 $i3 --version
-i3 version 4.13 (2016-11-08) © 2009 Michael Stapelberg and contributors
+i3 version 4.16.1 (2019-01-27) © 2009 Michael Stapelberg and contributors
 ```
 ## Features
 
@@ -12,6 +12,7 @@ i3 version 4.13 (2016-11-08) © 2009 Michael Stapelberg and contributors
 - Updating workspace name even working
 - Create new workspace by naming (or moving container to new)
 - Monitoring, you can put your bash scripts into `~/.i3/bin/{daemon.d,bar.d}`
+- Reminder
 
 ## Setups
 ```
@@ -32,6 +33,7 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 * <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>i</kbd> Move a container to workspace by naming
 * <kbd>Super</kbd>+<kbd>m</kbd> Mark a container
 * <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>m</kbd> Go to the marked container
+* <kbd>Super</kbd>+<kbd>'</kbd> Reminder
 
 ### Mouse mode
 
@@ -53,8 +55,10 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 
 ## Screenshots
 
-- master
-![master](https://user-images.githubusercontent.com/9713793/48619359-d4f28b00-e9ce-11e8-806c-95d349fcc7d5.png)
+- master - As v4 but removing conky package (use i3blocks in status bar)
+
+- v4
+![v4](https://user-images.githubusercontent.com/9713793/48619359-d4f28b00-e9ce-11e8-806c-95d349fcc7d5.png)
 
 - v3
 ![v3](https://user-images.githubusercontent.com/9713793/46845799-325f4f00-ce07-11e8-81f1-b184a8d49f1f.png)
@@ -68,11 +72,11 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 ## Packages
 - required
 
-``xinit xbacklight xinput feh scrot conky-all rxvt-unicode-256color alsa-utils acpi fonts-font-awesome redshift xdotool screen
+``xinit xbacklight xinput i3blocks rxvt-unicode-256color screen feh scrot redshift alsa-utils acpi fonts-font-awesome xdotool
 ``
 - optional
 
-``wicd thunderbird firefore-esr ranger weechat emacs vim
+``wicd emacs ranger firefox
 ``
 
 ## Issues
@@ -84,8 +88,8 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 
 >https://github.com/i3/i3/issues/2511
 
-- You don't like the conky, just want a simple wallpaper
->Disable conky configuration on `~/.i3/config`
+- If you want conky feature
+>Enable conky configuration on `~/.i3/config`
 
 ```
 exec --no-startup-id conky -d -c ~/.i3/conky-right
