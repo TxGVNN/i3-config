@@ -257,9 +257,9 @@ bindsym $mod+r mode "resize"
 bindsym $mod+b bar mode toggle
 bar {
         i3bar_command /usr/bin/i3bar
-        # i3bar_command ~/.i3/lemonbar/i3_lemonbar.sh
+        status_command i3blocks -c ~/.i3/i3blocks.conf
         # status_command i3status -c ~/.i3/i3status.conf
-        status_command ~/.i3/bin/conky-i3bar
+        # status_command ~/.i3/bin/conky-i3bar
         font pango:DejaVu Sans Mono 9
         tray_output primary
         position top
@@ -267,7 +267,7 @@ bar {
         colors {
             background #202020
             separator #202020
-            statusline #ffffff
+            statusline #88ABC4
             focused_workspace  #AAAAAA #000000 #DDDDDD
             active_workspace   #000000 #808080 #336633
             inactive_workspace #606060 #808080 #000000

@@ -87,8 +87,8 @@ TEXT
         "color"     : ${if_match ${memperc}>80}"\#DD0000"${else}"\#E69D00"${endif}
     },
     {
-        "full_text" : "\uF0A1 ${exec ~/.i3/bin/conky-audio}%",
-        "color"     : ${if_match ${exec ~/.i3/bin/conky-audio}>95}"\#DD0000"${else}"\#88ABC4"${endif}
+        "full_text" : "\uF0A1 ${exec ~/.i3/bin/audio}%",
+        "color"     : ${if_match ${exec ~/.i3/bin/audio}>95}"\#DD0000"${else}"\#88ABC4"${endif}
     },
     {
         "full_text" : "${if_match ${exec ~/.i3/bin/battery }>0}\uF0E4${else}\uF1E6${endif} ${battery_percent}%",
