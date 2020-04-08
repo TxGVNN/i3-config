@@ -1,6 +1,5 @@
 #/bin/sh
-#xinput set-prop 14 309 1 1 1 1 1 2 0
-#xinput set-prop 14 303 1 1 1
 xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
-xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 0.5
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 1
 xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Disable While Typing Enabled' 1
+xinput set-prop 'TPPS/2 IBM TrackPoint' 'libinput Accel Speed' 1
