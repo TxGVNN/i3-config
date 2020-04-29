@@ -265,13 +265,13 @@ bar {
         position top
         # font pango:Terminus 8
         colors {
-            background #202020
+            # background #202020
             separator #202020
-            statusline #88ABC4
-            focused_workspace  #AAAAAA #000000 #DDDDDD
-            active_workspace   #000000 #808080 #336633
-            inactive_workspace #606060 #808080 #000000
-            urgent_workspace   #AAAAAA #e60000 #ffffff
+            # statusline #88ABC4
+            # focused_workspace  #AAAAAA #000000 #DDDDDD
+            # active_workspace   #000000 #808080 #336633
+            # inactive_workspace #606060 #808080 #000000
+            # urgent_workspace   #AAAAAA #e60000 #ffffff
         }
         # bindsym button1 nop
         # bindsym button2 nop
@@ -291,16 +291,16 @@ set $id     #1c4a1c
 set $ce     #ceecee
 
 # set some nice colors      border  background  text    indicator
-client.focused              $id     $ac        $tx     $id
-client.unfocused            $bg     $bg         $ia     $id
-client.focused_inactive     $bg     $bg         $ac     $id
+# client.focused              $id     $ac        $tx     $id
+# client.unfocused            $bg     $bg         $ia     $id
+# client.focused_inactive     $bg     $bg         $ac     $id
 #client.urgent               $yw     $yw         $tx     $id
 
 # start application
 exec --no-startup-id feh --bg-fill ~/.i3/background.bmp
-exec --no-startup-id conky -d -c ~/.i3/conky-right
-exec --no-startup-id conky -d -c ~/.i3/conky-left
-#exec --no-startup-id conky -d -c ~/.i3/conky-bottom
+# exec --no-startup-id conky -d -c ~/.i3/conky-right
+# exec --no-startup-id conky -d -c ~/.i3/conky-left
+# exec --no-startup-id conky -d -c ~/.i3/conky-bottom
 exec --no-startup-id ~/.i3/bin/bar
 exec --no-startup-id ~/.i3/bin/xinput-fix
 exec --no-startup-id dunst
