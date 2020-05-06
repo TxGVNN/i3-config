@@ -1,1 +1,1 @@
-printf "%.f" $(xbacklight)
+printf "%.f%%" $(xbacklight)
