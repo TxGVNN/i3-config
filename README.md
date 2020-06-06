@@ -26,7 +26,7 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 * <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>e</kbd> System tools
 * <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>q</kbd> Close current container
 * More basic bindings... (see `config`)
-* <kbd>Super</kbd>+<kbd>f1</kbd> Toggle fastly floating terminal
+* <kbd>Super</kbd>+<kbd>Esc</kbd> Toggle fastly floating terminal
 * <kbd>Super</kbd>+<kbd>t</kbd> Rename workspace name (with workspace number)
 * <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>t</kbd> Rename workspace name
 * <kbd>Super</kbd>+<kbd>i</kbd> Create new workspace by naming (Go to if already exists)
