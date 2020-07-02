@@ -308,7 +308,6 @@ exec --no-startup-id ibus-daemon --xim -d -r
 exec --no-startup-id dconf write /desktop/ibus/general/engines-order "['xkb:us::eng', 'Unikey']"
 exec --no-startup-id xautolock -time 5 -locker '~/.i3/bin/i3lock.sh'
 exec --no-startup-id ~/.i3/bin/redshift
-exec --no-startup-id openpgp-applet
 # exec --no-startup-id setxkbmap -layout us -option ctrl:nocaps
 
 # lock screen
