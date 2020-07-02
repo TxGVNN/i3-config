@@ -72,7 +72,7 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 ## Packages
 - required
 
-``xinit xbacklight xinput i3blocks rxvt-unicode-256color screen feh scrot redshift alsa-utils acpi fonts-font-awesome xdotool
+``xinit xbacklight xinput i3blocks rxvt-unicode-256color screen feh scrot redshift alsa-utils acpi fonts-font-awesome xdotool xclip
 ``
 - optional
 
