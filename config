@@ -329,7 +329,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightnes
 bindsym --release XF86Sleep exec ~/.i3/bin/i3lock.sh && systemctl suspend
 
 # Screenshot
-bindsym Print exec scrot 'scrot_%Y-%m-%d-%T_$wx$h.png' -e 'mv $f /tmp/'
+bindsym Print exec scrot -e 'mv $f /tmp/'
 bindsym $mod+Print exec gnome-screenshot -i -a
 
 # Toggle fastly terminal
