@@ -20,6 +20,12 @@ git clone https://github.com/TxGVNN/i3-config.git ~/.i3
 ```
 Don't forget setup the `Xresources` file. If you expect more dotfiles, you can have a look in [TxGVNN/dots](https://github.com/TxGVNN/dots.git)
 
+### Requirements
+
+```
+xbacklight xinput i3blocks rxvt-unicode-256color screen feh scrot redshift alsa-utils acpi fonts-font-awesome xdotool xclip
+```
+
 ## Bindings
 * <kbd>Super</kbd>+<kbd>Enter</kbd> Open terminal
 * <kbd>Super</kbd>+<kbd>d</kbd> Open dmenu
@@ -53,17 +59,6 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 
 * <kbd>Control+h</kbd>, <kbd>Control+l</kbd> `It means Control + Right/Left click (zoom feature in browser)`
 
-## Requirements
-
-```
-xbacklight xinput i3blocks rxvt-unicode-256color screen feh scrot redshift alsa-utils acpi fonts-font-awesome xdotool xclip
-```
-
-- optional
-
-```
-wicd emacs conky-all
-```
 ## Screenshots
 
 - master - As v4 but removing conky package (use i3blocks in status bar)
