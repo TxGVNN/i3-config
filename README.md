@@ -53,6 +53,17 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 
 * <kbd>Control+h</kbd>, <kbd>Control+l</kbd> `It means Control + Right/Left click (zoom feature in browser)`
 
+## Requirements
+
+```
+xbacklight xinput i3blocks rxvt-unicode-256color screen feh scrot redshift alsa-utils acpi fonts-font-awesome xdotool xclip
+```
+
+- optional
+
+```
+wicd emacs conky-all
+```
 ## Screenshots
 
 - master - As v4 but removing conky package (use i3blocks in status bar)
@@ -68,16 +79,6 @@ Don't forget setup the `Xresources` file. If you expect more dotfiles, you can h
 
 - v1
 ![v1](https://user-images.githubusercontent.com/9713793/46845798-312e2200-ce07-11e8-9ad4-58f91538aa17.png)
-
-## Packages
-- required
-
-``xinit xbacklight xinput i3blocks rxvt-unicode-256color screen feh scrot redshift alsa-utils acpi fonts-font-awesome xdotool xclip
-``
-- optional
-
-``wicd emacs ranger firefox
-``
 
 ## Issues
 - Icon not show?
