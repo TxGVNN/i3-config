@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 if [[ $(acpi -a | cut -d' ' -f3 | cut -d- -f1) = "off" ]]; then
 	echo "1"
 else

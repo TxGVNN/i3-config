@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Check ~/.i3/bin/daemon.d directory
 [ -d "$0.d" ] || exit 1
 while IFS='\0' read -r -d '' shell

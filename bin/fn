@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Giap Tran <txgvnn@gmail.com>
 #cat >> .i3/config <<EOF
 #bindsym $mod+F1 exec fn 1

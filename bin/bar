@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 OUTPUT="/tmp/.${LOGNAME}_i3_bar"
 PIDFILE="/tmp/.${LOGNAME}_i3_bar.pid"
 if [ "${DEBUG:-0}" -eq 1 ]; then
@@ -17,5 +17,5 @@ while IFS='\0' read -r -d '' shell; do
 done <  <(find "$0.d/" -maxdepth 1 -name \*.sh -printf '%p\0')
 
 # Sleep 5 minutes
-sleep 600
+sleep 150
 exec $0

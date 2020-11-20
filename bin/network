@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Network info
 ifaces=$(ls /sys/class/net | grep -E '^(eth|wlan|enp|wlp)')
 array=($ifaces)
