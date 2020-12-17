@@ -47,42 +47,33 @@ URxvt*scrollTtyOutput:           true
 ! URxvt*pointerBlank:                   boolean
 ! URxvt.keysym.Control-0x2b: perl:font-size:increase
 ! URxvt.keysym.Control-0x2d: perl:font-size:decrease
-URxvt*background:                     #1a1a1a
-URxvt*foreground:                     #c0b18b
-xterm*background:                     #1f1f1f
-xterm*foreground:                     #c0b18b
-
-!black
-*color0:                         #2E3436
-*color8:                         #555753
-
-!red
-*color1:                         #C83F09
-*color9:                         #DE6839
-
-!green
-*color2:                         #4E9A06
-*color10:                        #77B739
-
-!yellow
-*color3:                         #C4A000
-*color11:                        #E0CF91
-
-!blue
-*color4:                         #3465A4
-*color12:                        #729FCF
-
-!magenta
-*color5:                         #75507B
-*color13:                        #AD7FA8
-
-!cyan
-*color6:                         #06989A
-*color14:                        #7CB8BB
-
-!white
-*color7:                         #BABDB9
-*color15:                        #EEEEEC
+URxvt*background: #282828
+! soft contrast: *background: #32302f
+URxvt*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2
 
 ! URxvt*colorBD:                        color
 ! URxvt*colorIT:                        color
