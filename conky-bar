@@ -90,10 +90,10 @@ TEXT
         "full_text" : "\uF0A1 ${exec ~/.i3/bin/audio}%",
         "color"     : ${if_match ${exec ~/.i3/bin/audio}>95}"\#DD0000"${else}"\#88ABC4"${endif}
     },
-    {
-        "full_text" : "${if_match ${exec ~/.i3/bin/battery }>0}\uF0E4${else}\uF1E6${endif} ${battery_percent}%",
-        "color"     : ${if_match ${battery_percent}<15}"\#ff0000"${else}"\#88ABC4"${endif}
-    },
+    # {
+    #     "full_text" : "${if_match ${exec ~/.i3/bin/battery }>0}\uF0E4${else}\uF1E6${endif} ${battery_percent}%",
+    #     "color"     : ${if_match ${battery_percent}<15}"\#ff0000"${else}"\#88ABC4"${endif}
+    # },
     {
         "full_text" : "\uF073 ${time (W%V) %A %d %b} \uF188 ${time %R}",
         "color"     : "\#119966"
