@@ -13,7 +13,7 @@ i3 version 4.16.1 (2019-01-27) © 2009 Michael Stapelberg and contributors
 - Create new workspace by naming (or moving container to new)
 - Monitoring, you can put your bash scripts into `~/.i3/bin/{daemon.d,bar.d}`
 - Reminder
-
+- Clipboard manager by clipmenu [cdown/clipmenu](https://github.com/cdown/clipmenu)
 ## Setups
 ```
 git clone https://github.com/TxGVNN/i3-config.git ~/.i3
@@ -40,6 +40,7 @@ xbacklight xinput i3blocks rxvt-unicode-256color screen feh scrot redshift alsa-
 * <kbd>Super</kbd>+<kbd>m</kbd> Mark a container
 * <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>m</kbd> Go to the marked container
 * <kbd>Super</kbd>+<kbd>'</kbd> Reminder
+* <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>w</kbd> clipmenu
 
 ### Mouse mode
 
