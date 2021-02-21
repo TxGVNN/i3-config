@@ -310,6 +310,10 @@ exec --no-startup-id xautolock -time 5 -locker '~/.i3/bin/i3lock.sh'
 exec --no-startup-id ~/.i3/bin/redshift
 # exec --no-startup-id setxkbmap -layout us -option ctrl:nocaps
 
+# clipboard manager
+exec --no-startup-id ~/.i3/bin/clipmenud
+bindsym $mod+Shift+w exec CM_OUTPUT_CLIP=1 ~/.i3/bin/clipmenu
+
 # lock screen
 bindsym --release XF86ScreenSaver exec ~/.i3/bin/i3lock.sh
 bindsym --release $mod+Delete exec ~/.i3/bin/i3lock.sh
