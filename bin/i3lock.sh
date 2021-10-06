@@ -7,6 +7,7 @@ convert "$IMG" -blur 1x1  -implode 1 -colorize 20% "$IMG"
 convert "$IMG" -scale 20% -scale 500% "$IMG"
 convert "$IMG" ~/.i3/bin/lock.png -gravity center -composite -matte "$IMG"
 if ! i3lock -i "$IMG"; then
+    rm "$IMG"
     return 1
 fi
 xset dpms force off
