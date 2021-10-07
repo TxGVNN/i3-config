@@ -297,6 +297,7 @@ set $ce     #ceecee
 #client.urgent               $yw     $yw         $tx     $id
 
 # start application
+exec --no-startup-id dbus-launch nm-applet
 exec --no-startup-id feh --bg-fill ~/.i3/background.bmp
 # exec --no-startup-id conky -d -c ~/.i3/conky-right
 # exec --no-startup-id conky -d -c ~/.i3/conky-left
