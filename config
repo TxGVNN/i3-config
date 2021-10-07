@@ -373,6 +373,7 @@ bindsym $mod+Mod1+k exec keepassxc
 # email
 bindsym $mod+Mod1+e exec thunderbird
 # browser
+bindsym $mod+Mod1+n exec nyxt
 bindsym $mod+Mod1+b exec firefox -P default
 bindsym $mod+Mod1+Shift+b exec firefox -P default --private-window
 bindsym $mod+Mod1+g exec chromium --temp-profile
