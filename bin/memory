@@ -50,9 +50,9 @@ END {
 		pct=used/total*100
 	}
 	# full text
-	printf("%.1f%% (%.1fG)\n", pct, used)
+	printf("%.1f%%(%.1fG)\n", pct, used)
 	# short text
-	printf("%.1f%% (%.1fG)\n", pct, used)
+	printf("%.1f%%(%.1fG)\n", pct, used)
 	# color
 	if (pct > 90) {
 		print("#FF0000")
