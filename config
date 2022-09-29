@@ -155,9 +155,9 @@ bindsym $mod+Shift+i exec i3-input -F "move container to workspace \"%s\"" -P 'M
 # mark container
 bindsym $mod+m exec i3-input -F 'mark %s' -P 'Mark name: '
 bindsym $mod+Shift+m exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
-# copy to register ($mod+~, $mod+Shift+~)
-bindcode $mod+49 exec ~/.i3/bin/x-register
-bindcode $mod+Shift+49 exec ~/.i3/bin/x-register copy
+# copy to register ($mod+., $mod+Shift+.)
+bindcode $mod+60 exec ~/.i3/bin/x-register
+bindcode $mod+Shift+60 exec ~/.i3/bin/x-register copy
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
