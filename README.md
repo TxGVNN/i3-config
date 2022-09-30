@@ -40,7 +40,7 @@ xbacklight xinput i3blocks rxvt-unicode-256color screen feh scrot redshift alsa-
 * <kbd>Super</kbd>+<kbd>m</kbd> Mark a container
 * <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>m</kbd> Go to the marked container
 * <kbd>Super</kbd>+<kbd>'</kbd> Reminder
-* <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>w</kbd> clipmenu
+* <kbd>Super</kbd>+<kbd>Insert</kbd> clipmenu
 
 ### Mouse mode
 
@@ -62,18 +62,18 @@ xbacklight xinput i3blocks rxvt-unicode-256color screen feh scrot redshift alsa-
 
 ## Screenshots
 
-- master - As v4 but removing conky package (use i3blocks in status bar)
+- *master* - As v4 but removing conky package (use i3blocks in status bar)
 
-- v4
+- *v4*
 ![v4](https://user-images.githubusercontent.com/9713793/48619359-d4f28b00-e9ce-11e8-806c-95d349fcc7d5.png)
 
-- v3
+- *v3*
 ![v3](https://user-images.githubusercontent.com/9713793/46845799-325f4f00-ce07-11e8-81f1-b184a8d49f1f.png)
 
-- v2
+- *v2*
 ![v2](https://user-images.githubusercontent.com/9713793/46845797-312e2200-ce07-11e8-9631-27e27c6c8678.png)
 
-- v1
+- *v1*
 ![v1](https://user-images.githubusercontent.com/9713793/46845798-312e2200-ce07-11e8-9ad4-58f91538aa17.png)
 
 ## Issues

@@ -313,7 +313,7 @@ exec --no-startup-id ~/.i3/bin/redshift
 
 # clipboard manager
 exec --no-startup-id ~/.i3/bin/clipmenud
-bindsym $mod+Shift+y exec CM_OUTPUT_CLIP=1 ~/.i3/bin/clipmenu
+bindsym $mod+Insert exec CM_OUTPUT_CLIP=1 ~/.i3/bin/clipmenu
 
 # lock screen
 bindsym --release XF86ScreenSaver exec ~/.i3/bin/i3lock.sh
