@@ -1,0 +1,6 @@
+#!/bin/sh
+echo ""
+case $BLOCK_BUTTON in
+ 1) i3-msg -q exec flameshot gui ;;
+ 3) i3-msg -q exec flameshot gui ;;
+esac
